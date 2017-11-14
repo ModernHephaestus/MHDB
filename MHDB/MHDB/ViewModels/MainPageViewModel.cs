@@ -20,6 +20,5 @@ namespace MHDB.ViewModels
     class MainPageViewModel
     {
 
-
     }
 }

@@ -23,17 +23,21 @@ namespace MHDB.Models
 
         public static List<MenuItem> GetMainItems()
         {
-            var items = new List<MenuItem>();
-            items.Add(new MenuItem() { Icon = Symbol.Accept, Name = "MenuItem1", PageType = typeof(Views.BlankPage1) });
-            items.Add(new MenuItem() { Icon = Symbol.Send, Name = "MenuItem2", PageType = typeof(Views.BlankPage1) });
-            items.Add(new MenuItem() { Icon = Symbol.Shop, Name = "MenuItem3", PageType = typeof(Views.BlankPage1) });
+            var items = new List<MenuItem>
+            {
+                new MenuItem() { Icon = Symbol.Accept, Name = "Home", PageType = typeof(Views.Home) },
+                new MenuItem() { Icon = Symbol.Send, Name = "Data", PageType = typeof(Views.Data) },
+                new MenuItem() { Icon = Symbol.Shop, Name = "Compare", PageType = typeof(Views.Compare) }
+            };
             return items;
         }
 
         public static List<MenuItem> GetOptionsItems()
         {
-            var items = new List<MenuItem>();
-            items.Add(new MenuItem() { Icon = Symbol.Setting, Name = "OptionItem1", PageType = typeof(Views.BlankPage1) });
+            var items = new List<MenuItem>
+            {
+                new MenuItem() { Icon = Symbol.Setting, Name = "OptionItem1", PageType = typeof(Views.Settings) }
+            };
             return items;
         }
     }
