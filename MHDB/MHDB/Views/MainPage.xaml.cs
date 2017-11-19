@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using MHDB.Models;
-using MHDB.ViewModels;
+using Microsoft.EntityFrameworkCore;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace MHDB
@@ -23,11 +23,16 @@ namespace MHDB
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        //internal SQLiteConnection DbConn { get; set; }
+        DatabaseHelper DbHelper { get; set; } = new DatabaseHelper();
+
         public MainPage()
         {
             this.InitializeComponent();
             HamburgerMenuControl.ItemsSource = MenuItem.GetMainItems();
             HamburgerMenuControl.OptionsItemsSource = MenuItem.GetOptionsItems();
+            DbHelper.CreateDatabase();
+            //DbConn = DbHelper.ConnectToDatabase();
         }
 
         private void OnMenuItemClick(object sender, ItemClickEventArgs e)

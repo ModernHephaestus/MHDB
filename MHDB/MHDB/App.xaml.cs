@@ -14,8 +14,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using SQLite.Net;
-using SQLite.Net.Platform.WinRT;
+using MHDB.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MHDB
 {
@@ -28,13 +28,18 @@ namespace MHDB
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
-        //internal static string DB_PATH = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+        //internal static string DB_PATH = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "MHDB.sqlite");
 
-        //SQLiteConnection conn = new SQLiteConnection(new SQLitePlatformWinRT(), DB_PATH);
         public App()
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            using (Database db = new Database())
+            {
+                db.Database.Migrate();
+            }
+
         }
 
         /// <summary>

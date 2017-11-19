@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MHDB.Models;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,6 +26,14 @@ namespace MHDB.Views
         public Data()
         {
             this.InitializeComponent();
+        }
+
+        private void TestButton_Click(object sender, RoutedEventArgs e)
+        {
+            var helper = new DatabaseHelper();
+            //var conn = helper.ConnectToDatabase();
+            //helper.ResetDatabase(conn);
+            //Test.Text = conn.DatabasePath;
         }
     }
 }

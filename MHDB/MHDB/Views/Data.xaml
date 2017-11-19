@@ -8,6 +8,10 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image Source="https://upload.wikimedia.org/wikipedia/commons/6/61/M9-pistolet.jpg"/>
+        <StackPanel>
+            <Image Visibility="Collapsed" Name="image" Source="https://upload.wikimedia.org/wikipedia/commons/6/61/M9-pistolet.jpg"/>
+            <Button Name="TestButton" Content="Get M9" Click="TestButton_Click"/>
+            <TextBlock Name="Test" />
+        </StackPanel>
     </Grid>
 </Page>
