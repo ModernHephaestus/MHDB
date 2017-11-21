@@ -36,7 +36,7 @@ namespace MHDB.Models
         }
         public void ResetDatabase()
         {
-            using (var db = new Database())
+            using (var db = new DatabaseContext())
             {
             }
         }

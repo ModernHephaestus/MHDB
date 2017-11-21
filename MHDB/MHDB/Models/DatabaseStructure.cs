@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 namespace MHDB.Models
 {
-    class Database : DbContext
+    class DatabaseContext : DbContext
     {
         public DbSet<Pistols> Pistols { get; set; }
 
@@ -18,14 +18,19 @@ namespace MHDB.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Pistols>().HasKey(p => new { p.Id });
-            modelBuilder.Entity<Pistols>().Property(r => new { r.ModelName }).IsRequired();
-            modelBuilder.Entity<Pistols>().Property(r => new { r.Manufacturer}).IsRequired();
+            //modelBuilder.Entity<Pistols>().HasKey(p => new { p.Id });
+            //modelBuilder.Entity<Pistols>().Property(r => new { r.ModelName }).IsRequired();
+            //modelBuilder.Entity<Pistols>().Property(r => new { r.Manufacturer}).IsRequired();
         }
     }
 
     internal class Pistols
     {
+        /// <summary>
+        /// Each property is a column in the SQLite Database.
+        /// Properties must be public for the Entity Framework SQLite to work.
+        /// As the whole class is internal, each public property in the class is also, in effect, internal.
+        /// </summary>   
         [Key]
         public int Id { get; set; }
 
@@ -33,7 +38,7 @@ namespace MHDB.Models
         public string Image { get; set; } = "x";
         //Model Name, such as M9, M4, M1911
         [Required]
-        internal string ModelName { get; set; } = "x";
+        public string ModelName { get; set; } = "x";
         //Manufacturer Name, such as Beretta, or Colt
         [Required]
         public string Manufacturer { get; set; } = "x";
@@ -50,5 +55,9 @@ namespace MHDB.Models
         //public string ProductionStart { get; set; }
         //public string ProductionEnd { get; set; }
 
+        Pistols()
+        {
+            Image = "X";
+        }
     }
 }

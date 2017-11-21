@@ -35,7 +35,7 @@ namespace MHDB
             this.InitializeComponent();
             this.Suspending += OnSuspending;
 
-            using (Database db = new Database())
+            using (DatabaseContext db = new DatabaseContext())
             {
                 db.Database.Migrate();
             }
