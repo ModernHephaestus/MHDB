@@ -23,38 +23,69 @@ namespace MHDB.Models
             //modelBuilder.Entity<Pistols>().Property(r => new { r.Manufacturer}).IsRequired();
         }
     }
-
-    internal class Pistols
+    internal class SmallArms
     {
         /// <summary>
-        /// Each property is a column in the SQLite Database.
+        /// Each property is a column in the SQLite database table.
         /// Properties must be public for the Entity Framework SQLite to work.
         /// As the whole class is internal, each public property in the class is also, in effect, internal.
         /// </summary>   
         [Key]
         public int Id { get; set; }
 
-        //Image URL: Must be full url, i.e. ending with name.jpg or name.png etc.
-        public string Image { get; set; } = "x";
+        //Image URL: Must be full web url, i.e. ending with name.jpg or name.png etc.
+        public string Image { get; set; } = "N/A";
         //Model Name, such as M9, M4, M1911
         [Required]
-        public string ModelName { get; set; } = "x";
+        public string ModelName { get; set; }
         //Manufacturer Name, such as Beretta, or Colt
         [Required]
-        public string Manufacturer { get; set; } = "x";
+        public string Manufacturer { get; set; }
         //Designed Date, usually simply a year or decade like 1988 or 1980s
         public string Designed { get; set; } = "x";
 
-        //1st = start service year, 2nd = end service year (present if still in use)
-        //public Tuple<string, string> Service { get; set; } = Tuple.Create("x", "x");
-        //1st = start production year, 2nd = end production year (present if still being produced)
-        //public Tuple<string, string> Production { get; set; } = Tuple.Create("x", "x");
+        [Required]
+        //public string StartService { get; set; }
 
-        //public string ServiceStart { get; set; }
-        //public string ServiceEnd { get; set; }
-        //public string ProductionStart { get; set; }
-        //public string ProductionEnd { get; set; }
+        public DateTime StartService { get; set; }
 
+        //public string EndService { get; set; } = "Present";
+        private string _EndService;
+        public string EndService
+        {
+            get { return _EndService; }
+            set
+            {
+                if (Convert.ToInt32(value) >= DateTime.Now.Year)
+                    this._EndService = "Present";
+                else
+                    this._EndService = value;
+            }
+        }
+
+        [Required]
+        public string StartProduction { get; set; }
+
+        //public string EndProduction { get; set; } = "Present";
+        private string _EndProduction;
+        public string EndProduction
+        {
+            get { return _EndProduction; }
+            set
+            {
+                if (Convert.ToInt32(value) >= DateTime.Now.Year)
+                    this._EndProduction = "Present";
+                else
+                    this._EndProduction = value;
+            }
+        }
+
+        public double NoBuilt { get; set; } = 0;
+
+
+    }
+    internal class Pistols : SmallArms
+    {
         Pistols()
         {
             Image = "X";
