@@ -5,12 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using MHDB.Models.DatabaseItems;
 namespace MHDB.Models
 {
-    class DatabaseContext : DbContext
+    internal class DatabaseContext : DbContext
     {
         public DbSet<Pistols> Pistols { get; set; }
-
+        public DbSet<SubmachineGuns> SubmachineGuns {get; set; }
+        public DbSet<RiflesAndCarbines> RiflesAndCarbines { get; set; }
+        public DbSet<Shotguns> Shotguns { get; set; }
+        public DbSet<MachineGuns> MachineGuns { get; set; }
+        public DbSet<DMRSniperRifles> DMRSniperRifles { get; set; }
+        public DbSet<AntiMaterial> AntiMaterial { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=MHDB.db");
@@ -23,7 +29,7 @@ namespace MHDB.Models
             //modelBuilder.Entity<Pistols>().Property(r => new { r.Manufacturer}).IsRequired();
         }
     }
-    internal class SmallArms
+    internal class GenericHardware
     {
         /// <summary>
         /// Each property is a column in the SQLite database table.
@@ -42,7 +48,7 @@ namespace MHDB.Models
         [Required]
         public string Manufacturer { get; set; }
         //Designed Date, usually simply a year or decade like 1988 or 1980s
-        public string Designed { get; set; } = "x";
+        public DateTime Designed { get; set; }
 
         [Required]
         //public string StartService { get; set; }
@@ -81,14 +87,5 @@ namespace MHDB.Models
         }
 
         public double NoBuilt { get; set; } = 0;
-
-
-    }
-    internal class Pistols : SmallArms
-    {
-        Pistols()
-        {
-            Image = "X";
-        }
     }
 }

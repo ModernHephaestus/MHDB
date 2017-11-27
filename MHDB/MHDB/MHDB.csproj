@@ -96,6 +96,12 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\DatabaseHelper.cs" />
+    <Compile Include="Models\DatabaseItems\Artillery.cs" />
+    <Compile Include="Models\DatabaseItems\FixedWingAircraft.cs" />
+    <Compile Include="Models\DatabaseItems\HelicopterRotorcraft.cs" />
+    <Compile Include="Models\DatabaseItems\Ships.cs" />
+    <Compile Include="Models\DatabaseItems\SmallArms.cs" />
+    <Compile Include="Models\DatabaseItems\Vehicles.cs" />
     <Compile Include="Models\DatabaseStructure.cs" />
     <Compile Include="Models\Menus.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
