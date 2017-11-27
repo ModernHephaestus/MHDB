@@ -87,5 +87,6 @@ namespace MHDB.Models
         }
 
         public double NoBuilt { get; set; } = 0;
+        public double Cost { get; set; } = 0;
     }
 }
