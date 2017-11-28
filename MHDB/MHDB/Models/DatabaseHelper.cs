@@ -75,9 +75,7 @@ namespace MHDB.Models
             using (var db = new DatabaseContext())
             {
                 //var temp = new Pistols { ModelName = "M9", Sights = "Iron Sights"};
-                db.Pistols.Add(new Pistols { ModelName = "M9", Sights = "Iron Sights"});
-                db.Pistols.Add(new Pistols { ModelName = "M4", Sights = "Iron Sights" });
-                db.SaveChanges();
+                var InitData = new InitializeData();
             }
         }
     }

@@ -8,7 +8,7 @@ using MHDB.Models;
 namespace MHDB.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20171127231127_InitialMigration")]
+    [Migration("20171128205349_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,7 +32,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<double>("Displacement");
 
@@ -48,7 +48,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxSpeed");
 
@@ -57,9 +58,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -78,7 +81,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -86,7 +89,8 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Image");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaximumElevation");
 
@@ -101,9 +105,11 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Shell");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.HasKey("Id");
 
@@ -126,7 +132,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<double>("Displacement");
 
@@ -142,7 +148,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxSpeed");
 
@@ -151,9 +158,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -173,11 +182,12 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Calibre");
 
-                    b.Property<string>("Cartridge");
+                    b.Property<string>("Cartridge")
+                        .IsRequired();
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<double>("EffectiveRange");
 
@@ -191,7 +201,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxRange");
 
@@ -202,12 +213,13 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("Sights")
+                    b.Property<string>("Sights");
+
+                    b.Property<string>("StartProduction")
                         .IsRequired();
 
-                    b.Property<string>("StartProduction");
-
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -226,7 +238,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -243,7 +255,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxSpeed");
 
@@ -252,9 +265,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<string>("Suspension");
 
@@ -279,7 +294,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -294,7 +309,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxAltitude");
 
@@ -305,9 +321,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -327,7 +345,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -341,7 +359,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxAltitude");
 
@@ -352,9 +371,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -374,7 +395,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -388,7 +409,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxAltitude");
 
@@ -399,9 +421,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -428,7 +452,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<double>("Displacement");
 
@@ -444,7 +468,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxSpeed");
 
@@ -453,9 +478,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -480,7 +507,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<double>("Displacement");
 
@@ -496,7 +523,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxSpeed");
 
@@ -505,9 +533,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -527,11 +557,12 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Calibre");
 
-                    b.Property<string>("Cartridge");
+                    b.Property<string>("Cartridge")
+                        .IsRequired();
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<double>("EffectiveRange");
 
@@ -545,7 +576,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxRange");
 
@@ -556,12 +588,13 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("Sights")
+                    b.Property<string>("Sights");
+
+                    b.Property<string>("StartProduction")
                         .IsRequired();
 
-                    b.Property<string>("StartProduction");
-
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -579,7 +612,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -593,7 +626,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxAltitude");
 
@@ -604,9 +638,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -633,7 +669,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<double>("Displacement");
 
@@ -649,7 +685,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxSpeed");
 
@@ -658,9 +695,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -678,7 +717,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -692,7 +731,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxAltitude");
 
@@ -703,9 +743,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -725,7 +767,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -739,7 +781,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxAltitude");
 
@@ -750,9 +793,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -773,7 +818,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -781,7 +826,8 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Image");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaximumElevation");
 
@@ -796,9 +842,11 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Shell");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.HasKey("Id");
 
@@ -815,7 +863,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -832,7 +880,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxSpeed");
 
@@ -841,9 +890,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<string>("Suspension");
 
@@ -869,11 +920,12 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Calibre");
 
-                    b.Property<string>("Cartridge");
+                    b.Property<string>("Cartridge")
+                        .IsRequired();
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<double>("EffectiveRange");
 
@@ -887,7 +939,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxRange");
 
@@ -898,12 +951,13 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("Sights")
+                    b.Property<string>("Sights");
+
+                    b.Property<string>("StartProduction")
                         .IsRequired();
 
-                    b.Property<string>("StartProduction");
-
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -922,7 +976,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -930,7 +984,8 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Image");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaximumElevation");
 
@@ -945,9 +1000,11 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Shell");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.HasKey("Id");
 
@@ -964,7 +1021,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -979,7 +1036,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxAltitude");
 
@@ -990,9 +1048,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -1014,11 +1074,12 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Calibre");
 
-                    b.Property<string>("Cartridge");
+                    b.Property<string>("Cartridge")
+                        .IsRequired();
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<double>("EffectiveRange");
 
@@ -1032,7 +1093,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxRange");
 
@@ -1043,12 +1105,13 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("Sights")
+                    b.Property<string>("Sights");
+
+                    b.Property<string>("StartProduction")
                         .IsRequired();
 
-                    b.Property<string>("StartProduction");
-
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -1068,11 +1131,12 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Calibre");
 
-                    b.Property<string>("Cartridge");
+                    b.Property<string>("Cartridge")
+                        .IsRequired();
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<double>("EffectiveRange");
 
@@ -1086,7 +1150,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxRange");
 
@@ -1097,12 +1162,13 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("Sights")
+                    b.Property<string>("Sights");
+
+                    b.Property<string>("StartProduction")
                         .IsRequired();
 
-                    b.Property<string>("StartProduction");
-
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -1121,7 +1187,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -1129,7 +1195,8 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Image");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaximumElevation");
 
@@ -1144,9 +1211,11 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Shell");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.HasKey("Id");
 
@@ -1164,11 +1233,12 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Calibre");
 
-                    b.Property<string>("Cartridge");
+                    b.Property<string>("Cartridge")
+                        .IsRequired();
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<double>("EffectiveRange");
 
@@ -1182,7 +1252,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxRange");
 
@@ -1193,12 +1264,13 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("Sights")
+                    b.Property<string>("Sights");
+
+                    b.Property<string>("StartProduction")
                         .IsRequired();
 
-                    b.Property<string>("StartProduction");
-
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -1218,11 +1290,12 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Calibre");
 
-                    b.Property<string>("Cartridge");
+                    b.Property<string>("Cartridge")
+                        .IsRequired();
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<double>("EffectiveRange");
 
@@ -1236,7 +1309,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxRange");
 
@@ -1247,12 +1321,13 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("Sights")
+                    b.Property<string>("Sights");
+
+                    b.Property<string>("StartProduction")
                         .IsRequired();
 
-                    b.Property<string>("StartProduction");
-
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -1277,7 +1352,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<double>("Displacement");
 
@@ -1293,7 +1368,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxSpeed");
 
@@ -1302,9 +1378,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -1323,7 +1401,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -1340,7 +1418,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxSpeed");
 
@@ -1349,9 +1428,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<string>("Suspension");
 
@@ -1375,7 +1456,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -1389,7 +1470,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxAltitude");
 
@@ -1400,9 +1482,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -1423,7 +1507,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -1440,7 +1524,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxSpeed");
 
@@ -1449,9 +1534,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<string>("Suspension");
 
@@ -1475,7 +1562,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -1489,7 +1576,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxAltitude");
 
@@ -1500,9 +1588,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 
@@ -1523,7 +1613,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Cost");
 
-                    b.Property<DateTime>("Designed");
+                    b.Property<string>("Designed");
 
                     b.Property<string>("EndProduction");
 
@@ -1538,7 +1628,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Length");
 
-                    b.Property<string>("Manufacturer");
+                    b.Property<string>("Manufacturer")
+                        .IsRequired();
 
                     b.Property<double>("MaxAltitude");
 
@@ -1549,9 +1640,11 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
-                    b.Property<string>("StartProduction");
+                    b.Property<string>("StartProduction")
+                        .IsRequired();
 
-                    b.Property<DateTime>("StartService");
+                    b.Property<string>("StartService")
+                        .IsRequired();
 
                     b.Property<double>("Weight");
 

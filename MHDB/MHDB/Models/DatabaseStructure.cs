@@ -97,15 +97,14 @@ namespace MHDB.Models
         [Required]
         public string ModelName { get; set; }
         //Manufacturer Name, such as Beretta, or Colt
- //       [Required]
+        [Required]
         public string Manufacturer { get; set; }
         //Designed Date, usually simply a year or decade like 1988 or 1980s
-        public DateTime Designed { get; set; }
+        public string Designed { get; set; }
 
-    //    [Required]
-        //public string StartService { get; set; }
-
-        public DateTime StartService { get; set; }
+        [Required]
+        public string StartService { get; set; }
+        
 
         //public string EndService { get; set; } = "Present";
         private string _EndService;
@@ -114,14 +113,16 @@ namespace MHDB.Models
             get { return _EndService; }
             set
             {
-                if (Convert.ToInt32(value) >= DateTime.Now.Year)
+                if (value == "Present")
+                    this._EndService = value;
+                else if (Convert.ToInt32(value) >= DateTime.Now.Year)
                     this._EndService = "Present";
                 else
                     this._EndService = value;
             }
         }
 
-   //     [Required]
+        [Required]
         public string StartProduction { get; set; }
 
         //public string EndProduction { get; set; } = "Present";
@@ -131,7 +132,9 @@ namespace MHDB.Models
             get { return _EndProduction; }
             set
             {
-                if (Convert.ToInt32(value) >= DateTime.Now.Year)
+                if (value == "Present")
+                    this._EndService = value;
+                else if (Convert.ToInt32(value) >= DateTime.Now.Year)
                     this._EndProduction = "Present";
                 else
                     this._EndProduction = value;
