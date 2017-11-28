@@ -24,15 +24,14 @@ namespace MHDB
     public sealed partial class MainPage : Page
     {
         //internal SQLiteConnection DbConn { get; set; }
-        DatabaseHelper DbHelper { get; set; } = new DatabaseHelper();
+        DatabaseHelper DbHelper { get; set; }
 
         public MainPage()
         {
             this.InitializeComponent();
+            DbHelper = new DatabaseHelper();
             HamburgerMenuControl.ItemsSource = MenuItem.GetMainItems();
             HamburgerMenuControl.OptionsItemsSource = MenuItem.GetOptionsItems();
-            DbHelper.CreateDatabase();
-            //DbConn = DbHelper.ConnectToDatabase();
         }
 
         private void OnMenuItemClick(object sender, ItemClickEventArgs e)

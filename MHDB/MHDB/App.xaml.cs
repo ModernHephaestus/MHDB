@@ -38,7 +38,14 @@ namespace MHDB
             using (DatabaseContext db = new DatabaseContext())
             {
                 db.Database.Migrate();
+                if (!db.Pistols.Any())
+                {
+                    DatabaseHelper DbHelper = new DatabaseHelper();
+                    DbHelper.InitializeDatabase();
+                }
             }
+
+            Subclasses DbSubClasses = new Subclasses();
 
         }
 

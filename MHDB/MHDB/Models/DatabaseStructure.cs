@@ -3,21 +3,73 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using MHDB.Models.DatabaseItems;
 namespace MHDB.Models
 {
+    internal class Subclasses
+    {
+        Type GenericHardware = typeof(GenericHardware);
+        Type SmallArms = typeof(SmallArms);
+        Type Artillery = typeof(Artillery);
+        Type Vehicles = typeof(Vehicles);
+        Type FixedWingAircraft = typeof(FixedWingAircraft);
+        Type HelicopterRotorcraft = typeof(HelicopterRotorcraft);
+        Type Ships = typeof(Ships);
+
+        public IEnumerable<Type> sc;
+        public Type[] Types;
+        internal Subclasses()
+        {
+            Assembly assembly = this.GetType().GetTypeInfo().Assembly;
+            Types = assembly.GetTypes();
+
+            sc = Types.Where(t => t.GetTypeInfo().IsSubclassOf(GenericHardware));
+        }
+    }
+
     internal class DatabaseContext : DbContext
     {
+        //SmallArms
         public DbSet<Pistols> Pistols { get; set; }
-        public DbSet<SubmachineGuns> SubmachineGuns {get; set; }
+        public DbSet<SubmachineGuns> SubmachineGuns { get; set; }
         public DbSet<RiflesAndCarbines> RiflesAndCarbines { get; set; }
         public DbSet<Shotguns> Shotguns { get; set; }
         public DbSet<MachineGuns> MachineGuns { get; set; }
         public DbSet<DMRSniperRifles> DMRSniperRifles { get; set; }
         public DbSet<AntiMaterial> AntiMaterial { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //Artillery
+        public DbSet<Mortars> Mortars {get; set;}
+        public DbSet<Howitzers> Howitzers {get; set;}
+        public DbSet<RocketArtillery> RocketArtillery {get; set;}
+        public DbSet<AirDefense> AirDefense {get; set;}
+        //Vehicles
+        public DbSet<Trucks> Trucks {get; set;}
+        public DbSet<APCs> APCs {get; set;}
+        public DbSet<IFVs> IFVs {get; set;}
+        public DbSet<Tanks> Tanks {get; set;}
+        //FixedWingAircraft
+        public DbSet<Fighter> Fighter {get; set;}
+        public DbSet<GroundAttack> GroundAttack {get; set;}
+        public DbSet<Gunship> Gunship {get; set;}
+        public DbSet<Bomber> Bomber {get; set;}
+        public DbSet<Transport> Transport {get; set;}
+        public DbSet<CommandAndControl> CommandAndControl {get; set;}
+        public DbSet<UAV> UAV {get; set;}
+        //HelicopterRotorcraft
+        public DbSet<Attack> Attack {get; set;}
+        public DbSet<Utility> Utility {get; set;}
+        public DbSet<Observation> Observation {get; set;}
+        //Ships
+        public DbSet<AircraftCarriers> AircraftCarriers {get; set;}
+        public DbSet<AmphibiousWarfare> AmphibiousWarfare {get; set;}
+        public DbSet<Cruisers> Cruisers {get; set;}
+        public DbSet<Destroyers> Destroyers {get; set;}
+        public DbSet<Frigates> Frigates {get; set;}
+        public DbSet<Submarines> Submarines {get; set;}
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=MHDB.db");
         }
@@ -45,12 +97,12 @@ namespace MHDB.Models
         [Required]
         public string ModelName { get; set; }
         //Manufacturer Name, such as Beretta, or Colt
-        [Required]
+ //       [Required]
         public string Manufacturer { get; set; }
         //Designed Date, usually simply a year or decade like 1988 or 1980s
         public DateTime Designed { get; set; }
 
-        [Required]
+    //    [Required]
         //public string StartService { get; set; }
 
         public DateTime StartService { get; set; }
@@ -69,7 +121,7 @@ namespace MHDB.Models
             }
         }
 
-        [Required]
+   //     [Required]
         public string StartProduction { get; set; }
 
         //public string EndProduction { get; set; } = "Present";

@@ -10,27 +10,27 @@ namespace MHDB.Models.DatabaseItems
     internal class SmallArms : GenericHardware
     {
         //Weight is in Kg, kilograms.
-        [Required]
+     //   [Required]
         public double Weight { get; set; }
 
         //Length and barrel length are in mm, milimeters.
-        [Required]
+      //  [Required]
         public double Length { get; set; }
-        [Required]
+       // [Required]
         public double BarrelLength { get; set; }
 
-        [Required]
+       // [Required]
         public string Cartridge { get; set; }
-        [Required]
+        //[Required]
         public string Calibre { get; set; }
-        [Required]
+        //[Required]
         public string Action { get; set; }
         //Muzzle Velocity is in m/s, meters per second.
         public double MuzzleVelocity { get; set; }
         //Effective and Max ranges are in m, meters.
         public double EffectiveRange { get; set; }
         public double MaxRange { get; set; }
-        [Required]
+     //   [Required]
         public string FeedSystem { get; set; }
         [Required]
         public string Sights { get; set; }

@@ -25,9 +25,9 @@ namespace MHDB.Models
         {
             var items = new List<MenuItem>
             {
-                new MenuItem() { Icon = Symbol.Accept, Name = "Home", PageType = typeof(Views.Home) },
-                new MenuItem() { Icon = Symbol.Send, Name = "Data", PageType = typeof(Views.Data) },
-                new MenuItem() { Icon = Symbol.Shop, Name = "Compare", PageType = typeof(Views.Compare) }
+                new MenuItem() { Icon = Symbol.Home, Name = "Home", PageType = typeof(Views.Home) },
+                new MenuItem() { Icon = Symbol.ViewAll, Name = "Data", PageType = typeof(Views.Data) },
+                new MenuItem() { Icon = Symbol.TwoPage, Name = "Compare", PageType = typeof(Views.Compare) }
             };
             return items;
         }
@@ -36,7 +36,7 @@ namespace MHDB.Models
         {
             var items = new List<MenuItem>
             {
-                new MenuItem() { Icon = Symbol.Setting, Name = "OptionItem1", PageType = typeof(Views.Settings) }
+                new MenuItem() { Icon = Symbol.Setting, Name = "Settings", PageType = typeof(Views.Settings) }
             };
             return items;
         }

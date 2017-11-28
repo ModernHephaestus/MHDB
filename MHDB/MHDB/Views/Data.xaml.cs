@@ -13,7 +13,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using MHDB.Models;
-
+using System.Reflection;
+using MHDB.Models.DatabaseItems;
+using Windows.ApplicationModel.DataTransfer;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MHDB.Views
@@ -23,6 +25,7 @@ namespace MHDB.Views
     /// </summary>
     public sealed partial class Data : Page
     {
+        DataPackage dataPackage = new DataPackage();
         public Data()
         {
             this.InitializeComponent();
@@ -30,10 +33,29 @@ namespace MHDB.Views
 
         private void TestButton_Click(object sender, RoutedEventArgs e)
         {
-            var helper = new DatabaseHelper();
-            //var conn = helper.ConnectToDatabase();
-            //helper.ResetDatabase(conn);
-            //Test.Text = conn.DatabasePath;
+            using (var db = new DatabaseContext())
+            {
+                Test.ItemsSource = db.Pistols.ToList();
+            }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            using (var db = new DatabaseContext())
+            {
+                Test.ItemsSource = db.Pistols;
+            }
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            DatabaseHelper dbhelper = new DatabaseHelper();
+            
+            dbhelper.ResetDatabase();
+            using (var db = new DatabaseContext())
+            {
+                Test.ItemsSource = db.Pistols;
+            }
         }
     }
 }

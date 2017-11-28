@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MHDB.Models.DatabaseItems
 {
-    internal class Ships
+    internal class Ships : GenericHardware
     {
         //Weight is in kg, kilograms.
         public double Weight { get; set; }
