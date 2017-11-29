@@ -43,6 +43,7 @@ namespace MHDB.Views
         {
             using (var db = new DatabaseContext())
             {
+                Images.ItemsSource = db.Pistols;
                 Test.ItemsSource = db.Pistols;
             }
         }
@@ -54,6 +55,7 @@ namespace MHDB.Views
             dbhelper.ResetDatabase();
             using (var db = new DatabaseContext())
             {
+                Images.ItemsSource = db.Pistols;
                 Test.ItemsSource = db.Pistols;
             }
         }

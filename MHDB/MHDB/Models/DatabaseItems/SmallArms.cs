@@ -26,6 +26,8 @@ namespace MHDB.Models.DatabaseItems
         
         public string Action { get; set; }
         //Muzzle Velocity is in m/s, meters per second.
+        //RateOfFire is in rounds per minute
+        public double RateOfFire { get; set; }
         public double MuzzleVelocity { get; set; }
         //Effective and Max ranges are in m, meters.
         //Effective and Max ranges are the upper bound if data source gives a range.

@@ -21,13 +21,23 @@
             <Button Name="TestButton" Content="Types" Click="TestButton_Click"/>
             <Button Name="DeleteButton" Content="Delete" Click="DeleteButton_Click"/>
             <!--<TextBlock Name="Test" TextWrapping="WrapWholeWords" />-->
-            <ListView Name="Test">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding ModelName}"/>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <StackPanel Orientation="Horizontal">
+                <ListView Name="Images" Width="200">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Image}" Width="100" Height="100"/>
+                            <!--Width="50" Height="50" Stretch="UniformToFill"-->
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ListView Name="Test" Width="200">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Height="100" Text="{Binding ModelName}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </Page>

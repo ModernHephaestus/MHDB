@@ -8,7 +8,7 @@ using MHDB.Models;
 namespace MHDB.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20171128205349_InitialMigration")]
+    [Migration("20171129221001_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -212,6 +212,8 @@ namespace MHDB.Migrations
                     b.Property<double>("MuzzleVelocity");
 
                     b.Property<double>("NoBuilt");
+
+                    b.Property<double>("RateOfFire");
 
                     b.Property<string>("Sights");
 
@@ -588,6 +590,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
+                    b.Property<double>("RateOfFire");
+
                     b.Property<string>("Sights");
 
                     b.Property<string>("StartProduction")
@@ -951,6 +955,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
+                    b.Property<double>("RateOfFire");
+
                     b.Property<string>("Sights");
 
                     b.Property<string>("StartProduction")
@@ -1105,6 +1111,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
+                    b.Property<double>("RateOfFire");
+
                     b.Property<string>("Sights");
 
                     b.Property<string>("StartProduction")
@@ -1161,6 +1169,8 @@ namespace MHDB.Migrations
                     b.Property<double>("MuzzleVelocity");
 
                     b.Property<double>("NoBuilt");
+
+                    b.Property<double>("RateOfFire");
 
                     b.Property<string>("Sights");
 
@@ -1264,6 +1274,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
+                    b.Property<double>("RateOfFire");
+
                     b.Property<string>("Sights");
 
                     b.Property<string>("StartProduction")
@@ -1320,6 +1332,8 @@ namespace MHDB.Migrations
                     b.Property<double>("MuzzleVelocity");
 
                     b.Property<double>("NoBuilt");
+
+                    b.Property<double>("RateOfFire");
 
                     b.Property<string>("Sights");
 

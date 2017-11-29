@@ -212,6 +212,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
+                    b.Property<double>("RateOfFire");
+
                     b.Property<string>("Sights");
 
                     b.Property<string>("StartProduction")
@@ -587,6 +589,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
+                    b.Property<double>("RateOfFire");
+
                     b.Property<string>("Sights");
 
                     b.Property<string>("StartProduction")
@@ -950,6 +954,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
+                    b.Property<double>("RateOfFire");
+
                     b.Property<string>("Sights");
 
                     b.Property<string>("StartProduction")
@@ -1104,6 +1110,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
+                    b.Property<double>("RateOfFire");
+
                     b.Property<string>("Sights");
 
                     b.Property<string>("StartProduction")
@@ -1160,6 +1168,8 @@ namespace MHDB.Migrations
                     b.Property<double>("MuzzleVelocity");
 
                     b.Property<double>("NoBuilt");
+
+                    b.Property<double>("RateOfFire");
 
                     b.Property<string>("Sights");
 
@@ -1263,6 +1273,8 @@ namespace MHDB.Migrations
 
                     b.Property<double>("NoBuilt");
 
+                    b.Property<double>("RateOfFire");
+
                     b.Property<string>("Sights");
 
                     b.Property<string>("StartProduction")
@@ -1319,6 +1331,8 @@ namespace MHDB.Migrations
                     b.Property<double>("MuzzleVelocity");
 
                     b.Property<double>("NoBuilt");
+
+                    b.Property<double>("RateOfFire");
 
                     b.Property<string>("Sights");
 
