@@ -8,6 +8,7 @@ namespace MHDB.Models.DatabaseItems
 {
     internal class FixedWingAircraft : GenericHardware
     {
+        public const string TopLevelClass = "Fixed Wing Aircraft";
         //Weight is in kg, kilograms.
         public double Weight { get; set; }
         //Length, Width, and Height are in m, meters.

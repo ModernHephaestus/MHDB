@@ -9,6 +9,7 @@ namespace MHDB.Models.DatabaseItems
 {
     internal class Artillery : GenericHardware
     {
+        public const string TopLevelClass = "Artillery";
         //Shell is a comma separated list of shells used.
         public string Shell { get; set; }
         [Required]

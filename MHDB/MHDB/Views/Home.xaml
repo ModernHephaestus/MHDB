@@ -7,7 +7,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Text="MHDB - Military Hardware Database" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <SymbolIcon Name="ToData" Symbol="ViewAll"/>
+        <SymbolIcon Name="ToCompare" Symbol="TwoPage"/>
+    </Grid>-->
+    <Grid Name="HomeGrid" Margin="20,20,20,20">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/Tanks.gif" Opacity="0.95" />
+        </Grid.Background>
+        <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock Name="Title" Text="MHDB - Military Hardware Database" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30" Margin="10,10,10,10" TextWrapping="Wrap" TextAlignment="Center"/>
+            <Viewbox MaxHeight="200" MaxWidth="200" Name="ToData" RelativePanel.AlignLeftWith="Title" RelativePanel.Below="Title">
+                <SymbolIcon Name="DataIcon" Symbol="ViewAll" />
+            </Viewbox>
+            <Viewbox MaxHeight="200" MaxWidth="200" Name="ToCompare"  RelativePanel.Below="Title" RelativePanel.AlignRightWith="Title">
+                <SymbolIcon Name="CompareIcon" Symbol="TwoPage" />
+            </Viewbox>
+            <Border Name="DataDesc" RelativePanel.Below="ToData" RelativePanel.AlignLeftWith="ToData" RelativePanel.AlignRightWith="ToData" Background="AntiqueWhite">
+                <TextBlock Name="DataDescasdf" Text="Click this Icon in the left menu to go to the data view page." TextWrapping="Wrap"/>
+            </Border>
+            <Border Name="CompareDesc" RelativePanel.Below="ToCompare" RelativePanel.AlignRightWith="ToCompare" RelativePanel.AlignLeftWith="ToCompare" Background="AntiqueWhite">
+                <TextBlock Text="Click this Icon in the left menu to go to the compare page." TextWrapping="Wrap" />
+            </Border>
+        </RelativePanel>
     </Grid>
 </Page>

@@ -95,9 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20171129221001_InitialMigration.cs" />
-    <Compile Include="Migrations\20171129221001_InitialMigration.designer.cs">
-      <DependentUpon>20171129221001_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20171130052129_Inheritance.cs" />
+    <Compile Include="Migrations\20171130052129_Inheritance.designer.cs">
+      <DependentUpon>20171130052129_Inheritance.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Models\DatabaseHelper.cs" />
@@ -164,6 +164,7 @@
     <None Include="MHDB_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Tanks.gif" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -201,6 +202,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore">
+      <Version>1.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational">
       <Version>1.1.4</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite">

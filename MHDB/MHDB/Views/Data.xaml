@@ -1,12 +1,15 @@
 ﻿<Page
     x:Class="MHDB.Views.Data"
+    x:FieldModifier="Internal"
+    Name="DataPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MHDB.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Loaded="Page_Loaded">
+    Loaded="Page_Loaded"
+    >
 
     <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         --><!--<StackPanel>
@@ -15,29 +18,56 @@
             <TextBlock Name="Test" TextWrapping="WrapWholeWords" />
         </StackPanel>--><!--
     </Grid>-->
-    <ScrollViewer>
-        <StackPanel>
-            <Image Visibility="Collapsed" Name="image" Source="https://upload.wikimedia.org/wikipedia/commons/6/61/M9-pistolet.jpg"/>
-            <Button Name="TestButton" Content="Types" Click="TestButton_Click"/>
-            <Button Name="DeleteButton" Content="Delete" Click="DeleteButton_Click"/>
-            <!--<TextBlock Name="Test" TextWrapping="WrapWholeWords" />-->
-            <StackPanel Orientation="Horizontal">
-                <ListView Name="Images" Width="200">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <Image Source="{Binding Image}" Width="100" Height="100"/>
-                            <!--Width="50" Height="50" Stretch="UniformToFill"-->
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <ListView Name="Test" Width="200">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock Height="100" Text="{Binding ModelName}"/>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+    
+    
+    <!--<ScrollViewer>
+    </ScrollViewer>-->
+    <Grid>
+        <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Name="SelectLevel" Orientation="Horizontal" Visibility="Visible">
+                <Button Content="SmallArms" Margin="10" Click="SmallArmButtonClick"/>
+                <Button Content="Artillery" Margin="10" Click="ArtilleryButtonClick"/>
+                <Button Content="Vehicles" Margin="10" Click="VehiclesButtonClick"/>
+                <Button Content="Aircraft" Margin="10" Click="AircraftButtonClick"/>
+                <Button Content="Helicopters" Margin="10" Click="HelicoptersButtonClick"/>
+                <Button Content="Ships" Margin="10" Click="ShipsButtonClick"/>
             </StackPanel>
-        </StackPanel>
-    </ScrollViewer>
+            <!--<StackPanel Name="SelectTable" Orientation="Horizontal" Visibility="Collapsed" RelativePanel.Below="SelectLevel">
+                <ItemsControl>
+                    <ControlTemplate>
+                        <Button Content="test"/>
+                    </ControlTemplate>
+                </ItemsControl>
+            </StackPanel>-->
+            <ListView
+                Name="SelectTable"
+                Height="75"
+                SelectionChanged="SelectTable_SelectionChanged"
+                ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                ScrollViewer.HorizontalScrollMode="Enabled"
+                ScrollViewer.IsHorizontalRailEnabled="True"
+                Background="PaleGoldenrod"
+                Visibility="Collapsed" RelativePanel.Below="SelectLevel">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+            </ListView>
+            <ListView x:FieldModifier="Internal" Name="Info" HorizontalAlignment="Center" VerticalAlignment="Center" RelativePanel.Below="SelectTable">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="6">
+                            <Image Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{Binding ModelName}" FontWeight="Bold" Margin="6"/>
+                                <TextBlock Text="{Binding Manufacturer}" Margin="6"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativePanel>
+    </Grid>
+    
 </Page>

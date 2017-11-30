@@ -32,6 +32,12 @@ namespace MHDB.Models
 
     internal class DatabaseContext : DbContext
     {
+        public DbSet<SmallArms> SmallArms { get; set; }
+        public DbSet<Artillery> Artillery { get; set; }
+        public DbSet<Vehicles> Vehicles { get; set; }
+        public DbSet<FixedWingAircraft> FixedWingAircraft { get; set; }
+        public DbSet<HelicopterRotorcraft> HelicopterRotorcraft { get; set; }
+        public DbSet<Ships> Ships { get; set; }
         //SmallArms
         public DbSet<Pistols> Pistols { get; set; }
         public DbSet<SubmachineGuns> SubmachineGuns { get; set; }
@@ -41,41 +47,47 @@ namespace MHDB.Models
         public DbSet<DMRSniperRifles> DMRSniperRifles { get; set; }
         public DbSet<AntiMaterial> AntiMaterial { get; set; }
         //Artillery
-        public DbSet<Mortars> Mortars {get; set;}
-        public DbSet<Howitzers> Howitzers {get; set;}
-        public DbSet<RocketArtillery> RocketArtillery {get; set;}
-        public DbSet<AirDefense> AirDefense {get; set;}
+        public DbSet<Mortars> Mortars { get; set; }
+        public DbSet<Howitzers> Howitzers { get; set; }
+        public DbSet<RocketArtillery> RocketArtillery { get; set; }
+        public DbSet<AirDefense> AirDefense { get; set; }
         //Vehicles
-        public DbSet<Trucks> Trucks {get; set;}
-        public DbSet<APCs> APCs {get; set;}
-        public DbSet<IFVs> IFVs {get; set;}
-        public DbSet<Tanks> Tanks {get; set;}
+        public DbSet<Trucks> Trucks { get; set; }
+        public DbSet<APCs> APCs { get; set; }
+        public DbSet<IFVs> IFVs { get; set; }
+        public DbSet<Tanks> Tanks { get; set; }
         //FixedWingAircraft
-        public DbSet<Fighter> Fighter {get; set;}
-        public DbSet<GroundAttack> GroundAttack {get; set;}
-        public DbSet<Gunship> Gunship {get; set;}
-        public DbSet<Bomber> Bomber {get; set;}
-        public DbSet<Transport> Transport {get; set;}
-        public DbSet<CommandAndControl> CommandAndControl {get; set;}
-        public DbSet<UAV> UAV {get; set;}
+        public DbSet<Fighter> Fighter { get; set; }
+        public DbSet<GroundAttack> GroundAttack { get; set; }
+        public DbSet<Gunship> Gunship { get; set; }
+        public DbSet<Bomber> Bomber { get; set; }
+        public DbSet<Transport> Transport { get; set; }
+        public DbSet<CommandAndControl> CommandAndControl { get; set; }
+        public DbSet<UAV> UAV { get; set; }
         //HelicopterRotorcraft
-        public DbSet<Attack> Attack {get; set;}
-        public DbSet<Utility> Utility {get; set;}
-        public DbSet<Observation> Observation {get; set;}
+        public DbSet<Attack> Attack { get; set; }
+        public DbSet<Utility> Utility { get; set; }
+        public DbSet<Observation> Observation { get; set; }
         //Ships
-        public DbSet<AircraftCarriers> AircraftCarriers {get; set;}
-        public DbSet<AmphibiousWarfare> AmphibiousWarfare {get; set;}
-        public DbSet<Cruisers> Cruisers {get; set;}
-        public DbSet<Destroyers> Destroyers {get; set;}
-        public DbSet<Frigates> Frigates {get; set;}
-        public DbSet<Submarines> Submarines {get; set;}
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public DbSet<AircraftCarriers> AircraftCarriers { get; set; }
+        public DbSet<AmphibiousWarfare> AmphibiousWarfare { get; set; }
+        public DbSet<Cruisers> Cruisers { get; set; }
+        public DbSet<Destroyers> Destroyers { get; set; }
+        public DbSet<Frigates> Frigates { get; set; }
+        public DbSet<Submarines> Submarines { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=MHDB.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<SmallArms>().HasDiscriminator<string>("_FirearmType");
+            modelBuilder.Entity<Artillery>().HasDiscriminator<string>("_ArtilleryType");
+            modelBuilder.Entity<Vehicles>().HasDiscriminator<string>("_VehicleType");
+            modelBuilder.Entity<FixedWingAircraft>().HasDiscriminator<string>("_AircraftType");
+            modelBuilder.Entity<HelicopterRotorcraft>().HasDiscriminator<string>("_HelicopterType");
+            modelBuilder.Entity<Ships>().HasDiscriminator<string>("_ShipType");
             //modelBuilder.Entity<Pistols>().HasKey(p => new { p.Id });
             //modelBuilder.Entity<Pistols>().Property(r => new { r.ModelName }).IsRequired();
             //modelBuilder.Entity<Pistols>().Property(r => new { r.Manufacturer}).IsRequired();

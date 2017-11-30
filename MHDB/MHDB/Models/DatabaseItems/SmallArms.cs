@@ -9,8 +9,9 @@ namespace MHDB.Models.DatabaseItems
 
     internal class SmallArms : GenericHardware
     {
+        public const string TopLevelClass = "Firearms";
         //Weight is in Kg, kilograms.
-        
+
         public double Weight { get; set; }
 
         //Length and barrel length are in mm, milimeters.
@@ -41,6 +42,7 @@ namespace MHDB.Models.DatabaseItems
 
     internal class Pistols : SmallArms
     {
+
     }
     internal class SubmachineGuns : SmallArms
     {

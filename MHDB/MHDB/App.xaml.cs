@@ -39,6 +39,7 @@ namespace MHDB
             {
                 db.Database.Migrate();
                 if (!db.Pistols.Any())
+                //if (!db.SmallArms.Any())
                 {
                     DatabaseHelper DbHelper = new DatabaseHelper();
                     DbHelper.InitializeDatabase();

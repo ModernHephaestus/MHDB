@@ -9,6 +9,7 @@ namespace MHDB.Models.DatabaseItems
 {
     internal class Ships : GenericHardware
     {
+        public const string TopLevelClass = "Naval Vessel";
         //Weight is in kg, kilograms.
         public double Weight { get; set; }
         //Length, Width, and Height are in m, meters.

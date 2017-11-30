@@ -27,6 +27,5 @@ namespace MHDB.Views
         {
             this.InitializeComponent();
         }
-
     }
 }
