@@ -15,102 +15,70 @@ using Windows.UI.Xaml.Navigation;
 using MHDB.Models;
 using System.Reflection;
 using MHDB.Models.DatabaseItems;
+using System.CodeDom;
+using System.CodeDom.Compiler;
+using Microsoft.EntityFrameworkCore;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MHDB.Views
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Page where you view and select which pieces of hardware you want to compare.
     /// </summary>
     public sealed partial class Data : Page
     {
-        private string TableSelected {get; set;}
+        private string _TableSelected {get; set;}
+        private string _TypeSelected { get; set; }
+        private string _Item1 { get; set; } = "";
+        private string _Item2 { get; set; } = "";
+        private Object TestObject { get; set; }
         public Data()
         {
             this.InitializeComponent();
         }
-
-        private void TestButton_Click(object sender, RoutedEventArgs e)
+        private void CategoryClick(object sender, RoutedEventArgs e)
         {
-            //using (var db = new DatabaseContext())
-            //{
-            //    Test.ItemsSource = db.Pistols.ToList();
-            //}
-        }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            using (var db = new DatabaseContext())
-            {
-                //Images.ItemsSource = db.Pistols;
-                //Test.ItemsSource = db.Pistols;
-                Info.ItemsSource = db.Pistols;
-                //List<Button> ButtonList = new List<Button>();
-                //ButtonList.Add(new Button { Content=})
-            }
-        }
-
-        private void DeleteButton_Click(object sender, RoutedEventArgs e)
-        {
-            //DatabaseHelper dbhelper = new DatabaseHelper();
-            
-            //dbhelper.ResetDatabase();
-            //using (var db = new DatabaseContext())
-            //{
-            //    Images.ItemsSource = db.Pistols;
-            //    Test.ItemsSource = db.Pistols;
-            //}
-        }
-
-        private void SmallArmButtonClick(object sender, RoutedEventArgs e)
-        {
-            using (var db = new DatabaseContext())
-            {
-                //var test = db.SmallArms;
-                //Info.ItemsSource = db.SmallArms;
-                TableSelected = "SmallArms";
-                var test = new List<string>
-                {
-                    "Pistols",
-                    "SubmachineGuns",
-                    "RiflesAndCarbines"
-                };
-                SelectTable.ItemsSource = test;
-            }
+            DatabaseHelper DbHelper = new DatabaseHelper();
+            var SenderButton = (Button)sender;
+            SelectTable.ItemsSource = DbHelper.FillTableList(SenderButton.Content.ToString());
+            _TableSelected = SenderButton.Content.ToString();
             SelectTable.Visibility = Visibility.Visible;
         }
-
-        private void ArtilleryButtonClick(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void VehiclesButtonClick(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void AircraftButtonClick(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void HelicoptersButtonClick(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ShipsButtonClick(object sender, RoutedEventArgs e)
-        {
-
-        }
+        //private void CategoryClick(object sender, RoutedEventArgs e)
+        //{
+        //    var SenderButton = (Button)sender;
+        //    string TemplateString = SenderButton.Content.ToString();
+        //    Info.ItemTemplate = (DataTemplate)Resources[TemplateString];
+        //}
 
         private void SelectTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            using (var db = new DatabaseContext())
+            try
             {
-                Info.ItemsSource = db.Pistols;
+                DatabaseHelper DbHelper = new DatabaseHelper();
+                Info.ItemsSource = DbHelper.SelectTable(SelectTable.SelectedItem.ToString());
+                _TypeSelected = SelectTable.SelectedItem.ToString();
             }
+            catch
+            {
+
+            }
+        }
+        private void Info_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //TestObject = (Object)Info.SelectedItem[0];
+        }
+
+        private void Item1_Click(object sender, RoutedEventArgs e)
+        {
+            var test = Info.SelectedItems[0];
+            Item1Text.Text = test.GetType().GetProperties().ToString();
+
+        }
+
+        private void Item2_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

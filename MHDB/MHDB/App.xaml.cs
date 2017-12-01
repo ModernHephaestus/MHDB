@@ -45,9 +45,6 @@ namespace MHDB
                     DbHelper.InitializeDatabase();
                 }
             }
-
-            Subclasses DbSubClasses = new Subclasses();
-
         }
 
         /// <summary>

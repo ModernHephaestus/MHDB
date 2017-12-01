@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace MHDB.Models.DatabaseItems
 {
-
+    [Table("Small Arms")]
     internal class SmallArms : GenericHardware
     {
         public const string TopLevelClass = "Firearms";

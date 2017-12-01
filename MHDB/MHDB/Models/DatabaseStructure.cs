@@ -6,30 +6,10 @@ using System.Threading.Tasks;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using MHDB.Models.DatabaseItems;
 namespace MHDB.Models
 {
-    internal class Subclasses
-    {
-        Type GenericHardware = typeof(GenericHardware);
-        Type SmallArms = typeof(SmallArms);
-        Type Artillery = typeof(Artillery);
-        Type Vehicles = typeof(Vehicles);
-        Type FixedWingAircraft = typeof(FixedWingAircraft);
-        Type HelicopterRotorcraft = typeof(HelicopterRotorcraft);
-        Type Ships = typeof(Ships);
-
-        public IEnumerable<Type> sc;
-        public Type[] Types;
-        internal Subclasses()
-        {
-            Assembly assembly = this.GetType().GetTypeInfo().Assembly;
-            Types = assembly.GetTypes();
-
-            sc = Types.Where(t => t.GetTypeInfo().IsSubclassOf(GenericHardware));
-        }
-    }
-
     internal class DatabaseContext : DbContext
     {
         public DbSet<SmallArms> SmallArms { get; set; }

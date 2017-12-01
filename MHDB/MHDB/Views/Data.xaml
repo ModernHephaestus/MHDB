@@ -8,7 +8,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Loaded="Page_Loaded"
+    xmlns:data="using:MHDB.Models"
+    xmlns:SpecificData="using:MHDB.Models.DatabaseItems"
     >
 
     <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -18,56 +19,54 @@
             <TextBlock Name="Test" TextWrapping="WrapWholeWords" />
         </StackPanel>--><!--
     </Grid>-->
-    
-    
-    <!--<ScrollViewer>
-    </ScrollViewer>-->
-    <Grid>
-        <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+
+    <ScrollViewer>
+        <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <StackPanel Name="SelectLevel" Orientation="Horizontal" Visibility="Visible">
-                <Button Content="SmallArms" Margin="10" Click="SmallArmButtonClick"/>
-                <Button Content="Artillery" Margin="10" Click="ArtilleryButtonClick"/>
-                <Button Content="Vehicles" Margin="10" Click="VehiclesButtonClick"/>
-                <Button Content="Aircraft" Margin="10" Click="AircraftButtonClick"/>
-                <Button Content="Helicopters" Margin="10" Click="HelicoptersButtonClick"/>
-                <Button Content="Ships" Margin="10" Click="ShipsButtonClick"/>
+                <Button Name="SmallArmsBtn" Content="SmallArms" Margin="10" Click="CategoryClick"/>
+                <Button Name="ArtileryBtn" Content="Artillery" Margin="10" Click="CategoryClick"/>
+                <Button Name="VehiclesBtn" Content="Vehicles" Margin="10" Click="CategoryClick"/>
+                <Button Name="AircraftBtn" Content="Aircraft" Margin="10" Click="CategoryClick"/>
+                <Button Name="HelicoptersBtn" Content="Helicopters" Margin="10" Click="CategoryClick"/>
+                <Button Name="ShipsBtn" Content="Ships" Margin="10" Click="CategoryClick"/>
             </StackPanel>
-            <!--<StackPanel Name="SelectTable" Orientation="Horizontal" Visibility="Collapsed" RelativePanel.Below="SelectLevel">
-                <ItemsControl>
-                    <ControlTemplate>
-                        <Button Content="test"/>
-                    </ControlTemplate>
-                </ItemsControl>
-            </StackPanel>-->
-            <ListView
-                Name="SelectTable"
-                Height="75"
-                SelectionChanged="SelectTable_SelectionChanged"
-                ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                ScrollViewer.HorizontalScrollMode="Enabled"
-                ScrollViewer.IsHorizontalRailEnabled="True"
-                Background="PaleGoldenrod"
-                Visibility="Collapsed" RelativePanel.Below="SelectLevel">
+            <ListView Name="SelectTable" Height="50" SelectionChanged="SelectTable_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.IsHorizontalRailEnabled="True" Background="PaleGoldenrod" Visibility="Collapsed" RelativePanel.Below="SelectLevel">
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal"/>
                     </ItemsPanelTemplate>
                 </ListView.ItemsPanel>
             </ListView>
-            <ListView x:FieldModifier="Internal" Name="Info" HorizontalAlignment="Center" VerticalAlignment="Center" RelativePanel.Below="SelectTable">
+            <ListView Name="Info" HorizontalAlignment="Center" VerticalAlignment="Center" RelativePanel.Below="SelectTable" SelectionChanged="Info_SelectionChanged" RelativePanel.AlignHorizontalCenterWith="SelectTable">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Margin="6">
-                            <Image Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
+                            <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
                             <StackPanel Orientation="Vertical">
-                                <TextBlock Text="{Binding ModelName}" FontWeight="Bold" Margin="6"/>
+                                <TextBlock Name="ItemModelName" Text="{Binding ModelName}" FontWeight="Bold" Margin="6"/>
                                 <TextBlock Text="{Binding Manufacturer}" Margin="6"/>
                             </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <StackPanel Name="ItemPanel" Orientation="Vertical" RelativePanel.Below="Info" RelativePanel.AlignHorizontalCenterWith="Info" Margin="10" RelativePanel.AlignRightWith="Info" RelativePanel.AlignLeftWith="Info">
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="Item1" Content="Item 1" Width="100" Height="50" Click="Item1_Click" Margin="50"/>
+                    <Button Name="Item2" Content="Item 2" Width="100" Height="50" Click="Item2_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Name="Item1Text" Text="Item 1 Selection Empty" TextWrapping="Wrap"/>
+                    <TextBlock Name="Item2Text" Text="Item 2 Selection Empty" TextWrapping="Wrap"/>
+                </StackPanel>
+            </StackPanel>
+            <!--<Viewbox Name="Item1Box" MaxHeight="100" MaxWidth="100" RelativePanel.AlignBottomWith="" RelativePanel.LeftOf="Item2Box">
+                <Image Name="Item1" Source="https://upload.wikimedia.org/wikipedia/commons/c/c5/Kar_98K_-_AM.021488.jpg"/>
+            </Viewbox>
+            <Viewbox Name="Item2Box" MaxHeight="100" MaxWidth="100" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+                <Image Name="Item2" Source="{Binding Image}"/>
+            </Viewbox>-->
         </RelativePanel>
-    </Grid>
-    
+    </ScrollViewer>
 </Page>

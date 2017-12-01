@@ -8,8 +8,8 @@ using MHDB.Models;
 namespace MHDB.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20171130052129_Inheritance")]
-    partial class Inheritance
+    [Migration("20171130223948_TestMigration")]
+    partial class TestMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -116,7 +116,7 @@ namespace MHDB.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FixedWingAircraft");
+                    b.ToTable("Aircraft");
 
                     b.HasDiscriminator<string>("_AircraftType").HasValue("FixedWingAircraft");
                 });
@@ -173,7 +173,7 @@ namespace MHDB.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HelicopterRotorcraft");
+                    b.ToTable("Helicopters");
 
                     b.HasDiscriminator<string>("_HelicopterType").HasValue("HelicopterRotorcraft");
                 });
@@ -297,7 +297,7 @@ namespace MHDB.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SmallArms");
+                    b.ToTable("Small Arms");
 
                     b.HasDiscriminator<string>("_FirearmType").HasValue("SmallArms");
                 });
@@ -368,7 +368,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Artillery");
 
 
-                    b.ToTable("AirDefense");
+                    b.ToTable("Artillery");
 
                     b.HasDiscriminator().HasValue("AirDefense");
                 });
@@ -378,7 +378,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Artillery");
 
 
-                    b.ToTable("Howitzers");
+                    b.ToTable("Artillery");
 
                     b.HasDiscriminator().HasValue("Howitzers");
                 });
@@ -388,7 +388,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Artillery");
 
 
-                    b.ToTable("Mortars");
+                    b.ToTable("Artillery");
 
                     b.HasDiscriminator().HasValue("Mortars");
                 });
@@ -398,7 +398,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Artillery");
 
 
-                    b.ToTable("RocketArtillery");
+                    b.ToTable("Artillery");
 
                     b.HasDiscriminator().HasValue("RocketArtillery");
                 });
@@ -408,7 +408,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.FixedWingAircraft");
 
 
-                    b.ToTable("Bomber");
+                    b.ToTable("Aircraft");
 
                     b.HasDiscriminator().HasValue("Bomber");
                 });
@@ -418,7 +418,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.FixedWingAircraft");
 
 
-                    b.ToTable("CommandAndControl");
+                    b.ToTable("Aircraft");
 
                     b.HasDiscriminator().HasValue("CommandAndControl");
                 });
@@ -428,7 +428,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.FixedWingAircraft");
 
 
-                    b.ToTable("Fighter");
+                    b.ToTable("Aircraft");
 
                     b.HasDiscriminator().HasValue("Fighter");
                 });
@@ -438,7 +438,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.FixedWingAircraft");
 
 
-                    b.ToTable("GroundAttack");
+                    b.ToTable("Aircraft");
 
                     b.HasDiscriminator().HasValue("GroundAttack");
                 });
@@ -448,7 +448,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.FixedWingAircraft");
 
 
-                    b.ToTable("Gunship");
+                    b.ToTable("Aircraft");
 
                     b.HasDiscriminator().HasValue("Gunship");
                 });
@@ -458,7 +458,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.FixedWingAircraft");
 
 
-                    b.ToTable("Transport");
+                    b.ToTable("Aircraft");
 
                     b.HasDiscriminator().HasValue("Transport");
                 });
@@ -468,7 +468,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.FixedWingAircraft");
 
 
-                    b.ToTable("UAV");
+                    b.ToTable("Aircraft");
 
                     b.HasDiscriminator().HasValue("UAV");
                 });
@@ -478,7 +478,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.HelicopterRotorcraft");
 
 
-                    b.ToTable("Attack");
+                    b.ToTable("Helicopters");
 
                     b.HasDiscriminator().HasValue("Attack");
                 });
@@ -488,7 +488,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.HelicopterRotorcraft");
 
 
-                    b.ToTable("Observation");
+                    b.ToTable("Helicopters");
 
                     b.HasDiscriminator().HasValue("Observation");
                 });
@@ -498,7 +498,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.HelicopterRotorcraft");
 
 
-                    b.ToTable("Utility");
+                    b.ToTable("Helicopters");
 
                     b.HasDiscriminator().HasValue("Utility");
                 });
@@ -508,7 +508,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Ships");
 
 
-                    b.ToTable("AircraftCarriers");
+                    b.ToTable("Ships");
 
                     b.HasDiscriminator().HasValue("AircraftCarriers");
                 });
@@ -518,7 +518,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Ships");
 
 
-                    b.ToTable("AmphibiousWarfare");
+                    b.ToTable("Ships");
 
                     b.HasDiscriminator().HasValue("AmphibiousWarfare");
                 });
@@ -528,7 +528,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Ships");
 
 
-                    b.ToTable("Cruisers");
+                    b.ToTable("Ships");
 
                     b.HasDiscriminator().HasValue("Cruisers");
                 });
@@ -538,7 +538,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Ships");
 
 
-                    b.ToTable("Destroyers");
+                    b.ToTable("Ships");
 
                     b.HasDiscriminator().HasValue("Destroyers");
                 });
@@ -548,7 +548,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Ships");
 
 
-                    b.ToTable("Frigates");
+                    b.ToTable("Ships");
 
                     b.HasDiscriminator().HasValue("Frigates");
                 });
@@ -558,7 +558,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Ships");
 
 
-                    b.ToTable("Submarines");
+                    b.ToTable("Ships");
 
                     b.HasDiscriminator().HasValue("Submarines");
                 });
@@ -568,7 +568,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.SmallArms");
 
 
-                    b.ToTable("AntiMaterial");
+                    b.ToTable("Small Arms");
 
                     b.HasDiscriminator().HasValue("AntiMaterial");
                 });
@@ -578,7 +578,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.SmallArms");
 
 
-                    b.ToTable("DMRSniperRifles");
+                    b.ToTable("Small Arms");
 
                     b.HasDiscriminator().HasValue("DMRSniperRifles");
                 });
@@ -588,7 +588,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.SmallArms");
 
 
-                    b.ToTable("MachineGuns");
+                    b.ToTable("Small Arms");
 
                     b.HasDiscriminator().HasValue("MachineGuns");
                 });
@@ -598,7 +598,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.SmallArms");
 
 
-                    b.ToTable("Pistols");
+                    b.ToTable("Small Arms");
 
                     b.HasDiscriminator().HasValue("Pistols");
                 });
@@ -608,7 +608,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.SmallArms");
 
 
-                    b.ToTable("RiflesAndCarbines");
+                    b.ToTable("Small Arms");
 
                     b.HasDiscriminator().HasValue("RiflesAndCarbines");
                 });
@@ -618,7 +618,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.SmallArms");
 
 
-                    b.ToTable("Shotguns");
+                    b.ToTable("Small Arms");
 
                     b.HasDiscriminator().HasValue("Shotguns");
                 });
@@ -628,7 +628,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.SmallArms");
 
 
-                    b.ToTable("SubmachineGuns");
+                    b.ToTable("Small Arms");
 
                     b.HasDiscriminator().HasValue("SubmachineGuns");
                 });
@@ -638,7 +638,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Vehicles");
 
 
-                    b.ToTable("APCs");
+                    b.ToTable("Vehicles");
 
                     b.HasDiscriminator().HasValue("APCs");
                 });
@@ -648,7 +648,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Vehicles");
 
 
-                    b.ToTable("IFVs");
+                    b.ToTable("Vehicles");
 
                     b.HasDiscriminator().HasValue("IFVs");
                 });
@@ -658,7 +658,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Vehicles");
 
 
-                    b.ToTable("Tanks");
+                    b.ToTable("Vehicles");
 
                     b.HasDiscriminator().HasValue("Tanks");
                 });
@@ -668,7 +668,7 @@ namespace MHDB.Migrations
                     b.HasBaseType("MHDB.Models.DatabaseItems.Vehicles");
 
 
-                    b.ToTable("Trucks");
+                    b.ToTable("Vehicles");
 
                     b.HasDiscriminator().HasValue("Trucks");
                 });

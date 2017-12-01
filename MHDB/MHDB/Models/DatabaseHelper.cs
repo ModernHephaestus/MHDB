@@ -7,6 +7,7 @@ using System.IO;
 using Microsoft.EntityFrameworkCore;
 using MHDB.Models.DatabaseItems;
 using MHDB.Views;
+using System.Reflection;
 namespace MHDB.Models
 {
     internal class DatabaseHelper
@@ -81,6 +82,24 @@ namespace MHDB.Models
             using (var db = new DatabaseContext())
             {
                 InitializeData.InitializeDatabase();
+            }
+        }
+        internal object SelectTable(string Table)
+        {
+            var db = new DatabaseContext();
+            return db.GetType().GetProperty(Table).GetValue(db);
+        }
+        internal List<string> FillTableList(string TableName)
+        {
+            using (var db = new DatabaseContext())
+            {
+                var names = new List<string>();
+                var test = db.Model.GetEntityTypes().Where(c => c.Relational().TableName.ToString() == "Small Arms");
+                foreach (var x in test)
+                {
+                    names.Add(x.Relational().DiscriminatorValue.ToString());
+                }
+                return names;
             }
         }
     }

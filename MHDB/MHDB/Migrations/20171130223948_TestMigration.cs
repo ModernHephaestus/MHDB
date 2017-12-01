@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MHDB.Migrations
 {
-    public partial class Inheritance : Migration
+    public partial class TestMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -37,7 +37,7 @@ namespace MHDB.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "FixedWingAircraft",
+                name: "Aircraft",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -64,11 +64,11 @@ namespace MHDB.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_FixedWingAircraft", x => x.Id);
+                    table.PrimaryKey("PK_Aircraft", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "HelicopterRotorcraft",
+                name: "Helicopters",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -95,7 +95,7 @@ namespace MHDB.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_HelicopterRotorcraft", x => x.Id);
+                    table.PrimaryKey("PK_Helicopters", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -132,7 +132,7 @@ namespace MHDB.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SmallArms",
+                name: "Small Arms",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -163,7 +163,7 @@ namespace MHDB.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SmallArms", x => x.Id);
+                    table.PrimaryKey("PK_Small Arms", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -206,16 +206,16 @@ namespace MHDB.Migrations
                 name: "Artillery");
 
             migrationBuilder.DropTable(
-                name: "FixedWingAircraft");
+                name: "Aircraft");
 
             migrationBuilder.DropTable(
-                name: "HelicopterRotorcraft");
+                name: "Helicopters");
 
             migrationBuilder.DropTable(
                 name: "Ships");
 
             migrationBuilder.DropTable(
-                name: "SmallArms");
+                name: "Small Arms");
 
             migrationBuilder.DropTable(
                 name: "Vehicles");

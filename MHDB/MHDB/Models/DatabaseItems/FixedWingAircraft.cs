@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace MHDB.Models.DatabaseItems
 {
+    [Table("Aircraft")]
     internal class FixedWingAircraft : GenericHardware
     {
         public const string TopLevelClass = "Fixed Wing Aircraft";

@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using MHDB.Models;
+using Microsoft.Toolkit.Uwp;
 using Microsoft.EntityFrameworkCore;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -30,8 +31,8 @@ namespace MHDB
         {
             this.InitializeComponent();
             DbHelper = new DatabaseHelper();
-            HamburgerMenuControl.ItemsSource = MenuItem.GetMainItems();
-            HamburgerMenuControl.OptionsItemsSource = MenuItem.GetOptionsItems();
+            HamburgerMenu.ItemsSource = MenuItem.GetMainItems();
+            HamburgerMenu.OptionsItemsSource = MenuItem.GetOptionsItems();
             var menuItem = new MenuItem { PageType = typeof(Views.Home) };
             ContentFrame.Navigate(menuItem.PageType);
         }
@@ -39,6 +40,11 @@ namespace MHDB
         {
             var menuItem = e.ClickedItem as MenuItem;
             ContentFrame.Navigate(menuItem.PageType);
+        }
+
+        private void HamburgerMenu_LostFocus(object sender, RoutedEventArgs e)
+        {
+            HamburgerMenu.IsPaneOpen = false;
         }
     }
     
