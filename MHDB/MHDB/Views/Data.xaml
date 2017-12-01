@@ -10,17 +10,10 @@
     mc:Ignorable="d"
     xmlns:data="using:MHDB.Models"
     xmlns:SpecificData="using:MHDB.Models.DatabaseItems"
+    xmlns:Controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:tools="using:MyToolkit.Controls"
     >
-
-    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        --><!--<StackPanel>
-            <Image Visibility="Collapsed" Name="image" Source="https://upload.wikimedia.org/wikipedia/commons/6/61/M9-pistolet.jpg"/>
-            <Button Name="TestButton" Content="Types" Click="TestButton_Click"/>
-            <TextBlock Name="Test" TextWrapping="WrapWholeWords" />
-        </StackPanel>--><!--
-    </Grid>-->
-
-
+    
     <ScrollViewer>
         <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <StackPanel Name="SelectLevel" Orientation="Horizontal" Visibility="Visible">
@@ -38,7 +31,7 @@
                     </ItemsPanelTemplate>
                 </ListView.ItemsPanel>
             </ListView>
-            <ListView Name="Info" HorizontalAlignment="Center" VerticalAlignment="Center" RelativePanel.Below="SelectTable" SelectionChanged="Info_SelectionChanged" RelativePanel.AlignHorizontalCenterWith="SelectTable">
+            <!--<ListView Name="Info" HorizontalAlignment="Center" VerticalAlignment="Center" RelativePanel.Below="SelectTable" SelectionChanged="Info_SelectionChanged" RelativePanel.AlignHorizontalCenterWith="SelectTable">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Margin="6">
@@ -50,7 +43,32 @@
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>
+            </ListView>-->
+
+            <GridView x:Name="Info" RelativePanel.Below="SelectTable" RelativePanel.AlignHorizontalCenterWith="SelectTable"  IsItemClickEnabled="True" ItemClick="Info_ItemClick">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="6">
+                            <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Name="ItemModelName" Text="{Binding ModelName}" FontWeight="Bold" Margin="6"/>
+                                <TextBlock Text="{Binding Manufacturer}" Margin="6"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+
+            <GridView x:Name="Details">
+                <GridView.ItemTemplate>
+                    <DataTemplate >  <!--x:DataType="Tables:SmallArms"-->
+                        <StackPanel>
+                            <!--Figure out how I want to layout the data.-->
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+
             <StackPanel Name="ItemPanel" Orientation="Vertical" RelativePanel.Below="Info" RelativePanel.AlignHorizontalCenterWith="Info" Margin="10" RelativePanel.AlignRightWith="Info" RelativePanel.AlignLeftWith="Info">
                 <StackPanel Orientation="Horizontal">
                     <Button Name="Item1" Content="Item 1" Width="100" Height="50" Click="Item1_Click" Margin="50"/>

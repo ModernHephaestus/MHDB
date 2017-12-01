@@ -6,7 +6,7 @@
     xmlns:m="using:MHDB.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:asdf="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:Controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -23,7 +23,7 @@
     </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <asdf:HamburgerMenu x:Name="HamburgerMenu"
+        <Controls:HamburgerMenu x:Name="HamburgerMenu"
                                 PaneBackground="Black"
                                 Foreground="White"
                                 ItemTemplate="{StaticResource DefaultTemplate}"
@@ -32,6 +32,6 @@
                                 OptionsItemClick="OnMenuItemClick"
                             LostFocus="HamburgerMenu_LostFocus">
             <Frame x:Name="ContentFrame" Foreground="Black"/>
-        </asdf:HamburgerMenu>
+        </Controls:HamburgerMenu>
     </Grid>
 </Page>

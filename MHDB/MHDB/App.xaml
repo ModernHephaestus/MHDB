@@ -3,6 +3,27 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MHDB"
+    xmlns:Tables="using:MHDB.Models.DatabaseItems"
     RequestedTheme="Light">
+    <!--<Application.Resources>
+        --><!--These are gridview Data templates for each category--><!--
+        <DataTemplate x:Name="SmallArms" x:DataType="Tables:SmallArms">
+            
+        </DataTemplate>
+        <DataTemplate x:Name="Artillery" x:DataType="Tables:Artillery">
 
+        </DataTemplate>
+        <DataTemplate x:Name="Vehicles" x:DataType="Tables:Vehicles">
+
+        </DataTemplate>
+        <DataTemplate x:Name="FixedWingAircraft" x:DataType="Tables:FixedWingAircraft">
+
+        </DataTemplate>
+        <DataTemplate x:Name="HelicopterRotorcraft" x:DataType="Tables:HelicopterRotorcraft">
+
+        </DataTemplate>
+        <DataTemplate x:Name="Ships" x:DataType="Tables:Ships">
+
+        </DataTemplate>
+    </Application.Resources>-->
 </Application>

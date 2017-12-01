@@ -18,6 +18,7 @@ using MHDB.Models.DatabaseItems;
 using System.CodeDom;
 using System.CodeDom.Compiler;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.ObjectModel;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MHDB.Views
@@ -31,7 +32,9 @@ namespace MHDB.Views
         private string _TypeSelected { get; set; }
         private string _Item1 { get; set; } = "";
         private string _Item2 { get; set; } = "";
-        private Object TestObject { get; set; }
+        private Pistols TestObject { get; set; } = new Pistols();
+
+        private List<GenericHardware> DataContent { get; set; }
         public Data()
         {
             this.InitializeComponent();
@@ -44,13 +47,6 @@ namespace MHDB.Views
             _TableSelected = SenderButton.Content.ToString();
             SelectTable.Visibility = Visibility.Visible;
         }
-        //private void CategoryClick(object sender, RoutedEventArgs e)
-        //{
-        //    var SenderButton = (Button)sender;
-        //    string TemplateString = SenderButton.Content.ToString();
-        //    Info.ItemTemplate = (DataTemplate)Resources[TemplateString];
-        //}
-
         private void SelectTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -64,21 +60,21 @@ namespace MHDB.Views
 
             }
         }
-        private void Info_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //TestObject = (Object)Info.SelectedItem[0];
-        }
-
         private void Item1_Click(object sender, RoutedEventArgs e)
         {
-            var test = Info.SelectedItems[0];
-            Item1Text.Text = test.GetType().GetProperties().ToString();
+            Item1Text.Text = Info.SelectedValue.GetType().GetProperties().ToString();
 
         }
 
         private void Item2_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Info_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var ItemInfo = (SmallArms)e.ClickedItem;
+            Item1Text.Text = ItemInfo.ModelName;
         }
     }
 }
