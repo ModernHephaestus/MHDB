@@ -8,15 +8,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d">
-
     <Page.Resources>
         <DataTemplate x:Key="DefaultTemplate" x:DataType="m:MenuItem">
-            <Grid Width="240" Height="48">
+            <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="48" />
+                    <ColumnDefinition Width="48"/>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <SymbolIcon Grid.Column="0" Symbol="{x:Bind Icon, Mode=OneWay}" Foreground="White" />
+                <SymbolIcon Grid.Column="0" Symbol="{x:Bind Icon, Mode=OneWay}" Width="50" Foreground="White" />
                 <TextBlock Grid.Column="1" Text="{x:Bind Name, Mode=OneWay}" FontSize="16" VerticalAlignment="Center" Foreground="White" />
             </Grid>
         </DataTemplate>

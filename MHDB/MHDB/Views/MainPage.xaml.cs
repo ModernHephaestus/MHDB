@@ -33,8 +33,7 @@ namespace MHDB
             DbHelper = new DatabaseHelper();
             HamburgerMenu.ItemsSource = MenuItem.GetMainItems();
             HamburgerMenu.OptionsItemsSource = MenuItem.GetOptionsItems();
-            var menuItem = new MenuItem { PageType = typeof(Views.Home) };
-            ContentFrame.Navigate(menuItem.PageType);
+            ContentFrame.Navigate(typeof(Views.Home));
         }
         private void OnMenuItemClick(object sender, ItemClickEventArgs e)
         {

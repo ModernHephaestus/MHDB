@@ -73,8 +73,62 @@ namespace MHDB.Views
 
         private void Info_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var ItemInfo = (SmallArms)e.ClickedItem;
-            Item1Text.Text = ItemInfo.ModelName;
+            dynamic ItemInfo = (GenericHardware)e.ClickedItem;
+            switch (_TableSelected)
+            {
+                case "SmallArms":
+                    {
+                        //var ItemInfo = (SmallArms)e.ClickedItem;
+                        ItemInfo = (SmallArms)e.ClickedItem;
+                        //Item1Text.Text = ItemInfo.ModelName;
+                    }
+                    break;
+                case "Artillery":
+                    {
+                        //var ItemInfo = (Artillery)e.ClickedItem;
+                        ItemInfo = (Artillery)e.ClickedItem;
+                        //Item1Text.Text = ItemInfo.ModelName;
+                    }
+                    break;
+                case "Vehicles":
+                    {
+                        //var ItemInfo = (Vehicles)e.ClickedItem;
+                        ItemInfo = (Vehicles)e.ClickedItem;
+                        //Item1Text.Text = ItemInfo.ModelName;
+                    }
+                    break;
+                case "FixedWingAircraft":
+                    {
+                        //var ItemInfo = (FixedWingAircraft)e.ClickedItem;
+                        ItemInfo = (FixedWingAircraft)e.ClickedItem;
+                        //Item1Text.Text = ItemInfo.ModelName;
+                    }
+                    break;
+                case "HelicopterRotorcraft":
+                    {
+                        //var ItemInfo = (HelicopterRotorcraft)e.ClickedItem;
+                        ItemInfo = (HelicopterRotorcraft)e.ClickedItem;
+                        //Item1Text.Text = ItemInfo.ModelName;
+                    }
+                    break;
+                case "Ships":
+                    {
+                        //var ItemInfo2 = (Ships)e.ClickedItem;
+                        ItemInfo = (Ships)e.ClickedItem;
+                        //Item1Text.Text = ItemInfo.ModelName;
+                    }
+                    break;
+            };
+            if((string)Item1Text.Tag == "Empty")
+            {
+                Item1Text.Text = ItemInfo.ModelName;
+                Item1Text.Tag = "Filled";
+            }
+            else if ((string)Item2Text.Tag == "Empty")
+            {
+                Item2Text.Text = ItemInfo.ModelName;
+                Item2Text.Tag = "Filled";
+            }
         }
     }
 }
