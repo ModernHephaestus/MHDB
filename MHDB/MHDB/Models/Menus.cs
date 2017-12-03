@@ -17,6 +17,9 @@ namespace MHDB.Models
 {
     public class MenuItem
     {
+        /// <summary>
+        /// This class provides the Hamburger Menu items used for navigation throughout the app.
+        /// </summary>
         public Symbol Icon { get; set; }
         public string Name { get; set; }
         public Type PageType { get; set; }

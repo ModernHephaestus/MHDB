@@ -7,12 +7,41 @@ using System.IO;
 using Microsoft.EntityFrameworkCore;
 using MHDB.Models.DatabaseItems;
 using MHDB.Views;
+using MHDB.Models.Data;
 using System.Reflection;
 namespace MHDB.Models
 {
     internal class DatabaseHelper
     {
-        public void ResetDatabase()
+        public static void MigrateDb()
+        {
+            using (DatabaseContext db = new DatabaseContext())
+            {
+                db.Database.Migrate();
+            }
+        }
+        public static bool IsEmpty()
+        {
+            using (DatabaseContext db = new DatabaseContext())
+            {
+                if (db.SmallArms.Any())
+                    return false;
+                if (db.Artillery.Any())
+                    return false;
+                if (db.Vehicles.Any())
+                    return false;
+                if (db.FixedWingAircraft.Any())
+                    return false;
+                if (db.HelicopterRotorcraft.Any())
+                    return false;
+                if (db.Ships.Any())
+                    return false;
+                else
+                    return true;
+            }
+        }
+
+        public static void ResetDatabase()
         {
             using (var db = new DatabaseContext())
             {
@@ -40,7 +69,7 @@ namespace MHDB.Models
                 }
             }
         }
-        internal void InitializeDatabase()
+        internal static void InitializeDatabase()
         {
             using (var db = new DatabaseContext())
             {

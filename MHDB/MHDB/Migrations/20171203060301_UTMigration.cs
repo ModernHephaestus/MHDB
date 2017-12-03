@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MHDB.Migrations
 {
-    public partial class TestMigration : Migration
+    public partial class UTMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

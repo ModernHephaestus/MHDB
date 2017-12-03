@@ -95,9 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20171130223948_TestMigration.cs" />
-    <Compile Include="Migrations\20171130223948_TestMigration.designer.cs">
-      <DependentUpon>20171130223948_TestMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20171203060301_UTMigration.cs" />
+    <Compile Include="Migrations\20171203060301_UTMigration.designer.cs">
+      <DependentUpon>20171203060301_UTMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Models\DatabaseHelper.cs" />
@@ -138,7 +138,7 @@
     <Compile Include="Models\Data\Vehicles\AddIFVs.cs" />
     <Compile Include="Models\Data\Vehicles\AddTanks.cs" />
     <Compile Include="Models\Data\Vehicles\AddTrucks.cs" />
-    <Compile Include="Models\InitializeData.cs" />
+    <Compile Include="Models\Data\InitializeData.cs" />
     <Compile Include="Models\Menus.cs" />
     <Compile Include="Models\TemplateSelector.cs" />
     <Compile Include="Views\Compare.xaml.cs">
@@ -203,6 +203,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore">
+      <Version>1.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory">
       <Version>1.1.4</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational">

@@ -19,7 +19,7 @@ using Windows.UI.Core;
 namespace MHDB.Views
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Page where the Application begins and gives instructions on the Apps usage.
     /// </summary>
     public sealed partial class Home : Page
     {

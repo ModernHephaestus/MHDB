@@ -8,8 +8,8 @@ using MHDB.Models;
 namespace MHDB.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20171130223948_TestMigration")]
-    partial class TestMigration
+    [Migration("20171203060301_UTMigration")]
+    partial class UTMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

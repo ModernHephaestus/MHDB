@@ -7,11 +7,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="MHDB - Military Hardware Database" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        <SymbolIcon Name="ToData" Symbol="ViewAll"/>
-        <SymbolIcon Name="ToCompare" Symbol="TwoPage"/>
-    </Grid>-->
     <Grid Name="HomeGrid" Margin="20,20,20,20">
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/Tanks.gif" Opacity="0.95" />

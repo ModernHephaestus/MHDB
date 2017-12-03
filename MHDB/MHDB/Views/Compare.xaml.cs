@@ -21,7 +21,7 @@ using Windows.UI.Xaml.Navigation;
 namespace MHDB.Views
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// This page compares the two pices of hardwars sent from the Data page.
     /// </summary>
     public sealed partial class Compare : Page
     {
@@ -111,8 +111,6 @@ namespace MHDB.Views
                     }
                     break;
             }
-            //Item1View.ItemsSource = PassedItem1;
-            //Item2View.ItemsSource = PassedItem2;
         }
     }
 }

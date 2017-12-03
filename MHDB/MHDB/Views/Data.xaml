@@ -20,13 +20,7 @@
                 <TextBlock Name="HelicoptersTxt" Text="Helicopters" Margin="10"/>
                 <TextBlock Name="ShipsTxt" Text="Ships" Margin="10"/>
             </GridView>
-            <!--<ListView Name="SelectTable" Height="50" SelectionChanged="SelectTable_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.IsHorizontalRailEnabled="True" Background="PaleGoldenrod" Visibility="Collapsed" RelativePanel.Below="SelectLevel">
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Horizontal"/>
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-            </ListView>-->
+
             <GridView Name="SelectTable" SelectionChanged="SelectTable_SelectionChanged"  Visibility="Collapsed" RelativePanel.Below="SelectLevel">
                 <GridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">
@@ -35,50 +29,11 @@
                     </Style>
                 </GridView.ItemContainerStyle>
             </GridView>
-            <!--<ListView Name="Info" HorizontalAlignment="Center" VerticalAlignment="Center" RelativePanel.Below="SelectTable" SelectionChanged="Info_SelectionChanged" RelativePanel.AlignHorizontalCenterWith="SelectTable">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal" Margin="6">
-                            <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock Name="ItemModelName" Text="{Binding ModelName}" FontWeight="Bold" Margin="6"/>
-                                <TextBlock Text="{Binding Manufacturer}" Margin="6"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>-->
 
             <GridView x:Name="Info" RelativePanel.Below="SelectTable" RelativePanel.AlignHorizontalCenterWith="SelectTable"  IsItemClickEnabled="True" ItemClick="Info_ItemClick" ItemTemplate="{StaticResource PreviewTemplate}">
-                <!--<GridView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal" Margin="6">
-                            <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock Name="ItemModelName" Text="{Binding ModelName}" FontWeight="Bold" Margin="6"/>
-                                <TextBlock Text="{Binding Manufacturer}" Margin="6"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </DataTemplate>
-                </GridView.ItemTemplate>-->
+
             </GridView>
 
-            <GridView x:Name="Details">
-                <GridView.ItemTemplate>
-                    <DataTemplate >  <!--x:DataType="Tables:SmallArms"-->
-                        <StackPanel>
-                            <!--Figure out how I want to layout the data.-->
-                        </StackPanel>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>
-
-            <!--<StackPanel Name="ItemPanel" Orientation="Vertical" RelativePanel.Below="Info" RelativePanel.AlignHorizontalCenterWith="Info" Margin="10" RelativePanel.AlignRightWith="Info" RelativePanel.AlignLeftWith="Info">
-                <StackPanel Background="AntiqueWhite" Width="300" Orientation="Horizontal">
-                    <TextBlock Name="Item1Text" Tag="Empty" Text="Item 1 Selection Empty" TextWrapping="Wrap" Margin="0,0,20,0" FontSize="20"/>
-                    <TextBlock Name="Item2Text" Tag="Empty" Text="Item 2 Selection Empty" TextWrapping="Wrap" Margin="0,20,0,0" FontSize="20"/>
-                </StackPanel>
-            </StackPanel>-->
             <GridView Name="ItemPanel" RelativePanel.Below="Info" RelativePanel.AlignHorizontalCenterWith="Info" Margin="10" RelativePanel.AlignRightWith="Info" RelativePanel.AlignLeftWith="Info" IsItemClickEnabled="True" ItemClick="ItemPanel_ItemClick">
                 <GridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">
@@ -93,12 +48,6 @@
                 <TextBlock Name="ClearSelections" Tag="Empty" Text="Clear Selections" TextWrapping="Wrap" FontSize="20"/>
                 <TextBlock Name="CompareItems" Tag="Empty" Text="CompareItems" TextWrapping="Wrap" FontSize="20" FontWeight="Bold"/>
             </GridView>
-            <!--<Viewbox Name="Item1Box" MaxHeight="100" MaxWidth="100" RelativePanel.AlignBottomWith="" RelativePanel.LeftOf="Item2Box">
-                <Image Name="Item1" Source="https://upload.wikimedia.org/wikipedia/commons/c/c5/Kar_98K_-_AM.021488.jpg"/>
-            </Viewbox>
-            <Viewbox Name="Item2Box" MaxHeight="100" MaxWidth="100" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True">
-                <Image Name="Item2" Source="{Binding Image}"/>
-            </Viewbox>-->
         </RelativePanel>
     </ScrollViewer>
 </Page>

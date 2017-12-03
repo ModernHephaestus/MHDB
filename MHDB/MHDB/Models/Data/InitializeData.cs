@@ -10,7 +10,7 @@ using MHDB.Models.Data.Vehicles;
 using MHDB.Models.Data.FixedWingAircraft;
 using MHDB.Models.Data.HelicopterRotorcraft;
 using MHDB.Models.Data.Ships;
-namespace MHDB.Models
+namespace MHDB.Models.Data
 {
     internal class InitializeData
     {

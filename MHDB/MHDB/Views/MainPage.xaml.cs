@@ -20,17 +20,13 @@ using Microsoft.EntityFrameworkCore;
 namespace MHDB
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Page which contains the Hamburger Menu and the Frame where the other pages are loaded into.
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        //internal SQLiteConnection DbConn { get; set; }
-        DatabaseHelper DbHelper { get; set; }
-
         public MainPage()
         {
             this.InitializeComponent();
-            DbHelper = new DatabaseHelper();
             HamburgerMenu.ItemsSource = MenuItem.GetMainItems();
             HamburgerMenu.OptionsItemsSource = MenuItem.GetOptionsItems();
             ContentFrame.Navigate(typeof(Views.Home));
