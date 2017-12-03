@@ -8,29 +8,33 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    xmlns:data="using:MHDB.Models"
-    xmlns:SpecificData="using:MHDB.Models.DatabaseItems"
-    xmlns:Controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
-    xmlns:tools="using:MyToolkit.Controls"
     >
     
     <ScrollViewer>
         <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <StackPanel Name="SelectLevel" Orientation="Horizontal" Visibility="Visible">
-                <Button Name="SmallArmsBtn" Content="SmallArms" Margin="10" Click="CategoryClick"/>
-                <Button Name="ArtileryBtn" Content="Artillery" Margin="10" Click="CategoryClick"/>
-                <Button Name="VehiclesBtn" Content="Vehicles" Margin="10" Click="CategoryClick"/>
-                <Button Name="AircraftBtn" Content="Aircraft" Margin="10" Click="CategoryClick"/>
-                <Button Name="HelicoptersBtn" Content="Helicopters" Margin="10" Click="CategoryClick"/>
-                <Button Name="ShipsBtn" Content="Ships" Margin="10" Click="CategoryClick"/>
-            </StackPanel>
-            <ListView Name="SelectTable" Height="50" SelectionChanged="SelectTable_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.IsHorizontalRailEnabled="True" Background="PaleGoldenrod" Visibility="Collapsed" RelativePanel.Below="SelectLevel">
+            <GridView Name="SelectLevel" Visibility="Visible" IsItemClickEnabled="True" ItemClick="SelectLevel_ItemClick">
+                <TextBlock Name="SmallArmsTxt" Text="Small Arms" Margin="10"/>
+                <TextBlock Name="ArtilleryTxt" Text="Artillery" Margin="10"/>
+                <TextBlock Name="VehiclesTxt" Text="Vehicles" Margin="10"/>
+                <TextBlock Name="AircraftTxt" Text="Aircraft" Margin="10"/>
+                <TextBlock Name="HelicoptersTxt" Text="Helicopters" Margin="10"/>
+                <TextBlock Name="ShipsTxt" Text="Ships" Margin="10"/>
+            </GridView>
+            <!--<ListView Name="SelectTable" Height="50" SelectionChanged="SelectTable_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.IsHorizontalRailEnabled="True" Background="PaleGoldenrod" Visibility="Collapsed" RelativePanel.Below="SelectLevel">
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal"/>
                     </ItemsPanelTemplate>
                 </ListView.ItemsPanel>
-            </ListView>
+            </ListView>-->
+            <GridView Name="SelectTable" SelectionChanged="SelectTable_SelectionChanged"  Visibility="Collapsed" RelativePanel.Below="SelectLevel">
+                <GridView.ItemContainerStyle>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="Width" Value="120"/>
+                        <Setter Property="Height" Value="50"/>
+                    </Style>
+                </GridView.ItemContainerStyle>
+            </GridView>
             <!--<ListView Name="Info" HorizontalAlignment="Center" VerticalAlignment="Center" RelativePanel.Below="SelectTable" SelectionChanged="Info_SelectionChanged" RelativePanel.AlignHorizontalCenterWith="SelectTable">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -45,8 +49,8 @@
                 </ListView.ItemTemplate>
             </ListView>-->
 
-            <GridView x:Name="Info" RelativePanel.Below="SelectTable" RelativePanel.AlignHorizontalCenterWith="SelectTable"  IsItemClickEnabled="True" ItemClick="Info_ItemClick">
-                <GridView.ItemTemplate>
+            <GridView x:Name="Info" RelativePanel.Below="SelectTable" RelativePanel.AlignHorizontalCenterWith="SelectTable"  IsItemClickEnabled="True" ItemClick="Info_ItemClick" ItemTemplate="{StaticResource PreviewTemplate}">
+                <!--<GridView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Margin="6">
                             <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
@@ -56,7 +60,7 @@
                             </StackPanel>
                         </StackPanel>
                     </DataTemplate>
-                </GridView.ItemTemplate>
+                </GridView.ItemTemplate>-->
             </GridView>
 
             <GridView x:Name="Details">
@@ -69,16 +73,26 @@
                 </GridView.ItemTemplate>
             </GridView>
 
-            <StackPanel Name="ItemPanel" Orientation="Vertical" RelativePanel.Below="Info" RelativePanel.AlignHorizontalCenterWith="Info" Margin="10" RelativePanel.AlignRightWith="Info" RelativePanel.AlignLeftWith="Info">
-                <StackPanel Orientation="Horizontal">
-                    <Button Name="Item1" Content="Item 1" Width="100" Height="50" Click="Item1_Click" Margin="50"/>
-                    <Button Name="Item2" Content="Item 2" Width="100" Height="50" Click="Item2_Click"/>
+            <!--<StackPanel Name="ItemPanel" Orientation="Vertical" RelativePanel.Below="Info" RelativePanel.AlignHorizontalCenterWith="Info" Margin="10" RelativePanel.AlignRightWith="Info" RelativePanel.AlignLeftWith="Info">
+                <StackPanel Background="AntiqueWhite" Width="300" Orientation="Horizontal">
+                    <TextBlock Name="Item1Text" Tag="Empty" Text="Item 1 Selection Empty" TextWrapping="Wrap" Margin="0,0,20,0" FontSize="20"/>
+                    <TextBlock Name="Item2Text" Tag="Empty" Text="Item 2 Selection Empty" TextWrapping="Wrap" Margin="0,20,0,0" FontSize="20"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Name="Item1Text" Tag="Empty" Text="Item 1 Selection Empty" TextWrapping="Wrap" Margin="10"/>
-                    <TextBlock Name="Item2Text" Tag="Empty" Text="Item 2 Selection Empty" TextWrapping="Wrap" Margin="10"/>
-                </StackPanel>
-            </StackPanel>
+            </StackPanel>-->
+            <GridView Name="ItemPanel" RelativePanel.Below="Info" RelativePanel.AlignHorizontalCenterWith="Info" Margin="10" RelativePanel.AlignRightWith="Info" RelativePanel.AlignLeftWith="Info" IsItemClickEnabled="True" ItemClick="ItemPanel_ItemClick">
+                <GridView.ItemContainerStyle>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="Width" Value="250"/>
+                        <Setter Property="Height" Value="50"/>
+                        <Setter Property="Background" Value="LightGray"/>
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                    </Style>
+                </GridView.ItemContainerStyle>
+                <TextBlock Name="SelectedItem1" Tag="Empty" Text="Item 1 Selection Empty" TextWrapping="Wrap" FontSize="20"/>
+                <TextBlock Name="SelectedItem2" Tag="Empty" Text="Item 2 Selection Empty" TextWrapping="Wrap" FontSize="20"/>
+                <TextBlock Name="ClearSelections" Tag="Empty" Text="Clear Selections" TextWrapping="Wrap" FontSize="20"/>
+                <TextBlock Name="CompareItems" Tag="Empty" Text="CompareItems" TextWrapping="Wrap" FontSize="20" FontWeight="Bold"/>
+            </GridView>
             <!--<Viewbox Name="Item1Box" MaxHeight="100" MaxWidth="100" RelativePanel.AlignBottomWith="" RelativePanel.LeftOf="Item2Box">
                 <Image Name="Item1" Source="https://upload.wikimedia.org/wikipedia/commons/c/c5/Kar_98K_-_AM.021488.jpg"/>
             </Viewbox>

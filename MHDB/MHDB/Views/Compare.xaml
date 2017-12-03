@@ -8,6 +8,49 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Name="Test"/>
+            <!--<ListView Name="Item1View">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Image Source="{Binding Image}"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+            </ListView>
+            <ListView Name="Item2View">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Image Source="{Binding Image}"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+            </ListView>-->
 
+            <GridView x:Name="Item1View" ItemTemplate="{StaticResource SmallArmsTemplate}">
+                <!--<GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="6">
+                            <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Name="ItemModelName" Text="{Binding ModelName}" FontWeight="Bold" Margin="6"/>
+                                <TextBlock Text="{Binding Manufacturer}" Margin="6"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>-->
+            </GridView>
+            <GridView x:Name="Item2View" ItemTemplate="{StaticResource SmallArmsTemplate}">
+                <!--<GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="6">
+                            <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Name="ItemModelName" Text="{Binding ModelName}" FontWeight="Bold" Margin="6"/>
+                                <TextBlock Text="{Binding Manufacturer}" Margin="6"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>-->
+            </GridView>
+        </StackPanel>
     </Grid>
 </Page>

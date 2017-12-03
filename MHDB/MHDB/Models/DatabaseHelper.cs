@@ -52,7 +52,7 @@ namespace MHDB.Models
             var db = new DatabaseContext();
             return db.GetType().GetProperty(Table).GetValue(db);
         }
-        internal List<string> FillTableList(string TableName)
+        internal List<string> FillTableList(string GivenTable)
         {
             using (var db = new DatabaseContext())
             {

@@ -30,8 +30,8 @@ namespace MHDB.Views
     {
         private string _TableSelected {get; set;}
         private string _TypeSelected { get; set; }
-        private string _Item1 { get; set; } = "";
-        private string _Item2 { get; set; } = "";
+        private object _Item1 { get; set; }
+        private object _Item2 { get; set; }
         private Pistols TestObject { get; set; } = new Pistols();
 
         private List<GenericHardware> DataContent { get; set; }
@@ -39,14 +39,16 @@ namespace MHDB.Views
         {
             this.InitializeComponent();
         }
-        private void CategoryClick(object sender, RoutedEventArgs e)
+
+        private void SelectLevel_ItemClick(object sender, ItemClickEventArgs e)
         {
             DatabaseHelper DbHelper = new DatabaseHelper();
-            var SenderButton = (Button)sender;
-            SelectTable.ItemsSource = DbHelper.FillTableList(SenderButton.Content.ToString());
-            _TableSelected = SenderButton.Content.ToString();
+            var ClickedItem = (TextBlock)e.ClickedItem;
+            SelectTable.ItemsSource = DbHelper.FillTableList(ClickedItem.Text);
+            _TableSelected = ClickedItem.Text;
             SelectTable.Visibility = Visibility.Visible;
         }
+
         private void SelectTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -60,17 +62,6 @@ namespace MHDB.Views
 
             }
         }
-        private void Item1_Click(object sender, RoutedEventArgs e)
-        {
-            Item1Text.Text = Info.SelectedValue.GetType().GetProperties().ToString();
-
-        }
-
-        private void Item2_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Info_ItemClick(object sender, ItemClickEventArgs e)
         {
             dynamic ItemInfo = (GenericHardware)e.ClickedItem;
@@ -78,56 +69,83 @@ namespace MHDB.Views
             {
                 case "SmallArms":
                     {
-                        //var ItemInfo = (SmallArms)e.ClickedItem;
                         ItemInfo = (SmallArms)e.ClickedItem;
-                        //Item1Text.Text = ItemInfo.ModelName;
                     }
                     break;
                 case "Artillery":
                     {
-                        //var ItemInfo = (Artillery)e.ClickedItem;
                         ItemInfo = (Artillery)e.ClickedItem;
-                        //Item1Text.Text = ItemInfo.ModelName;
                     }
                     break;
                 case "Vehicles":
                     {
-                        //var ItemInfo = (Vehicles)e.ClickedItem;
                         ItemInfo = (Vehicles)e.ClickedItem;
-                        //Item1Text.Text = ItemInfo.ModelName;
                     }
                     break;
                 case "FixedWingAircraft":
                     {
-                        //var ItemInfo = (FixedWingAircraft)e.ClickedItem;
                         ItemInfo = (FixedWingAircraft)e.ClickedItem;
-                        //Item1Text.Text = ItemInfo.ModelName;
                     }
                     break;
                 case "HelicopterRotorcraft":
                     {
-                        //var ItemInfo = (HelicopterRotorcraft)e.ClickedItem;
                         ItemInfo = (HelicopterRotorcraft)e.ClickedItem;
-                        //Item1Text.Text = ItemInfo.ModelName;
                     }
                     break;
                 case "Ships":
                     {
-                        //var ItemInfo2 = (Ships)e.ClickedItem;
                         ItemInfo = (Ships)e.ClickedItem;
-                        //Item1Text.Text = ItemInfo.ModelName;
                     }
                     break;
             };
-            if((string)Item1Text.Tag == "Empty")
+            if((string)SelectedItem1.Tag == "Empty")
             {
-                Item1Text.Text = ItemInfo.ModelName;
-                Item1Text.Tag = "Filled";
+                SelectedItem1.Text = ItemInfo.ModelName;
+                _Item1 = ItemInfo;
+                SelectedItem1.Tag = "Filled";
             }
-            else if ((string)Item2Text.Tag == "Empty")
+            else if ((string)SelectedItem2.Tag == "Empty")
             {
-                Item2Text.Text = ItemInfo.ModelName;
-                Item2Text.Tag = "Filled";
+                SelectedItem2.Text = ItemInfo.ModelName;
+                _Item2 = ItemInfo;
+                SelectedItem2.Tag = "Filled";
+            }
+        }
+
+        private void ItemPanel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var Item = (TextBlock)e.ClickedItem;
+            if (Item.Name == SelectedItem1.Name)
+            {
+                SelectedItem1.Tag = "Empty";
+                _Item1 = null;
+                SelectedItem1.Text = "Item 1 Selection Empty";
+            }
+            else if (Item.Name == SelectedItem2.Name)
+            {
+                _Item2 = null;
+                SelectedItem2.Tag = "Empty";
+                SelectedItem2.Text = "Item 2 Selection Empty";
+            }
+            else if (Item.Name == ClearSelections.Name)
+            {
+                _Item1 = null;
+                _Item2 = null;
+                SelectedItem1.Tag = "Empty";
+                SelectedItem1.Text = "Item 1 Selection Empty";
+                SelectedItem2.Tag = "Empty";
+                SelectedItem2.Text = "Item 2 Selection Empty";
+            }
+            else
+            {
+                Dictionary<string, object> dictionary = new Dictionary<string, object>
+                {
+                    { "Item1", _Item1 },
+                    { "Item2", _Item2 },
+                    { "Type", _TypeSelected },
+                    { "Table", _TableSelected }
+                };
+                Frame.Navigate(typeof(Compare), dictionary);
             }
         }
     }

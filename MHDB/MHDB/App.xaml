@@ -5,25 +5,25 @@
     xmlns:local="using:MHDB"
     xmlns:Tables="using:MHDB.Models.DatabaseItems"
     RequestedTheme="Light">
-    <!--<Application.Resources>
-        --><!--These are gridview Data templates for each category--><!--
-        <DataTemplate x:Name="SmallArms" x:DataType="Tables:SmallArms">
-            
+    <Application.Resources>
+        <!--These are gridview Data templates for each category-->
+        <DataTemplate x:Name="PreviewTemplate" x:Key="PreviewTemplate">
+            <StackPanel Orientation="Horizontal" Margin="6">
+                <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Name="ItemModelName" Text="{Binding ModelName}" FontWeight="Bold" Margin="6"/>
+                    <TextBlock Text="{Binding Manufacturer}" Margin="6"/>
+                </StackPanel>
+            </StackPanel>
         </DataTemplate>
-        <DataTemplate x:Name="Artillery" x:DataType="Tables:Artillery">
-
+        <DataTemplate x:Name="SmallArmsTemplate" x:Key="SmallArmsTemplate">
+            <StackPanel Orientation="Horizontal" Margin="6">
+                <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Name="ItemModelName" Text="{Binding ModelName}" FontWeight="Bold" Margin="6"/>
+                    <TextBlock Text="{Binding Manufacturer}" Margin="6"/>
+                </StackPanel>
+            </StackPanel>
         </DataTemplate>
-        <DataTemplate x:Name="Vehicles" x:DataType="Tables:Vehicles">
-
-        </DataTemplate>
-        <DataTemplate x:Name="FixedWingAircraft" x:DataType="Tables:FixedWingAircraft">
-
-        </DataTemplate>
-        <DataTemplate x:Name="HelicopterRotorcraft" x:DataType="Tables:HelicopterRotorcraft">
-
-        </DataTemplate>
-        <DataTemplate x:Name="Ships" x:DataType="Tables:Ships">
-
-        </DataTemplate>
-    </Application.Resources>-->
+    </Application.Resources>
 </Application>
