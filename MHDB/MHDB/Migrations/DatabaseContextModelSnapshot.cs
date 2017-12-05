@@ -23,7 +23,7 @@ namespace MHDB.Migrations
                     b.Property<string>("Carriage")
                         .IsRequired();
 
-                    b.Property<double>("Cost");
+                    b.Property<double?>("Cost");
 
                     b.Property<string>("Designed");
 
@@ -43,7 +43,7 @@ namespace MHDB.Migrations
                     b.Property<string>("ModelName")
                         .IsRequired();
 
-                    b.Property<double>("NoBuilt");
+                    b.Property<double?>("NoBuilt");
 
                     b.Property<double>("RateOfFire");
 
@@ -72,7 +72,7 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Armament");
 
-                    b.Property<double>("Cost");
+                    b.Property<double?>("Cost");
 
                     b.Property<string>("Designed");
 
@@ -98,7 +98,7 @@ namespace MHDB.Migrations
                     b.Property<string>("ModelName")
                         .IsRequired();
 
-                    b.Property<double>("NoBuilt");
+                    b.Property<double?>("NoBuilt");
 
                     b.Property<string>("StartProduction")
                         .IsRequired();
@@ -128,7 +128,7 @@ namespace MHDB.Migrations
                     b.Property<string>("Armament")
                         .IsRequired();
 
-                    b.Property<double>("Cost");
+                    b.Property<double?>("Cost");
 
                     b.Property<string>("Designed");
 
@@ -155,7 +155,7 @@ namespace MHDB.Migrations
                     b.Property<string>("ModelName")
                         .IsRequired();
 
-                    b.Property<double>("NoBuilt");
+                    b.Property<double?>("NoBuilt");
 
                     b.Property<string>("StartProduction")
                         .IsRequired();
@@ -191,7 +191,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Beam");
 
-                    b.Property<double>("Cost");
+                    b.Property<double?>("Cost");
 
                     b.Property<string>("Designed");
 
@@ -217,7 +217,7 @@ namespace MHDB.Migrations
                     b.Property<string>("ModelName")
                         .IsRequired();
 
-                    b.Property<double>("NoBuilt");
+                    b.Property<double?>("NoBuilt");
 
                     b.Property<string>("StartProduction")
                         .IsRequired();
@@ -251,7 +251,7 @@ namespace MHDB.Migrations
                     b.Property<string>("Cartridge")
                         .IsRequired();
 
-                    b.Property<double>("Cost");
+                    b.Property<double?>("Cost");
 
                     b.Property<string>("Designed");
 
@@ -277,7 +277,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("MuzzleVelocity");
 
-                    b.Property<double>("NoBuilt");
+                    b.Property<double?>("NoBuilt");
 
                     b.Property<double>("RateOfFire");
 
@@ -309,7 +309,7 @@ namespace MHDB.Migrations
                     b.Property<string>("Armament")
                         .IsRequired();
 
-                    b.Property<double>("Cost");
+                    b.Property<double?>("Cost");
 
                     b.Property<string>("Designed");
 
@@ -336,7 +336,7 @@ namespace MHDB.Migrations
                     b.Property<string>("ModelName")
                         .IsRequired();
 
-                    b.Property<double>("NoBuilt");
+                    b.Property<double?>("NoBuilt");
 
                     b.Property<string>("StartProduction")
                         .IsRequired();

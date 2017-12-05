@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MHDB.Migrations
 {
-    public partial class UTMigration : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace MHDB.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Carriage = table.Column<string>(nullable: false),
-                    Cost = table.Column<double>(nullable: false),
+                    Cost = table.Column<double>(nullable: true),
                     Designed = table.Column<string>(nullable: true),
                     EndProduction = table.Column<string>(nullable: true),
                     EndService = table.Column<string>(nullable: true),
@@ -24,7 +24,7 @@ namespace MHDB.Migrations
                     MaximumElevation = table.Column<double>(nullable: false),
                     MinimumElevation = table.Column<double>(nullable: false),
                     ModelName = table.Column<string>(nullable: false),
-                    NoBuilt = table.Column<double>(nullable: false),
+                    NoBuilt = table.Column<double>(nullable: true),
                     RateOfFire = table.Column<double>(nullable: false),
                     Shell = table.Column<string>(nullable: true),
                     StartProduction = table.Column<string>(nullable: false),
@@ -43,7 +43,7 @@ namespace MHDB.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Armament = table.Column<string>(nullable: true),
-                    Cost = table.Column<double>(nullable: false),
+                    Cost = table.Column<double>(nullable: true),
                     Designed = table.Column<string>(nullable: true),
                     EndProduction = table.Column<string>(nullable: true),
                     EndService = table.Column<string>(nullable: true),
@@ -55,7 +55,7 @@ namespace MHDB.Migrations
                     MaxAltitude = table.Column<double>(nullable: false),
                     MaxSpeed = table.Column<double>(nullable: false),
                     ModelName = table.Column<string>(nullable: false),
-                    NoBuilt = table.Column<double>(nullable: false),
+                    NoBuilt = table.Column<double>(nullable: true),
                     StartProduction = table.Column<string>(nullable: false),
                     StartService = table.Column<string>(nullable: false),
                     Weight = table.Column<double>(nullable: false),
@@ -74,7 +74,7 @@ namespace MHDB.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Armament = table.Column<string>(nullable: false),
-                    Cost = table.Column<double>(nullable: false),
+                    Cost = table.Column<double>(nullable: true),
                     Designed = table.Column<string>(nullable: true),
                     EndProduction = table.Column<string>(nullable: true),
                     EndService = table.Column<string>(nullable: true),
@@ -86,7 +86,7 @@ namespace MHDB.Migrations
                     MaxAltitude = table.Column<double>(nullable: false),
                     MaxSpeed = table.Column<double>(nullable: false),
                     ModelName = table.Column<string>(nullable: false),
-                    NoBuilt = table.Column<double>(nullable: false),
+                    NoBuilt = table.Column<double>(nullable: true),
                     StartProduction = table.Column<string>(nullable: false),
                     StartService = table.Column<string>(nullable: false),
                     Weight = table.Column<double>(nullable: false),
@@ -108,7 +108,7 @@ namespace MHDB.Migrations
                     Armament = table.Column<string>(nullable: false),
                     Armor = table.Column<string>(nullable: true),
                     Beam = table.Column<double>(nullable: false),
-                    Cost = table.Column<double>(nullable: false),
+                    Cost = table.Column<double>(nullable: true),
                     Designed = table.Column<string>(nullable: true),
                     Displacement = table.Column<double>(nullable: false),
                     Draft = table.Column<double>(nullable: false),
@@ -120,7 +120,7 @@ namespace MHDB.Migrations
                     Manufacturer = table.Column<string>(nullable: false),
                     MaxSpeed = table.Column<double>(nullable: false),
                     ModelName = table.Column<string>(nullable: false),
-                    NoBuilt = table.Column<double>(nullable: false),
+                    NoBuilt = table.Column<double>(nullable: true),
                     StartProduction = table.Column<string>(nullable: false),
                     StartService = table.Column<string>(nullable: false),
                     Weight = table.Column<double>(nullable: false),
@@ -141,7 +141,7 @@ namespace MHDB.Migrations
                     BarrelLength = table.Column<double>(nullable: false),
                     Calibre = table.Column<string>(nullable: true),
                     Cartridge = table.Column<string>(nullable: false),
-                    Cost = table.Column<double>(nullable: false),
+                    Cost = table.Column<double>(nullable: true),
                     Designed = table.Column<string>(nullable: true),
                     EffectiveRange = table.Column<double>(nullable: false),
                     EndProduction = table.Column<string>(nullable: true),
@@ -153,7 +153,7 @@ namespace MHDB.Migrations
                     MaxRange = table.Column<double>(nullable: false),
                     ModelName = table.Column<string>(nullable: false),
                     MuzzleVelocity = table.Column<double>(nullable: false),
-                    NoBuilt = table.Column<double>(nullable: false),
+                    NoBuilt = table.Column<double>(nullable: true),
                     RateOfFire = table.Column<double>(nullable: false),
                     Sights = table.Column<string>(nullable: true),
                     StartProduction = table.Column<string>(nullable: false),
@@ -173,7 +173,7 @@ namespace MHDB.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Armament = table.Column<string>(nullable: false),
-                    Cost = table.Column<double>(nullable: false),
+                    Cost = table.Column<double>(nullable: true),
                     Designed = table.Column<string>(nullable: true),
                     EndProduction = table.Column<string>(nullable: true),
                     EndService = table.Column<string>(nullable: true),
@@ -185,7 +185,7 @@ namespace MHDB.Migrations
                     Manufacturer = table.Column<string>(nullable: false),
                     MaxSpeed = table.Column<double>(nullable: false),
                     ModelName = table.Column<string>(nullable: false),
-                    NoBuilt = table.Column<double>(nullable: false),
+                    NoBuilt = table.Column<double>(nullable: true),
                     StartProduction = table.Column<string>(nullable: false),
                     StartService = table.Column<string>(nullable: false),
                     Suspension = table.Column<string>(nullable: true),

@@ -6,24 +6,10 @@
     xmlns:Tables="using:MHDB.Models.DatabaseItems"
     RequestedTheme="Light">
     <Application.Resources>
-        <!--These are gridview Data templates for each category-->
-        <DataTemplate x:Name="PreviewTemplate" x:Key="PreviewTemplate">
-            <StackPanel Orientation="Horizontal" Margin="6">
-                <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
-                <StackPanel Orientation="Vertical">
-                    <TextBlock Name="ItemModelName" Text="{Binding ModelName}" FontWeight="Bold" Margin="6"/>
-                    <TextBlock Text="{Binding Manufacturer}" Margin="6"/>
-                </StackPanel>
-            </StackPanel>
-        </DataTemplate>
-        <DataTemplate x:Name="SmallArmsTemplate" x:Key="SmallArmsTemplate">
-            <StackPanel Orientation="Horizontal" Margin="6">
-                <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
-                <StackPanel Orientation="Vertical">
-                    <TextBlock Name="ItemModelName" Text="{Binding ModelName}" FontWeight="Bold" Margin="6"/>
-                    <TextBlock Text="{Binding Manufacturer}" Margin="6"/>
-                </StackPanel>
-            </StackPanel>
-        </DataTemplate>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Models/DisplayDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

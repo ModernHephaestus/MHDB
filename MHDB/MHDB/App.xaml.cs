@@ -33,10 +33,12 @@ namespace MHDB
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            
+
             DatabaseHelper.MigrateDb();
             if (DatabaseHelper.IsEmpty())
+            {   
                 DatabaseHelper.InitializeDatabase();
+            }
         }
 
         /// <summary>

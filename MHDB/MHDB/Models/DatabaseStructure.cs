@@ -86,7 +86,7 @@ namespace MHDB.Models
         public int Id { get; set; }
 
         //Image URL: Must be full web url, i.e. ending with name.jpg or name.png etc.
-        public string Image { get; set; } = "N/A";
+        public string Image { get; set; } = "";
         //Model Name, such as M9, M4, M1911
         [Required]
         public string ModelName { get; set; }
@@ -127,7 +127,7 @@ namespace MHDB.Models
             set
             {
                 if (value == "Present")
-                    this._EndService = value;
+                    this._EndProduction = value;
                 else if (Convert.ToInt32(value) >= DateTime.Now.Year)
                     this._EndProduction = "Present";
                 else
@@ -135,7 +135,7 @@ namespace MHDB.Models
             }
         }
 
-        public double NoBuilt { get; set; } = 0;
-        public double Cost { get; set; } = 0;
+        public double? NoBuilt { get; set; } = null;
+        public double? Cost { get; set; } = null;
     }
 }

@@ -34,7 +34,8 @@ namespace MHDB.Views
             this.InitializeComponent();
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
+        { 
+            
             if (e.Parameter == null)
             {
                 return;
@@ -57,7 +58,7 @@ namespace MHDB.Views
                             (SmallArms)PassedItem1,
                             (SmallArms)PassedItem2
                         };
-                        Item1View.ItemsSource = ComparedItems;
+                        ItemView.ItemsSource = ComparedItems;
                     }
                     break;
                 case "Artillery":
@@ -67,7 +68,7 @@ namespace MHDB.Views
                             (Artillery)PassedItem1,
                             (Artillery)PassedItem2
                         };
-                        Item1View.ItemsSource = ComparedItems;
+                        ItemView.ItemsSource = ComparedItems;
                     }
                     break;
                 case "Vehicles":
@@ -77,7 +78,7 @@ namespace MHDB.Views
                             (Vehicles)PassedItem1,
                             (Vehicles)PassedItem2
                         };
-                        Item1View.ItemsSource = ComparedItems;
+                        ItemView.ItemsSource = ComparedItems;
                     }
                     break;
                 case "FixedWingAircraft":
@@ -87,7 +88,7 @@ namespace MHDB.Views
                             (FixedWingAircraft)PassedItem1,
                             (FixedWingAircraft)PassedItem2
                         };
-                        Item1View.ItemsSource = ComparedItems;
+                        ItemView.ItemsSource = ComparedItems;
                     }
                     break;
                 case "HelicopterRotorcraft":
@@ -97,7 +98,7 @@ namespace MHDB.Views
                             (HelicopterRotorcraft)PassedItem1,
                             (HelicopterRotorcraft)PassedItem2
                         };
-                        Item1View.ItemsSource = ComparedItems;
+                        ItemView.ItemsSource = ComparedItems;
                     }
                     break;
                 case "Ships":
@@ -107,7 +108,7 @@ namespace MHDB.Views
                             (Ships)PassedItem1,
                             (Ships)PassedItem2
                         };
-                        Item1View.ItemsSource = ComparedItems;
+                        ItemView.ItemsSource = ComparedItems;
                     }
                     break;
             }

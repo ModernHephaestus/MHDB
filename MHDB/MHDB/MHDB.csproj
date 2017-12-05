@@ -95,9 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20171203060301_UTMigration.cs" />
-    <Compile Include="Migrations\20171203060301_UTMigration.designer.cs">
-      <DependentUpon>20171203060301_UTMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20171205013713_InitialMigration.cs" />
+    <Compile Include="Migrations\20171205013713_InitialMigration.designer.cs">
+      <DependentUpon>20171205013713_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Models\DatabaseHelper.cs" />
@@ -180,6 +180,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Models\DisplayDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
     <Page Include="Views\Compare.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
