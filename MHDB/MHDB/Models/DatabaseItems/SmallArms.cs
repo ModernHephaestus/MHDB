@@ -22,19 +22,19 @@ namespace MHDB.Models.DatabaseItems
         public double BarrelLength { get; set; }
 
         [Required]
-        public string Cartridge { get; set; }
-        
-        public string Calibre { get; set; }
+        public string Cartridge { get; set; } = "";
+
+        public string Calibre { get; set; } = "";
         
         public string Action { get; set; }
         //Muzzle Velocity is in m/s, meters per second.
         //RateOfFire is in rounds per minute
-        public double RateOfFire { get; set; }
-        public double MuzzleVelocity { get; set; }
+        public double? RateOfFire { get; set; } = null;
+        public double? MuzzleVelocity { get; set; }
         //Effective and Max ranges are in m, meters.
         //Effective and Max ranges are the upper bound if data source gives a range.
         public double EffectiveRange { get; set; }
-        public double MaxRange { get; set; }
+        public double? MaxRange { get; set; }
         
         public string FeedSystem { get; set; }
         

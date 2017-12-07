@@ -20,10 +20,14 @@ namespace MHDB.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<double>("BarrelLength");
+
                     b.Property<string>("Carriage")
                         .IsRequired();
 
                     b.Property<double?>("Cost");
+
+                    b.Property<double>("Crew");
 
                     b.Property<string>("Designed");
 
@@ -32,6 +36,8 @@ namespace MHDB.Migrations
                     b.Property<string>("EndService");
 
                     b.Property<string>("Image");
+
+                    b.Property<double>("Length");
 
                     b.Property<string>("Manufacturer")
                         .IsRequired();
@@ -54,6 +60,8 @@ namespace MHDB.Migrations
 
                     b.Property<string>("StartService")
                         .IsRequired();
+
+                    b.Property<double>("Weight");
 
                     b.Property<string>("_ArtilleryType")
                         .IsRequired();
@@ -270,16 +278,16 @@ namespace MHDB.Migrations
                     b.Property<string>("Manufacturer")
                         .IsRequired();
 
-                    b.Property<double>("MaxRange");
+                    b.Property<double?>("MaxRange");
 
                     b.Property<string>("ModelName")
                         .IsRequired();
 
-                    b.Property<double>("MuzzleVelocity");
+                    b.Property<double?>("MuzzleVelocity");
 
                     b.Property<double?>("NoBuilt");
 
-                    b.Property<double>("RateOfFire");
+                    b.Property<double?>("RateOfFire");
 
                     b.Property<string>("Sights");
 

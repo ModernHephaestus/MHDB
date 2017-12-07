@@ -14,12 +14,15 @@ namespace MHDB.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    BarrelLength = table.Column<double>(nullable: false),
                     Carriage = table.Column<string>(nullable: false),
                     Cost = table.Column<double>(nullable: true),
+                    Crew = table.Column<double>(nullable: false),
                     Designed = table.Column<string>(nullable: true),
                     EndProduction = table.Column<string>(nullable: true),
                     EndService = table.Column<string>(nullable: true),
                     Image = table.Column<string>(nullable: true),
+                    Length = table.Column<double>(nullable: false),
                     Manufacturer = table.Column<string>(nullable: false),
                     MaximumElevation = table.Column<double>(nullable: false),
                     MinimumElevation = table.Column<double>(nullable: false),
@@ -29,6 +32,7 @@ namespace MHDB.Migrations
                     Shell = table.Column<string>(nullable: true),
                     StartProduction = table.Column<string>(nullable: false),
                     StartService = table.Column<string>(nullable: false),
+                    Weight = table.Column<double>(nullable: false),
                     _ArtilleryType = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
@@ -150,11 +154,11 @@ namespace MHDB.Migrations
                     Image = table.Column<string>(nullable: true),
                     Length = table.Column<double>(nullable: false),
                     Manufacturer = table.Column<string>(nullable: false),
-                    MaxRange = table.Column<double>(nullable: false),
+                    MaxRange = table.Column<double>(nullable: true),
                     ModelName = table.Column<string>(nullable: false),
-                    MuzzleVelocity = table.Column<double>(nullable: false),
+                    MuzzleVelocity = table.Column<double>(nullable: true),
                     NoBuilt = table.Column<double>(nullable: true),
-                    RateOfFire = table.Column<double>(nullable: false),
+                    RateOfFire = table.Column<double>(nullable: true),
                     Sights = table.Column<string>(nullable: true),
                     StartProduction = table.Column<string>(nullable: false),
                     StartService = table.Column<string>(nullable: false),

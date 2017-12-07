@@ -95,9 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20171205013713_InitialMigration.cs" />
-    <Compile Include="Migrations\20171205013713_InitialMigration.designer.cs">
-      <DependentUpon>20171205013713_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20171207073810_InitialMigration.cs" />
+    <Compile Include="Migrations\20171207073810_InitialMigration.designer.cs">
+      <DependentUpon>20171207073810_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Models\DatabaseHelper.cs" />
@@ -133,6 +133,7 @@
     <Compile Include="Models\Data\SmallArms\AddMachineGuns.cs" />
     <Compile Include="Models\Data\SmallArms\AddPistols.cs" />
     <Compile Include="Models\Data\SmallArms\AddRiflesAndCarbines.cs" />
+    <Compile Include="Models\Data\SmallArms\AddShotguns.cs" />
     <Compile Include="Models\Data\SmallArms\AddSubmachineGuns.cs" />
     <Compile Include="Models\Data\Vehicles\AddAPCs.cs" />
     <Compile Include="Models\Data\Vehicles\AddIFVs.cs" />

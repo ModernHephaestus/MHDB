@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MHDB.Models.DatabaseItems;
+
 namespace MHDB.Models.Data.SmallArms
 {
     internal class AddPistols

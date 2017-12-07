@@ -86,10 +86,11 @@ namespace MHDB.Models
             using (var db = new DatabaseContext())
             {
                 var names = new List<string>();
-                var test = db.Model.GetEntityTypes().Where(c => c.Relational().TableName.ToString() == "Small Arms");
-                foreach (var x in test)
+                var Tables = db.Model.GetEntityTypes().Where(c => c.Relational().TableName.ToString() == GivenTable);
+                foreach (var x in Tables)
                 {
-                    names.Add(x.Relational().DiscriminatorValue.ToString());
+                    if (x.Relational().DiscriminatorValue.ToString() != GivenTable)
+                        names.Add(x.Relational().DiscriminatorValue.ToString());
                 }
                 return names;
             }

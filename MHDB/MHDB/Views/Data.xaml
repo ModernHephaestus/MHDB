@@ -12,7 +12,7 @@
     
     <ScrollViewer>
         <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <GridView Name="SelectLevel" Visibility="Visible" IsItemClickEnabled="True" ItemClick="SelectLevel_ItemClick">
+            <GridView Name="SelectLevel" Visibility="Visible" IsItemClickEnabled="True" ItemClick="SelectLevel_ItemClick" HorizontalAlignment="Center">
                 <TextBlock Name="SmallArmsTxt" Text="Small Arms" Margin="10"/>
                 <TextBlock Name="ArtilleryTxt" Text="Artillery" Margin="10"/>
                 <TextBlock Name="VehiclesTxt" Text="Vehicles" Margin="10"/>
@@ -21,7 +21,12 @@
                 <TextBlock Name="ShipsTxt" Text="Ships" Margin="10"/>
             </GridView>
 
-            <GridView Name="SelectTable" SelectionChanged="SelectTable_SelectionChanged"  Visibility="Collapsed" RelativePanel.Below="SelectLevel">
+            <GridView Name="SelectTable" SelectionChanged="SelectTable_SelectionChanged"  Visibility="Collapsed" RelativePanel.Below="SelectLevel" RelativePanel.AlignHorizontalCenterWith="SelectLevel">
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid MaximumRowsOrColumns="5" Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
                 <GridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">
                         <Setter Property="Width" Value="120"/>
@@ -31,7 +36,11 @@
             </GridView>
 
             <GridView x:Name="Info" RelativePanel.Below="SelectTable" RelativePanel.AlignHorizontalCenterWith="SelectTable"  IsItemClickEnabled="True" ItemClick="Info_ItemClick" ItemTemplate="{StaticResource PreviewTemplate}">
-
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid MaximumRowsOrColumns="5" Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
             </GridView>
 
             <GridView Name="ItemPanel" RelativePanel.Below="Info" RelativePanel.AlignHorizontalCenterWith="Info" Margin="10" RelativePanel.AlignRightWith="Info" RelativePanel.AlignLeftWith="Info" IsItemClickEnabled="True" ItemClick="ItemPanel_ItemClick">

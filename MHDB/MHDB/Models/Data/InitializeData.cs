@@ -17,8 +17,12 @@ namespace MHDB.Models.Data
         public static void InitializeDatabase()
         {
             //SmallArms
+            AddAntiMaterial.InitAntiMaterial();
+            AddDMRSniperRifles.InitDMRSniperRifles();
+            AddMachineGuns.InitMachineGuns();
             AddPistols.InitPistols();
             AddRiflesAndCarbines.InitRiflesAndCarbines();
+            AddShotguns.InitShotguns();
             AddSubmachineGuns.InitSubmachineGuns();
             //Artillery
             AddAirDefense.InitAirDefense();

@@ -11,6 +11,18 @@ namespace MHDB.Models.DatabaseItems
     internal class Artillery : GenericHardware
     {
         public const string TopLevelClass = "Artillery";
+        //Weight is in Kg, kilograms.
+
+        public double Weight { get; set; }
+
+        //Length and barrel length are in mm, milimeters.
+
+        public double Length { get; set; }
+
+        public double BarrelLength { get; set; }
+
+        public double Crew { get; set; }
+
         //Shell is a comma separated list of shells used.
         public string Shell { get; set; }
         [Required]
