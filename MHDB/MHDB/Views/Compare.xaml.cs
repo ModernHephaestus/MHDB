@@ -84,7 +84,7 @@ namespace MHDB.Views
                         ItemView.ItemTemplate = (DataTemplate)Application.Current.Resources["VehiclesTemplate"];
                     }
                     break;
-                case "FixedWingAircraft":
+                case "Aircraft":
                     {
                         ObservableCollection<FixedWingAircraft> ComparedItems = new ObservableCollection<FixedWingAircraft>
                         {
@@ -92,9 +92,10 @@ namespace MHDB.Views
                             (FixedWingAircraft)PassedItem2
                         };
                         ItemView.ItemsSource = ComparedItems;
+                        ItemView.ItemTemplate = (DataTemplate)Application.Current.Resources["AircraftTemplate"];
                     }
                     break;
-                case "HelicopterRotorcraft":
+                case "Helicopters":
                     {
                         ObservableCollection<HelicopterRotorcraft> ComparedItems = new ObservableCollection<HelicopterRotorcraft>
                         {
@@ -102,6 +103,7 @@ namespace MHDB.Views
                             (HelicopterRotorcraft)PassedItem2
                         };
                         ItemView.ItemsSource = ComparedItems;
+                        ItemView.ItemTemplate = (DataTemplate)Application.Current.Resources["AircraftTemplate"];
                     }
                     break;
                 case "Ships":
@@ -112,6 +114,7 @@ namespace MHDB.Views
                             (Ships)PassedItem2
                         };
                         ItemView.ItemsSource = ComparedItems;
+                        ItemView.ItemTemplate = (DataTemplate)Application.Current.Resources["ShipsTemplate"];
                     }
                     break;
             }

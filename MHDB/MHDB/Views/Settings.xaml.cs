@@ -12,7 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using MHDB.Models;
+using System.ComponentModel;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MHDB.Views
@@ -25,6 +26,23 @@ namespace MHDB.Views
         public Settings()
         {
             this.InitializeComponent();
+        }
+        private void RunReset(object sender, DoWorkEventArgs e)
+        {
+            DatabaseHelper.ResetDatabase();
+        }
+        private void ResetCompleted( object sender, RunWorkerCompletedEventArgs e)
+        {
+            ResetProgress.IsActive = false;
+        }
+        private void ResetDb_Click(object sender, RoutedEventArgs e)
+        {
+            
+            ResetProgress.IsActive = true;
+            BackgroundWorker worker = new BackgroundWorker();
+            worker.DoWork += RunReset;
+            worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(ResetCompleted);
+            worker.RunWorkerAsync();
         }
     }
 }

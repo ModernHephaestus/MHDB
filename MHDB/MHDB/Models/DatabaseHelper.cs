@@ -89,8 +89,9 @@ namespace MHDB.Models
                 var Tables = db.Model.GetEntityTypes().Where(c => c.Relational().TableName.ToString() == GivenTable);
                 foreach (var x in Tables)
                 {
-                    if (x.Relational().DiscriminatorValue.ToString() != GivenTable)
-                        names.Add(x.Relational().DiscriminatorValue.ToString());
+                    var temp = x.Relational().DiscriminatorValue.ToString();
+                    if (!temp.Contains(GivenTable) && !temp.Contains("Aircraft") && !temp.Contains("Helicopter") && !temp.Contains("SmallArms"))
+                        names.Add(temp);
                 }
                 return names;
             }

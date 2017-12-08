@@ -47,6 +47,7 @@ namespace MHDB.Views
             SelectTable.ItemsSource = DbHelper.FillTableList(ClickedItem.Text);
             _TableSelected = ClickedItem.Text;
             ClearSelected();
+            Info.Visibility = Visibility.Collapsed;
             SelectTable.Visibility = Visibility.Visible;
         }
 
@@ -58,6 +59,7 @@ namespace MHDB.Views
             {
                 DatabaseHelper DbHelper = new DatabaseHelper();
                 Info.ItemsSource = DbHelper.SelectTable(SelectTable.SelectedItem.ToString());
+                Info.Visibility = Visibility.Visible;
                 _TypeSelected = SelectTable.SelectedItem.ToString();
             }
             catch

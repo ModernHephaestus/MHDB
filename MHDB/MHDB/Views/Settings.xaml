@@ -8,8 +8,10 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock FontSize="26" Text="Settings: "/>
-        </StackPanel>
+        <RelativePanel>
+            <TextBlock Name="SettingsHeading" FontSize="26" Text="Settings: " RelativePanel.AlignVerticalCenterWithPanel="False" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="50"/>
+            <Button Name="ResetDb" Content="Reset Database" Click="ResetDb_Click" Margin="0,40,0,0" RelativePanel.Below="SettingsHeading" RelativePanel.AlignHorizontalCenterWith="SettingsHeading"/>
+            <ProgressRing Name="ResetProgress"  RelativePanel.Below="ResetDb" RelativePanel.AlignLeftWith="ResetDb" Height="75" Width="75" />
+        </RelativePanel>
     </Grid>
 </Page>

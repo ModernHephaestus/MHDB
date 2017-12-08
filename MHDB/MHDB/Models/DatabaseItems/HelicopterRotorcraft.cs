@@ -10,11 +10,17 @@ namespace MHDB.Models.DatabaseItems
     [Table("Helicopters")]
     internal class HelicopterRotorcraft : GenericHardware
     {
+        /// <summary>
+        /// Each property is a column in the SQLite database table.
+        /// Properties must be public for the Entity Framework SQLite to work.
+        /// As the whole class is internal, each public property in the class is also, in effect, internal.
+        /// </summary>  
         public const string TopLevelClass = "Helicopter";
         //Weight is in kg, kilograms.
         public double Weight { get; set; }
         //Length, Width, and Height are in m, meters.
         public double Length { get; set; }
+        //Width takes blades into account.
         public double Width { get; set; }
         public double Height { get; set; }
 

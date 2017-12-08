@@ -99,39 +99,47 @@ namespace MHDB.Models
         [Required]
         public string StartService { get; set; }
         
-
-        //public string EndService { get; set; } = "Present";
+        
         private string _EndService;
         public string EndService
         {
             get { return _EndService; }
             set
             {
-                if (value == "Present")
-                    this._EndService = value;
-                else if (Convert.ToInt32(value) >= DateTime.Now.Year)
-                    this._EndService = "Present";
-                else
-                    this._EndService = value;
+                    if (int.TryParse(value, out int temp))
+                    {
+                        if (Convert.ToInt32(value) >= DateTime.Now.Year)
+                            this._EndService = "Present";
+                        else
+                            this._EndService = temp.ToString();
+                    }
+                    else
+                    {
+                        this._EndService = value;
+                    }
             }
         }
 
         [Required]
         public string StartProduction { get; set; }
-
-        //public string EndProduction { get; set; } = "Present";
+        
         private string _EndProduction;
         public string EndProduction
         {
             get { return _EndProduction; }
             set
             {
-                if (value == "Present")
-                    this._EndProduction = value;
-                else if (Convert.ToInt32(value) >= DateTime.Now.Year)
-                    this._EndProduction = "Present";
-                else
-                    this._EndProduction = value;
+                    if (int.TryParse(value, out int temp))
+                    {
+                        if (Convert.ToInt32(value) >= DateTime.Now.Year)
+                            this._EndProduction = "Present";
+                        else
+                            this._EndProduction = temp.ToString();
+                    }
+                    else
+                    {
+                        this._EndProduction = value;
+                    }
             }
         }
 

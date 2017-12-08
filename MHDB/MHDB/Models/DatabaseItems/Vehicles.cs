@@ -10,6 +10,11 @@ namespace MHDB.Models.DatabaseItems
     [Table("Vehicles")]
     internal class Vehicles : GenericHardware
     {
+        /// <summary>
+        /// Each property is a column in the SQLite database table.
+        /// Properties must be public for the Entity Framework SQLite to work.
+        /// As the whole class is internal, each public property in the class is also, in effect, internal.
+        /// </summary>  
         public const string TopLevelClass = "Ground Vehicles";
         //Weight is in Tonnes, kilograms.
         public double Weight { get; set; }

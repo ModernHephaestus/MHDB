@@ -29,13 +29,13 @@
                 </GridView.ItemsPanel>
                 <GridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">
-                        <Setter Property="Width" Value="120"/>
+                        <Setter Property="Width" Value="150"/>
                         <Setter Property="Height" Value="50"/>
                     </Style>
                 </GridView.ItemContainerStyle>
             </GridView>
 
-            <GridView x:Name="Info" RelativePanel.Below="SelectTable" RelativePanel.AlignHorizontalCenterWith="SelectTable"  IsItemClickEnabled="True" ItemClick="Info_ItemClick" ItemTemplate="{StaticResource PreviewTemplate}">
+            <GridView x:Name="Info" RelativePanel.Below="SelectTable" RelativePanel.AlignHorizontalCenterWith="SelectTable"  IsItemClickEnabled="True" ItemClick="Info_ItemClick" ItemTemplate="{StaticResource PreviewTemplate}" Visibility="Collapsed">
                 <GridView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <ItemsWrapGrid MaximumRowsOrColumns="5" Orientation="Horizontal"/>
@@ -43,7 +43,7 @@
                 </GridView.ItemsPanel>
             </GridView>
 
-            <GridView Name="ItemPanel" RelativePanel.Below="Info" RelativePanel.AlignHorizontalCenterWith="Info" Margin="10" RelativePanel.AlignRightWith="Info" RelativePanel.AlignLeftWith="Info" IsItemClickEnabled="True" ItemClick="ItemPanel_ItemClick">
+            <GridView Name="ItemPanel" RelativePanel.Below="Info" RelativePanel.AlignHorizontalCenterWith="SelectTable" HorizontalAlignment="Center" Margin="10"  IsItemClickEnabled="True" ItemClick="ItemPanel_ItemClick">
                 <GridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">
                         <Setter Property="Width" Value="250"/>

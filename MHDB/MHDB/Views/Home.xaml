@@ -26,5 +26,9 @@
                 <TextBlock Text="Click this Icon in the left menu to go to the compare page." TextWrapping="Wrap" />
             </Border>
         </RelativePanel>
+        <StackPanel Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <TextBlock Name="ImageCredit"       Text="Image Source: partcatalog.com" HorizontalAlignment="Center" TextAlignment="Left" Width="300"/>
+            <TextBlock Name="ImageSourceCredit" Text="Sourced From: popularmechanics.com" HorizontalAlignment="Center" TextAlignment="Left" Width="300"/>
+        </StackPanel>
     </Grid>
 </Page>
