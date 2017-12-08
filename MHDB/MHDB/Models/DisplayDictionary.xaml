@@ -44,7 +44,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Image Name="ItemImage" Source="{Binding Image}" Grid.ColumnSpan="2"/>
+            <Image Name="ItemImage" Source="{Binding Image}" Grid.ColumnSpan="2" MaxWidth="200" MaxHeight="200"/>
             <TextBlock Name="ItemModelNameDesc" Text="Model Name: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="0"/>
             <TextBlock Name="ItemModelName" Text="{Binding ModelName}" TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="1"/>
             <TextBlock Name="ItemManufactuerDesc" Text="Manufacturer: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="2" Grid.Column="0"/>
@@ -114,6 +114,73 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="200" MaxHeight="200" Grid.ColumnSpan="2"/>
+            <TextBlock Name="ItemModelNameDesc" Text="Model Name: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="0"/>
+            <TextBlock Name="ItemModelName" Text="{Binding ModelName}" TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock Name="ItemManufactuerDesc" Text="Manufacturer: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="2" Grid.Column="0"/>
+            <TextBlock Text="{Binding Manufacturer}" TextWrapping="Wrap" Margin="6" Grid.Row="2" Grid.Column="1"/>
+            <TextBlock Name="ItemStartProdDesc" Text="Start Production: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="3" Grid.Column="0"/>
+            <TextBlock Name="ItemDesinedDesc" Text="Designed: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="4" Grid.Column="0"/>
+            <TextBlock Text="{Binding Designed}" TextWrapping="Wrap" Margin="6" Grid.Row="4" Grid.Column="1"/>
+            <TextBlock Text="{Binding StartProduction}" TextWrapping="Wrap" Margin="6" Grid.Row="3" Grid.Column="1"/>
+            <TextBlock Name="ItemEndProdDesc" Text="End Production: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="5" Grid.Column="0"/>
+            <TextBlock Text="{Binding EndProduction}" TextWrapping="Wrap" Margin="6" Grid.Row="5" Grid.Column="1"/>
+            <TextBlock Name="ItemStartServiceDesc" Text="Start Service: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="6" Grid.Column="0"/>
+            <TextBlock Text="{Binding StartService}" TextWrapping="Wrap" Margin="6" Grid.Row="6" Grid.Column="1"/>
+            <TextBlock Name="ItemEndServiceDesc" Text="End Service: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="7" Grid.Column="0"/>
+            <TextBlock Text="{Binding EndService}" TextWrapping="Wrap" Margin="6" Grid.Row="7" Grid.Column="1"/>
+            <TextBlock Name="ItemNoBuiltDesc" Text="Number Built: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="8" Grid.Column="0"/>
+            <TextBlock Text="{Binding NoBuilt, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="8" Grid.Column="1"/>
+            <TextBlock Name="ItemCostDesc" Text="Cost: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
+            <TextBlock Text="{Binding Cost, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="9" Grid.Column="1"/>
+            <TextBlock Name="ItemWeightDesc" Text="Weight (kg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="10" Grid.Column="0"/>
+            <TextBlock Text="{Binding Weight}" TextWrapping="Wrap" Margin="6" Grid.Row="10" Grid.Column="1"/>
+            <TextBlock Name="ItemLengthDesc" Text="Length (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="11" Grid.Column="0"/>
+            <TextBlock Text="{Binding Length}" TextWrapping="Wrap" Margin="6" Grid.Row="11" Grid.Column="1"/>
+            <TextBlock Name="ItemBarrelLengthDesc" Text="Barrel Length (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="12" Grid.Column="0"/>
+            <TextBlock Text="{Binding BarrelLength}" TextWrapping="Wrap" Margin="6" Grid.Row="12" Grid.Column="1"/>
+            <TextBlock Name="ItemCrewDesc" Text="Crew: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="13" Grid.Column="0"/>
+            <TextBlock Text="{Binding Crew}" TextWrapping="Wrap" Margin="6" Grid.Row="13" Grid.Column="1"/>
+            <TextBlock Name="ItemShellDesc" Text="Shell: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="14" Grid.Column="0"/>
+            <TextBlock Text="{Binding Shell}" TextWrapping="Wrap" Margin="6" Grid.Row="14" Grid.Column="1"/>
+            <TextBlock Name="ItemCarriageDesc" Text="Carriage: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="15" Grid.Column="0"/>
+            <TextBlock Text="{Binding Carriage}" TextWrapping="Wrap" Margin="6" Grid.Row="15" Grid.Column="1"/>
+            <TextBlock Name="ItemMinElevationDesc" Text="Minimum Elevation (deg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="16" Grid.Column="0"/>
+            <TextBlock Text="{Binding MinimumElevation}" TextWrapping="Wrap" Margin="6" Grid.Row="16" Grid.Column="1"/>
+            <TextBlock Name="ItemMaxElevationDesc" Text="Maximum Elevation (deg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="17" Grid.Column="0"/>
+            <TextBlock Text="{Binding MaximumElevation}" TextWrapping="Wrap" Margin="6" Grid.Row="17" Grid.Column="1"/>
+            <TextBlock Name="ItemRateOfFireDesc" Text="Rate of Fire (rpm): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="18" Grid.Column="0"/>
+            <TextBlock Text="{Binding RateOfFire}" TextWrapping="Wrap" Margin="6" Grid.Row="18" Grid.Column="1"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Name="VehiclesTemplate" x:Key="VehiclesTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="200" MaxHeight="200" Grid.ColumnSpan="2"/>
@@ -137,22 +204,24 @@
             <TextBlock Text="{Binding Cost, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="9" Grid.Column="1"/>
             <TextBlock Name="ItemWeightDesc" Text="Weight (kg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="10" Grid.Column="0"/>
             <TextBlock Text="{Binding Weight}" TextWrapping="Wrap" Margin="6" Grid.Row="10" Grid.Column="1"/>
-            <TextBlock Name="ItemLengthDesc" Text="Length (mm): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="11" Grid.Column="0"/>
+            <TextBlock Name="ItemLengthDesc" Text="Length (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="11" Grid.Column="0"/>
             <TextBlock Text="{Binding Length}" TextWrapping="Wrap" Margin="6" Grid.Row="11" Grid.Column="1"/>
-            <TextBlock Name="ItemBarrelLengthDesc" Text="Barrel Length (mm): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="12" Grid.Column="0"/>
-            <TextBlock Text="{Binding BarrelLength}" TextWrapping="Wrap" Margin="6" Grid.Row="12" Grid.Column="1"/>
-            <TextBlock Name="ItemCrewDesc" Text="Crew: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="13" Grid.Column="0"/>
-            <TextBlock Text="{Binding Crew}" TextWrapping="Wrap" Margin="6" Grid.Row="13" Grid.Column="1"/>
-            <TextBlock Name="ItemShellDesc" Text="Shell: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="14" Grid.Column="0"/>
-            <TextBlock Text="{Binding Shell}" TextWrapping="Wrap" Margin="6" Grid.Row="14" Grid.Column="1"/>
-            <TextBlock Name="ItemCarriageDesc" Text="Carriage: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="15" Grid.Column="0"/>
-            <TextBlock Text="{Binding Carriage}" TextWrapping="Wrap" Margin="6" Grid.Row="15" Grid.Column="1"/>
-            <TextBlock Name="ItemMinElevationDesc" Text="Minimum Elevation: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="16" Grid.Column="0"/>
-            <TextBlock Text="{Binding MinimumElevation}" TextWrapping="Wrap" Margin="6" Grid.Row="16" Grid.Column="1"/>
-            <TextBlock Name="ItemMaxElevationDesc" Text="Maximum Elevation: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="17" Grid.Column="0"/>
-            <TextBlock Text="{Binding MaximumElevation}" TextWrapping="Wrap" Margin="6" Grid.Row="17" Grid.Column="1"/>
-            <TextBlock Name="ItemRateOfFireDesc" Text="Rate of Fire (rpm): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="18" Grid.Column="0"/>
-            <TextBlock Text="{Binding RateOfFire}" TextWrapping="Wrap" Margin="6" Grid.Row="18" Grid.Column="1"/>
+            <TextBlock Name="ItemWidthDesc" Text="Width (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="12" Grid.Column="0"/>
+            <TextBlock Text="{Binding Width}" TextWrapping="Wrap" Margin="6" Grid.Row="12" Grid.Column="1"/>
+            <TextBlock Name="ItemHeightDesc" Text="Height (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="13" Grid.Column="0"/>
+            <TextBlock Text="{Binding Height}" TextWrapping="Wrap" Margin="6" Grid.Row="13" Grid.Column="1"/>
+            <TextBlock Name="ItemArmamentDesc" Text="Armament: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="14" Grid.Column="0"/>
+            <TextBlock Text="{Binding Armament}" TextWrapping="Wrap" Margin="6" Grid.Row="14" Grid.Column="1"/>
+            <TextBlock Name="ItemEngineDesc" Text="Engine: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="15" Grid.Column="0"/>
+            <TextBlock Text="{Binding Engine}" TextWrapping="Wrap" Margin="6" Grid.Row="15" Grid.Column="1"/>
+            <TextBlock Name="ItemTransmissionDesc" Text="Transmission: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="16" Grid.Column="0"/>
+            <TextBlock Text="{Binding Transmission}" TextWrapping="Wrap" Margin="6" Grid.Row="16" Grid.Column="1"/>
+            <TextBlock Name="ItemSuspensionDesc" Text="Suspension: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="17" Grid.Column="0"/>
+            <TextBlock Text="{Binding Suspension}" TextWrapping="Wrap" Margin="6" Grid.Row="17" Grid.Column="1"/>
+            <TextBlock Name="ItemFuelCapDesc" Text="Fuel Capacity (L): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="18" Grid.Column="0"/>
+            <TextBlock Text="{Binding FuelCapacity}" TextWrapping="Wrap" Margin="6" Grid.Row="18" Grid.Column="1"/>
+            <TextBlock Name="ItemMaxSpeedDesc" Text="Maximum Speed (kph): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="19" Grid.Column="0"/>
+            <TextBlock Text="{Binding MaxSpeed}" TextWrapping="Wrap" Margin="6" Grid.Row="19" Grid.Column="1"/>
         </Grid>
     </DataTemplate>
 </ResourceDictionary>

@@ -15,7 +15,7 @@ namespace MHDB.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     BarrelLength = table.Column<double>(nullable: false),
-                    Carriage = table.Column<string>(nullable: false),
+                    Carriage = table.Column<string>(nullable: true),
                     Cost = table.Column<double>(nullable: true),
                     Crew = table.Column<double>(nullable: false),
                     Designed = table.Column<string>(nullable: true),

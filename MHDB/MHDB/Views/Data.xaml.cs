@@ -46,8 +46,11 @@ namespace MHDB.Views
             var ClickedItem = (TextBlock)e.ClickedItem;
             SelectTable.ItemsSource = DbHelper.FillTableList(ClickedItem.Text);
             _TableSelected = ClickedItem.Text;
+            ClearSelected();
             SelectTable.Visibility = Visibility.Visible;
         }
+
+        
 
         private void SelectTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -129,12 +132,7 @@ namespace MHDB.Views
             }
             else if (Item.Name == ClearSelections.Name)
             {
-                _Item1 = null;
-                _Item2 = null;
-                SelectedItem1.Tag = "Empty";
-                SelectedItem1.Text = "Item 1 Selection Empty";
-                SelectedItem2.Tag = "Empty";
-                SelectedItem2.Text = "Item 2 Selection Empty";
+                ClearSelected();
             }
             else
             {
@@ -147,6 +145,16 @@ namespace MHDB.Views
                 };
                 Frame.Navigate(typeof(Compare), dictionary);
             }
+        }
+
+        private void ClearSelected()
+        {
+            _Item1 = null;
+            _Item2 = null;
+            SelectedItem1.Tag = "Empty";
+            SelectedItem1.Text = "Item 1 Selection Empty";
+            SelectedItem2.Tag = "Empty";
+            SelectedItem2.Text = "Item 2 Selection Empty";
         }
     }
 }

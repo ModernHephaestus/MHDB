@@ -11,7 +11,7 @@ namespace MHDB.Models.DatabaseItems
     internal class Vehicles : GenericHardware
     {
         public const string TopLevelClass = "Ground Vehicles";
-        //Weight is in kg, kilograms.
+        //Weight is in Tonnes, kilograms.
         public double Weight { get; set; }
         //Length, Width, and Height are in m, meters.
         public double Length { get; set; }

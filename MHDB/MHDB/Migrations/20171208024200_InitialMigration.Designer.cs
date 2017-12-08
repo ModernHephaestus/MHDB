@@ -8,7 +8,7 @@ using MHDB.Models;
 namespace MHDB.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20171207073810_InitialMigration")]
+    [Migration("20171208024200_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,8 +23,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("BarrelLength");
 
-                    b.Property<string>("Carriage")
-                        .IsRequired();
+                    b.Property<string>("Carriage");
 
                     b.Property<double?>("Cost");
 
@@ -399,16 +398,6 @@ namespace MHDB.Migrations
                     b.ToTable("Artillery");
 
                     b.HasDiscriminator().HasValue("Mortars");
-                });
-
-            modelBuilder.Entity("MHDB.Models.DatabaseItems.RocketArtillery", b =>
-                {
-                    b.HasBaseType("MHDB.Models.DatabaseItems.Artillery");
-
-
-                    b.ToTable("Artillery");
-
-                    b.HasDiscriminator().HasValue("RocketArtillery");
                 });
 
             modelBuilder.Entity("MHDB.Models.DatabaseItems.Bomber", b =>

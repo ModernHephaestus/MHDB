@@ -15,7 +15,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
-
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MHDB.Views
@@ -59,6 +58,7 @@ namespace MHDB.Views
                             (SmallArms)PassedItem2
                         };
                         ItemView.ItemsSource = ComparedItems;
+                        ItemView.ItemTemplate = (DataTemplate)Application.Current.Resources["SmallArmsTemplate"];
                     }
                     break;
                 case "Artillery":
@@ -69,6 +69,7 @@ namespace MHDB.Views
                             (Artillery)PassedItem2
                         };
                         ItemView.ItemsSource = ComparedItems;
+                        ItemView.ItemTemplate = (DataTemplate)Application.Current.Resources["ArtilleryTemplate"];
                     }
                     break;
                 case "Vehicles":
@@ -79,6 +80,8 @@ namespace MHDB.Views
                             (Vehicles)PassedItem2
                         };
                         ItemView.ItemsSource = ComparedItems;
+
+                        ItemView.ItemTemplate = (DataTemplate)Application.Current.Resources["VehiclesTemplate"];
                     }
                     break;
                 case "FixedWingAircraft":

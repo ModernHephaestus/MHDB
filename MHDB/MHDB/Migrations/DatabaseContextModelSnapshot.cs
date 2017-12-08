@@ -22,8 +22,7 @@ namespace MHDB.Migrations
 
                     b.Property<double>("BarrelLength");
 
-                    b.Property<string>("Carriage")
-                        .IsRequired();
+                    b.Property<string>("Carriage");
 
                     b.Property<double?>("Cost");
 
@@ -398,16 +397,6 @@ namespace MHDB.Migrations
                     b.ToTable("Artillery");
 
                     b.HasDiscriminator().HasValue("Mortars");
-                });
-
-            modelBuilder.Entity("MHDB.Models.DatabaseItems.RocketArtillery", b =>
-                {
-                    b.HasBaseType("MHDB.Models.DatabaseItems.Artillery");
-
-
-                    b.ToTable("Artillery");
-
-                    b.HasDiscriminator().HasValue("RocketArtillery");
                 });
 
             modelBuilder.Entity("MHDB.Models.DatabaseItems.Bomber", b =>

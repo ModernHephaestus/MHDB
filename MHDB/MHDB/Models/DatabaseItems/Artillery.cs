@@ -25,7 +25,6 @@ namespace MHDB.Models.DatabaseItems
 
         //Shell is a comma separated list of shells used.
         public string Shell { get; set; }
-        [Required]
         public string Carriage { get; set; }
         //Minimum and Maximum elevation are in degrees.
         public double MinimumElevation { get; set; }
@@ -41,10 +40,10 @@ namespace MHDB.Models.DatabaseItems
     {
 
     }
-    internal class RocketArtillery : Artillery
-    {
+    //internal class RocketArtillery : Artillery
+    //{
 
-    }
+    //}
     internal class AirDefense : Artillery
     {
 

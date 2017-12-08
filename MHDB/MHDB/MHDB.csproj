@@ -95,9 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20171207073810_InitialMigration.cs" />
-    <Compile Include="Migrations\20171207073810_InitialMigration.designer.cs">
-      <DependentUpon>20171207073810_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20171208024200_InitialMigration.cs" />
+    <Compile Include="Migrations\20171208024200_InitialMigration.designer.cs">
+      <DependentUpon>20171208024200_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Models\DatabaseHelper.cs" />
@@ -111,7 +111,6 @@
     <Compile Include="Models\Data\Artillery\AddAirDefense.cs" />
     <Compile Include="Models\Data\Artillery\AddHowitzers.cs" />
     <Compile Include="Models\Data\Artillery\AddMortars.cs" />
-    <Compile Include="Models\Data\Artillery\AddRocketArtillery.cs" />
     <Compile Include="Models\Data\FixedWingAircraft\AddBomber.cs" />
     <Compile Include="Models\Data\FixedWingAircraft\AddCommandAndControl.cs" />
     <Compile Include="Models\Data\FixedWingAircraft\AddFighter.cs" />

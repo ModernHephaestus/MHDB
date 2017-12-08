@@ -28,7 +28,7 @@ namespace MHDB.Models.Data
             AddAirDefense.InitAirDefense();
             AddHowitzers.InitHowitzers();
             AddMortars.InitMortars();
-            AddRocketArtillery.InitRocketArtillery();
+            //AddRocketArtillery.InitRocketArtillery();
             //Vehicles
             AddAPCs.InitAPCs();
             AddIFVs.InitIFVs();

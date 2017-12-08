@@ -24,8 +24,8 @@
                     </ItemsPanelTemplate>
                 </ListView.ItemsPanel>
             </ListView>-->
-
-            <GridView x:Name="ItemView" ItemTemplate="{StaticResource SmallArmsTemplate}">
+<!--ItemTemplate="{StaticResource SmallArmsTemplate}"-->
+            <GridView x:Name="ItemView" >
                 <!--<GridView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Margin="6">

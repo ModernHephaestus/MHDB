@@ -30,7 +30,7 @@ namespace MHDB.Models
         //Artillery
         public DbSet<Mortars> Mortars { get; set; }
         public DbSet<Howitzers> Howitzers { get; set; }
-        public DbSet<RocketArtillery> RocketArtillery { get; set; }
+        //public DbSet<RocketArtillery> RocketArtillery { get; set; }
         public DbSet<AirDefense> AirDefense { get; set; }
         //Vehicles
         public DbSet<Trucks> Trucks { get; set; }
@@ -94,7 +94,7 @@ namespace MHDB.Models
         [Required]
         public string Manufacturer { get; set; }
         //Designed Date, usually simply a year or decade like 1988 or 1980s
-        public string Designed { get; set; }
+        public string Designed { get; set; } = "";
 
         [Required]
         public string StartService { get; set; }
