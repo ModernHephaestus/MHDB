@@ -38,6 +38,23 @@ namespace MHDB.Models.DatabaseItems
         //MaxSpeed is in km/h, kilometers per hour.
         public double? MaxSpeed { get; set; }
 
+        public Ships() : base()
+        {
+            this.Weight = 0;
+            this.Length = 0;
+            this.Beam = 0;
+            this.Draft = 0;
+            this.Displacement = 0;
+            this.Engine = "";
+            this.Armament = "";
+            this.Armor = "";
+            this.AircraftNo = 0;
+            this.MaxSpeed = 0;
+        }
+        public override double CalculateDimensions()
+        {
+            return (double)Length * (double)Beam * (double)Draft;
+        }
         public static bool operator> (Ships A, Ships B)
         {
             int valA = 0;
@@ -57,7 +74,10 @@ namespace MHDB.Models.DatabaseItems
                 valA += 1;
             else
                 valB += 1;
-
+            if (A.CalculateDimensions() > B.CalculateDimensions())
+                valA += 1;
+            else
+                valB += 1;
             if (A.Displacement > B.Displacement)
                 valA += 1;
             else
@@ -90,6 +110,10 @@ namespace MHDB.Models.DatabaseItems
             else
                 valB += 1;
             if (A.Draft < B.Draft)
+                valA += 1;
+            else
+                valB += 1;
+            if (A.CalculateDimensions() < B.CalculateDimensions())
                 valA += 1;
             else
                 valB += 1;

@@ -7,8 +7,8 @@
       <Entity type="Class">
         <Name>GenericHardware</Name>
         <Access>Internal</Access>
-        <Location left="916" top="1300" />
-        <Size width="220" height="281" />
+        <Location left="918" top="1284" />
+        <Size width="220" height="315" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private string EndService</Member>
         <Member type="Field">private string EndProduction</Member>
@@ -22,13 +22,15 @@
         <Member type="Property">public string StartProduction { get; set; }</Member>
         <Member type="Property">public double NoBuilt { get; set; }</Member>
         <Member type="Property">public double Cost { get; set; }</Member>
+        <Member type="Method">public virtual double CalculateDimensions()</Member>
+        <Member type="Constructor">public GenericHardware()</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Artillery</Name>
         <Access>Public</Access>
         <Location left="397" top="1658" />
-        <Size width="267" height="264" />
+        <Size width="267" height="281" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public double Weight { get; set; }</Member>
         <Member type="Property">public double Length { get; set; }</Member>
@@ -41,12 +43,13 @@
         <Member type="Property">public double RateOfFire { get; set; }</Member>
         <Member type="Method">public static bool operator&lt;(Artillery A, Artillery B)</Member>
         <Member type="Method">public static bool operator&gt;(Artillery A, Artillery B)</Member>
+        <Member type="Constructor">public Artillery()</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Mortars</Name>
         <Access>Public</Access>
-        <Location left="280" top="1988" />
+        <Location left="273" top="2086" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -54,7 +57,7 @@
       <Entity type="Class">
         <Name>Howitzers</Name>
         <Access>Public</Access>
-        <Location left="487" top="1988" />
+        <Location left="480" top="2086" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -62,7 +65,7 @@
       <Entity type="Class">
         <Name>AirDefense</Name>
         <Access>Public</Access>
-        <Location left="677" top="1988" />
+        <Location left="670" top="2086" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -71,7 +74,7 @@
         <Name>FixedWingAircraft</Name>
         <Access>Internal</Access>
         <Location left="1080" top="1678" />
-        <Size width="322" height="247" />
+        <Size width="322" height="281" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public double Weight { get; set; }</Member>
         <Member type="Property">public double Length { get; set; }</Member>
@@ -83,12 +86,14 @@
         <Member type="Property">public double MaxAltitude { get; set; }</Member>
         <Member type="Method">public static bool operator&lt;(FixedWingAircraft A, FixedWingAircraft B)</Member>
         <Member type="Method">public static bool operator&gt;(FixedWingAircraft A, FixedWingAircraft B)</Member>
+        <Member type="Method">public override double CalculateDimensions()</Member>
+        <Member type="Constructor">public FixedWingAircraft()</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>GroundAttack</Name>
         <Access>Public</Access>
-        <Location left="1143" top="1970" />
+        <Location left="1143" top="2086" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -96,7 +101,7 @@
       <Entity type="Class">
         <Name>Fighter</Name>
         <Access>Public</Access>
-        <Location left="941" top="1970" />
+        <Location left="941" top="2086" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -104,7 +109,7 @@
       <Entity type="Class">
         <Name>Gunship</Name>
         <Access>Public</Access>
-        <Location left="1336" top="1970" />
+        <Location left="1336" top="2086" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -112,7 +117,7 @@
       <Entity type="Class">
         <Name>CommandAndControl</Name>
         <Access>Public</Access>
-        <Location left="1335" top="2214" />
+        <Location left="1335" top="2330" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -120,7 +125,7 @@
       <Entity type="Class">
         <Name>Transport</Name>
         <Access>Public</Access>
-        <Location left="1148" top="2214" />
+        <Location left="1148" top="2330" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -128,7 +133,7 @@
       <Entity type="Class">
         <Name>Bomber</Name>
         <Access>Public</Access>
-        <Location left="941" top="2214" />
+        <Location left="941" top="2330" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -136,7 +141,7 @@
       <Entity type="Class">
         <Name>UAV</Name>
         <Access>Public</Access>
-        <Location left="941" top="2480" />
+        <Location left="941" top="2596" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -145,7 +150,7 @@
         <Name>HelicopterRotorcraft</Name>
         <Access>Internal</Access>
         <Location left="1722" top="1678" />
-        <Size width="267" height="247" />
+        <Size width="267" height="281" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public double Weight { get; set; }</Member>
         <Member type="Property">public double Length { get; set; }</Member>
@@ -157,12 +162,14 @@
         <Member type="Property">public double MaxAltitude { get; set; }</Member>
         <Member type="Method">public static bool operator&lt;(HelicopterRotorcraft A, HelicopterRotorcraft B)</Member>
         <Member type="Method">public static bool operator&gt;(HelicopterRotorcraft A, HelicopterRotorcraft B)</Member>
+        <Member type="Method">public override double CalculateDimensions()</Member>
+        <Member type="Constructor">public HelicopterRotorcraft()</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Observation</Name>
         <Access>Public</Access>
-        <Location left="1976" top="2010" />
+        <Location left="1976" top="2086" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -170,7 +177,7 @@
       <Entity type="Class">
         <Name>Utility</Name>
         <Access>Public</Access>
-        <Location left="1783" top="2010" />
+        <Location left="1783" top="2086" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -178,7 +185,7 @@
       <Entity type="Class">
         <Name>Attack</Name>
         <Access>Public</Access>
-        <Location left="1581" top="2010" />
+        <Location left="1581" top="2086" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -187,7 +194,7 @@
         <Name>Ships</Name>
         <Access>Internal</Access>
         <Location left="2372" top="1678" />
-        <Size width="267" height="281" />
+        <Size width="267" height="315" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public double Weight { get; set; }</Member>
         <Member type="Property">public double Length { get; set; }</Member>
@@ -201,12 +208,14 @@
         <Member type="Property">public double AircraftNo { get; set; }</Member>
         <Member type="Method">public static bool operator&lt;(Ships A, Ships B)</Member>
         <Member type="Method">public static bool operator&gt;(Ships A, Ships B)</Member>
+        <Member type="Method">public override double CalculateDimensions()</Member>
+        <Member type="Constructor">public Ships()</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>AircraftCarriers</Name>
         <Access>Public</Access>
-        <Location left="2193" top="2056" />
+        <Location left="2194" top="2086" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -214,7 +223,7 @@
       <Entity type="Class">
         <Name>AmphibiousWarfare</Name>
         <Access>Public</Access>
-        <Location left="2418" top="2056" />
+        <Location left="2419" top="2086" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -222,7 +231,7 @@
       <Entity type="Class">
         <Name>Cruisers</Name>
         <Access>Public</Access>
-        <Location left="2629" top="2056" />
+        <Location left="2630" top="2086" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -230,7 +239,7 @@
       <Entity type="Class">
         <Name>Frigates</Name>
         <Access>Public</Access>
-        <Location left="2418" top="2322" />
+        <Location left="2418" top="2352" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -238,7 +247,7 @@
       <Entity type="Class">
         <Name>Destroyers</Name>
         <Access>Public</Access>
-        <Location left="2193" top="2322" />
+        <Location left="2194" top="2352" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -246,7 +255,7 @@
       <Entity type="Class">
         <Name>Submarines</Name>
         <Access>Public</Access>
-        <Location left="2629" top="2322" />
+        <Location left="2629" top="2352" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -255,7 +264,7 @@
         <Name>SmallArms</Name>
         <Access>Public</Access>
         <Location left="2986" top="1678" />
-        <Size width="267" height="332" />
+        <Size width="267" height="349" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public double Weight { get; set; }</Member>
         <Member type="Property">public double Length { get; set; }</Member>
@@ -272,12 +281,13 @@
         <Member type="Property">publicstring Sights { get; set; }</Member>
         <Member type="Method">public static bool operator&lt;(SmallArms A, SmallArms B)</Member>
         <Member type="Method">public static bool operator&lt;(SmallArms A, SmallArms B)</Member>
+        <Member type="Constructor">public SmallArms()</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Pistols</Name>
         <Access>Public</Access>
-        <Location left="2910" top="2055" />
+        <Location left="2910" top="2086" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -285,7 +295,7 @@
       <Entity type="Class">
         <Name>SubmachineGuns</Name>
         <Access>Public</Access>
-        <Location left="3106" top="2056" />
+        <Location left="3106" top="2087" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -293,7 +303,7 @@
       <Entity type="Class">
         <Name>Shotguns</Name>
         <Access>Public</Access>
-        <Location left="3106" top="2322" />
+        <Location left="3106" top="2353" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -301,7 +311,7 @@
       <Entity type="Class">
         <Name>RiflesAndCarbines</Name>
         <Access>Public</Access>
-        <Location left="2910" top="2321" />
+        <Location left="2910" top="2352" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -309,7 +319,7 @@
       <Entity type="Class">
         <Name>DMRSniperRifles</Name>
         <Access>Public</Access>
-        <Location left="3106" top="2580" />
+        <Location left="3106" top="2611" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -317,7 +327,7 @@
       <Entity type="Class">
         <Name>AntiMaterial</Name>
         <Access>Public</Access>
-        <Location left="2910" top="2843" />
+        <Location left="2910" top="2874" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -325,7 +335,7 @@
       <Entity type="Class">
         <Name>MachineGuns</Name>
         <Access>Public</Access>
-        <Location left="2910" top="2580" />
+        <Location left="2910" top="2611" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -334,7 +344,7 @@
         <Name>Vehicles</Name>
         <Access>Internal</Access>
         <Location left="3491" top="1678" />
-        <Size width="267" height="281" />
+        <Size width="267" height="315" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public double Weight { get; set; }</Member>
         <Member type="Property">public double Length { get; set; }</Member>
@@ -348,12 +358,14 @@
         <Member type="Property">public double MaxSpeed { get; set; }</Member>
         <Member type="Method">public static bool operator&lt;(Vehicles A, Vehicles B)</Member>
         <Member type="Method">public static bool operator&gt;(Vehicles A, Vehicles B)</Member>
+        <Member type="Method">public override double CalculateDimensions()</Member>
+        <Member type="Constructor">public Vehicles()</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Trucks</Name>
         <Access>Public</Access>
-        <Location left="3396" top="1994" />
+        <Location left="3395" top="2076" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -361,7 +373,7 @@
       <Entity type="Class">
         <Name>APCs</Name>
         <Access>Public</Access>
-        <Location left="3629" top="1994" />
+        <Location left="3628" top="2076" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -369,7 +381,7 @@
       <Entity type="Class">
         <Name>IFVs</Name>
         <Access>Public</Access>
-        <Location left="3396" top="2270" />
+        <Location left="3395" top="2352" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -377,7 +389,7 @@
       <Entity type="Class">
         <Name>Tanks</Name>
         <Access>Public</Access>
-        <Location left="3629" top="2270" />
+        <Location left="3628" top="2352" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -385,7 +397,7 @@
       <Entity type="Class">
         <Name>DatabaseContext</Name>
         <Access>Internal</Access>
-        <Location left="1377" top="262" />
+        <Location left="1331" top="589" />
         <Size width="392" height="723" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public DbSet&lt;SmallArms&gt; SmallArms { get; set; }</Member>
@@ -428,6 +440,11 @@
         <Member type="Method">protected override void OnModelCreating(ModelBuilder modelBuilder)</Member>
         <Modifier>None</Modifier>
       </Entity>
+      <Entity type="Comment">
+        <Text>To Helper Classes Diagram. Associated with the DatabaseHelper and all associated helper classes.</Text>
+        <Location left="971" top="827" />
+        <Size width="160" height="75" />
+      </Entity>
     </Entities>
     <Relationships>
       <Relationship type="Generalization" first="2" second="1">
@@ -435,7 +452,7 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
           <X>530</X>
-          <Y>1959</Y>
+          <Y>1976</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="3" second="1">
@@ -443,7 +460,7 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
           <X>531</X>
-          <Y>1959</Y>
+          <Y>1976</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="4" second="1">
@@ -463,7 +480,7 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
           <X>1123</X>
-          <Y>1950</Y>
+          <Y>1984</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="6" second="5">
@@ -471,11 +488,11 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>1221</X>
-          <Y>1945</Y>
+          <Y>2061</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>1123</X>
-          <Y>1954</Y>
+          <Y>1988</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="7" second="5">
@@ -483,7 +500,7 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
           <X>1123</X>
-          <Y>1950</Y>
+          <Y>1984</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="9" second="5">
@@ -491,7 +508,7 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>1122</X>
-          <Y>2202</Y>
+          <Y>2318</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="10" second="5">
@@ -499,7 +516,7 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>1123</X>
-          <Y>2202</Y>
+          <Y>2318</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="11" second="5">
@@ -507,11 +524,11 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>1123</X>
-          <Y>2189</Y>
+          <Y>2305</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>1123</X>
-          <Y>1957</Y>
+          <Y>1991</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="12" second="5">
@@ -519,7 +536,7 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>1122</X>
-          <Y>2455</Y>
+          <Y>2571</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="14" second="13">
@@ -531,7 +548,7 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>1856</X>
-          <Y>1985</Y>
+          <Y>2061</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="16" second="13">
@@ -542,8 +559,8 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
-          <X>1026</X>
-          <Y>1606</Y>
+          <X>1028</X>
+          <Y>1624</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="18" second="17">
@@ -555,7 +572,7 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
           <X>2505</X>
-          <Y>1986</Y>
+          <Y>2020</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="20" second="17">
@@ -567,11 +584,11 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>2617</X>
-          <Y>2297</Y>
+          <Y>2327</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>2602</X>
-          <Y>1987</Y>
+          <Y>2021</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="21" second="17">
@@ -579,23 +596,23 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>2393</X>
-          <Y>2297</Y>
+          <Y>2327</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>2393</X>
-          <Y>1984</Y>
+          <Y>2018</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="22" second="17">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>2358</X>
-          <Y>2297</Y>
+          <X>2359</X>
+          <Y>2327</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>2393</X>
-          <Y>2001</Y>
+          <Y>2035</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="17" second="0">
@@ -607,11 +624,11 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>2989</X>
-          <Y>2035</Y>
+          <Y>2066</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3092</X>
-          <Y>2035</Y>
+          <Y>2052</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="26" second="24">
@@ -619,11 +636,11 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>3185</X>
-          <Y>2031</Y>
+          <Y>2062</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3093</X>
-          <Y>2031</Y>
+          <Y>2048</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="27" second="24">
@@ -631,11 +648,11 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>3093</X>
-          <Y>2297</Y>
+          <Y>2328</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3093</X>
-          <Y>2035</Y>
+          <Y>2052</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="28" second="24">
@@ -643,11 +660,11 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>3092</X>
-          <Y>2296</Y>
+          <Y>2327</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3092</X>
-          <Y>2035</Y>
+          <Y>2052</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="29" second="24">
@@ -655,11 +672,11 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>3093</X>
-          <Y>2554</Y>
+          <Y>2585</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3093</X>
-          <Y>2039</Y>
+          <Y>2056</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="31" second="24">
@@ -667,11 +684,11 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>3081</X>
-          <Y>2555</Y>
+          <Y>2586</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3092</X>
-          <Y>2035</Y>
+          <Y>2052</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="30" second="24">
@@ -679,23 +696,23 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>3092</X>
-          <Y>2816</Y>
+          <Y>2847</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3092</X>
-          <Y>2035</Y>
+          <Y>2052</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="33" second="32">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>3608</X>
-          <Y>1969</Y>
+          <X>3607</X>
+          <Y>2051</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3608</X>
-          <Y>1984</Y>
+          <Y>2018</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="34" second="32">
@@ -703,27 +720,27 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
           <X>3608</X>
-          <Y>2012</Y>
+          <Y>2046</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="35" second="32">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>3608</X>
-          <Y>2249</Y>
+          <X>3607</X>
+          <Y>2331</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3608</X>
-          <Y>1984</Y>
+          <Y>2018</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="36" second="32">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>3609</X>
-          <Y>2245</Y>
+          <X>3608</X>
+          <Y>2327</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="24" second="0">
@@ -737,6 +754,10 @@
       <Relationship type="Generalization" first="32" second="0">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Comment" first="38" second="37">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
       </Relationship>
     </Relationships>
   </ProjectItem>

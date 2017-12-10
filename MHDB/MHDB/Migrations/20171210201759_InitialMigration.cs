@@ -33,7 +33,7 @@ namespace MHDB.Migrations
                     StartProduction = table.Column<string>(nullable: false),
                     StartService = table.Column<string>(nullable: false),
                     Weight = table.Column<double>(nullable: false),
-                    _Type = table.Column<string>(nullable: false)
+                    _ArtilleryType = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -64,7 +64,7 @@ namespace MHDB.Migrations
                     StartService = table.Column<string>(nullable: false),
                     Weight = table.Column<double>(nullable: false),
                     Width = table.Column<double>(nullable: false),
-                    _Type = table.Column<string>(nullable: false)
+                    _AircraftType = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -95,7 +95,7 @@ namespace MHDB.Migrations
                     StartService = table.Column<string>(nullable: false),
                     Weight = table.Column<double>(nullable: false),
                     Width = table.Column<double>(nullable: false),
-                    _Type = table.Column<string>(nullable: false)
+                    _HelicopterType = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -128,7 +128,7 @@ namespace MHDB.Migrations
                     StartProduction = table.Column<string>(nullable: false),
                     StartService = table.Column<string>(nullable: false),
                     Weight = table.Column<double>(nullable: true),
-                    _Type = table.Column<string>(nullable: false)
+                    _ShipType = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -163,7 +163,7 @@ namespace MHDB.Migrations
                     StartProduction = table.Column<string>(nullable: false),
                     StartService = table.Column<string>(nullable: false),
                     Weight = table.Column<double>(nullable: false),
-                    _Type = table.Column<string>(nullable: false)
+                    _FirearmType = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -196,7 +196,7 @@ namespace MHDB.Migrations
                     Transmission = table.Column<string>(nullable: true),
                     Weight = table.Column<double>(nullable: false),
                     Width = table.Column<double>(nullable: false),
-                    _Type = table.Column<string>(nullable: false)
+                    _VehicleType = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

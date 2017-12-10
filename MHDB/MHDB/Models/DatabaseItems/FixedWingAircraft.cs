@@ -24,6 +24,23 @@ namespace MHDB.Models.DatabaseItems
         //MaxAltitude is in km, kilometers.
         public double MaxAltitude { get; set; }
 
+        public FixedWingAircraft() : base()
+        {
+            this.Weight = 0;
+            this.Length = 0;
+            this.Width = 0;
+            this.Height = 0;
+            this.Engine = "";
+            this.Armament = "";
+            this.MaxSpeed = 0;
+            this.MaxAltitude = 0;
+        }
+
+        public override double CalculateDimensions()
+        {
+            return Width * Height * Length;
+        }
+
         public static bool operator >(FixedWingAircraft A, FixedWingAircraft B)
         {
             int valA = 0;
@@ -34,21 +51,10 @@ namespace MHDB.Models.DatabaseItems
             else
                 valB += 1;
 
-            if (A.Length > B.Length)
+            if (A.CalculateDimensions() > B.CalculateDimensions())
                 valA += 1;
             else
                 valB += 1;
-
-            if (A.Width > B.Width)
-                valA += 1;
-            else
-                valB += 1;
-
-            if (A.Height > B.Height)
-                valA += 1;
-            else
-                valB += 1;
-
             if (A.MaxSpeed > B.MaxSpeed)
                 valA += 1;
             else
@@ -73,17 +79,7 @@ namespace MHDB.Models.DatabaseItems
             else
                 valB += 1;
 
-            if (A.Length < B.Length)
-                valA += 1;
-            else
-                valB += 1;
-
-            if (A.Width < B.Width)
-                valA += 1;
-            else
-                valB += 1;
-
-            if (A.Height < B.Height)
+            if (A.CalculateDimensions() < B.CalculateDimensions())
                 valA += 1;
             else
                 valB += 1;

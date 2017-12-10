@@ -32,6 +32,23 @@ namespace MHDB.Models.DatabaseItems
         //MaxSpeed is in km/h, kilometers per hour.
         public double MaxSpeed { get; set; }
 
+        public Vehicles() : base()
+        {
+            this.Weight = 0;
+            this.Length = 0;
+            this.Width = 0;
+            this.Height = 0;
+            this.Armament = "";
+            this.Engine = "";
+            this.Transmission = "";
+            this.Suspension = "";
+            this.FuelCapacity = 0;
+            this.MaxSpeed = 0;
+        }
+        public override double CalculateDimensions()
+        {
+            return Width * Height * Length;
+        }
         public static bool operator >(Vehicles A, Vehicles B)
         {
             int valA = 0;
@@ -42,17 +59,7 @@ namespace MHDB.Models.DatabaseItems
             else
                 valB += 1;
 
-            if (A.Length > B.Length)
-                valA += 1;
-            else
-                valB += 1;
-
-            if (A.Width > B.Width)
-                valA += 1;
-            else
-                valB += 1;
-
-            if (A.Height > B.Height)
+            if (A.CalculateDimensions() > B.CalculateDimensions())
                 valA += 1;
             else
                 valB += 1;
@@ -79,20 +86,11 @@ namespace MHDB.Models.DatabaseItems
             else
                 valB += 1;
 
-            if (A.Length < B.Length)
+            if (A.CalculateDimensions() < B.CalculateDimensions())
                 valA += 1;
             else
                 valB += 1;
 
-            if (A.Width < B.Width)
-                valA += 1;
-            else
-                valB += 1;
-
-            if (A.Height < B.Height)
-                valA += 1;
-            else
-                valB += 1;
 
             if (A.FuelCapacity < B.FuelCapacity)
                 valA += 1;

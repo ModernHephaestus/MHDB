@@ -36,6 +36,19 @@ namespace MHDB.Models.DatabaseItems
         //RateOfFire is in rpm, rounds per minute.
         public double RateOfFire { get; set; }
 
+        public Artillery() : base()
+        {
+            this.Weight = 0;
+            this.Length = 0;
+            this.BarrelLength = 0;
+            this.Crew = 0;
+            this.Shell = "";
+            this.Carriage = "";
+            this.MinimumElevation = 0;
+            this.MaximumElevation = 0;
+            this.RateOfFire = 0;
+        }
+
         public static bool operator >(Artillery A, Artillery B)
         {
             int valA = 0;

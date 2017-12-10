@@ -64,18 +64,13 @@ namespace MHDB.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<SmallArms>().HasDiscriminator<string>("_FirearmType");
-            //modelBuilder.Entity<Artillery>().HasDiscriminator<string>("_ArtilleryType");
-            //modelBuilder.Entity<Vehicles>().HasDiscriminator<string>("_VehicleType");
-            //modelBuilder.Entity<FixedWingAircraft>().HasDiscriminator<string>("_AircraftType");
-            //modelBuilder.Entity<HelicopterRotorcraft>().HasDiscriminator<string>("_HelicopterType");
-            //modelBuilder.Entity<Ships>().HasDiscriminator<string>("_ShipType");
-            modelBuilder.Entity<SmallArms>().HasDiscriminator<string>("_Type");
-            modelBuilder.Entity<Artillery>().HasDiscriminator<string>("_Type");
-            modelBuilder.Entity<Vehicles>().HasDiscriminator<string>("_Type");
-            modelBuilder.Entity<FixedWingAircraft>().HasDiscriminator<string>("_Type");
-            modelBuilder.Entity<HelicopterRotorcraft>().HasDiscriminator<string>("_Type");
-            modelBuilder.Entity<Ships>().HasDiscriminator<string>("_Type");
+            modelBuilder.Entity<SmallArms>().HasDiscriminator<string>("_FirearmType");
+            modelBuilder.Entity<Artillery>().HasDiscriminator<string>("_ArtilleryType");
+            modelBuilder.Entity<Vehicles>().HasDiscriminator<string>("_VehicleType");
+            modelBuilder.Entity<FixedWingAircraft>().HasDiscriminator<string>("_AircraftType");
+            modelBuilder.Entity<HelicopterRotorcraft>().HasDiscriminator<string>("_HelicopterType");
+            modelBuilder.Entity<Ships>().HasDiscriminator<string>("_ShipType");
+
         }
     }
     internal abstract class GenericHardware
@@ -148,5 +143,20 @@ namespace MHDB.Models
 
         public double? NoBuilt { get; set; } = null;
         public double? Cost { get; set; } = null;
+
+        public GenericHardware()
+        {
+            this.Image = "";
+            this.ModelName = "";
+            this.Manufacturer = "";
+            this.StartService = "";
+            this.EndService = "";
+            this.StartProduction = "";
+            this.EndProduction = "";
+        }
+        public virtual double CalculateDimensions()
+        {
+            return 0;
+        }
     }
 }

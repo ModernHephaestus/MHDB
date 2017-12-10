@@ -20,16 +20,16 @@ namespace MHDB.Models.DatabaseItems
         public double Weight { get; set; }
 
         //Length and barrel length are in mm, milimeters.
-        
+
         public double Length { get; set; }
-        
+
         public double BarrelLength { get; set; }
 
         [Required]
         public string Cartridge { get; set; } = "";
 
         public string Calibre { get; set; } = "";
-        
+
         public string Action { get; set; }
         //Muzzle Velocity is in m/s, meters per second.
         //RateOfFire is in rounds per minute
@@ -39,10 +39,25 @@ namespace MHDB.Models.DatabaseItems
         //Effective and Max ranges are the upper bound if data source gives a range.
         public double EffectiveRange { get; set; }
         public double? MaxRange { get; set; }
-        
+
         public string FeedSystem { get; set; }
-        
+
         public string Sights { get; set; }
+
+        public SmallArms() : base()
+        {
+            this.Weight = 0;
+            this.Length = 0;
+            this.BarrelLength = 0;
+            this.Cartridge = "";
+            this.Calibre = "";
+            this.RateOfFire = 0;
+            this.MuzzleVelocity = 0;
+            this.EffectiveRange = 0;
+            this.MaxRange = 0;
+            this.FeedSystem = "";
+            this.Sights = "";
+        }
 
         public static bool operator >(SmallArms A, SmallArms B)
         {

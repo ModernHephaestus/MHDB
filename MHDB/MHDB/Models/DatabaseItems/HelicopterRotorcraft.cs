@@ -32,6 +32,23 @@ namespace MHDB.Models.DatabaseItems
         //MaxAltitude is in km, kilometers.
         public double MaxAltitude { get; set; }
 
+        public HelicopterRotorcraft() : base()
+        {
+            this.Weight = 0;
+            this.Length = 0;
+            this.Width = 0;
+            this.Height = 0;
+            this.Engine = "";
+            this.Armament = "";
+            this.MaxSpeed = 0;
+            this.MaxAltitude = 0;
+        }
+
+        public override double CalculateDimensions()
+        {
+            return Width * Height * Length;
+        }
+
         public static bool operator >(HelicopterRotorcraft A, HelicopterRotorcraft B)
         {
             int valA = 0;
@@ -42,17 +59,7 @@ namespace MHDB.Models.DatabaseItems
             else
                 valB += 1;
 
-            if (A.Length > B.Length)
-                valA += 1;
-            else
-                valB += 1;
-
-            if (A.Width > B.Width)
-                valA += 1;
-            else
-                valB += 1;
-
-            if (A.Height > B.Height)
+            if (A.CalculateDimensions() > B.CalculateDimensions())
                 valA += 1;
             else
                 valB += 1;
@@ -81,17 +88,7 @@ namespace MHDB.Models.DatabaseItems
             else
                 valB += 1;
 
-            if (A.Length < B.Length)
-                valA += 1;
-            else
-                valB += 1;
-
-            if (A.Width < B.Width)
-                valA += 1;
-            else
-                valB += 1;
-
-            if (A.Height < B.Height)
+            if (A.CalculateDimensions() < B.CalculateDimensions())
                 valA += 1;
             else
                 valB += 1;
