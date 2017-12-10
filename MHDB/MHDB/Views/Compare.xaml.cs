@@ -24,8 +24,8 @@ namespace MHDB.Views
     /// </summary>
     public sealed partial class Compare : Page
     {
-        private object _PassedItem1 { get; set; }
-        private object _PassedItem2 { get; set; }
+        private dynamic _PassedItem1 { get; set; }
+        private dynamic _PassedItem2 { get; set; }
         private string _PassedType { get; set; }
         private string _PassedTable { get; set; }
         public Compare()
@@ -119,5 +119,20 @@ namespace MHDB.Views
                     break;
             }
         }
+
+        private void CompareBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (_PassedItem1 > _PassedItem2)
+            {
+                Winner.Text += _PassedItem1.ModelName;
+                Description.Text = "The 1st item averages higher than the 2nd!";
+            }
+            else
+            {
+                Winner.Text += _PassedItem2.ModelName;
+                Description.Text = "The 2nd item averages higher than the 1st!";
+            }
+        }
+        
     }
 }

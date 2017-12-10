@@ -31,6 +31,81 @@ namespace MHDB.Models.DatabaseItems
         public double FuelCapacity { get; set; }
         //MaxSpeed is in km/h, kilometers per hour.
         public double MaxSpeed { get; set; }
+
+        public static bool operator >(Vehicles A, Vehicles B)
+        {
+            int valA = 0;
+            int valB = 0;
+
+            if (A.Weight < B.Weight)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Length > B.Length)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Width > B.Width)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Height > B.Height)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.FuelCapacity > B.FuelCapacity)
+                valA += 1;
+            else
+                valB += 1;
+            if (A.MaxSpeed > B.MaxSpeed)
+                valA += 1;
+            else
+                valB += 1;
+
+            return valA > valB;
+
+        }
+        public static bool operator <(Vehicles A, Vehicles B)
+        {
+            int valA = 0;
+            int valB = 0;
+
+            if (A.Weight > B.Weight)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Length < B.Length)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Width < B.Width)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Height < B.Height)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.FuelCapacity < B.FuelCapacity)
+                valA += 1;
+            else
+                valB += 1;
+            if (A.MaxSpeed < B.MaxSpeed)
+                valA += 1;
+            else
+                valB += 1;
+
+            return valA < valB;
+        }
+
     }
     internal class Trucks : Vehicles
     {

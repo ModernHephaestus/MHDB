@@ -7,37 +7,20 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Name="Test"/>
-            <!--<ListView Name="Item1View">
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <Image Source="{Binding Image}"/>
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-            </ListView>
-            <ListView Name="Item2View">
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <Image Source="{Binding Image}"/>
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-            </ListView>-->
-<!--ItemTemplate="{StaticResource SmallArmsTemplate}"-->
-            <GridView x:Name="ItemView" >
-                <!--<GridView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal" Margin="6">
-                            <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="100" MaxHeight="100"/>
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock Name="ItemModelName" Text="{Binding ModelName}" FontWeight="Bold" Margin="6"/>
-                                <TextBlock Text="{Binding Manufacturer}" Margin="6"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </DataTemplate>
-                </GridView.ItemTemplate>-->
+    <Grid Background="{ThemeResource AppBarBackgroundThemeBrush}" Width="Auto" Height="Auto">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.33*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0">
+            <GridView x:Name="ItemView">
             </GridView>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Grid.Row="1" Background="LightGray">
+            <TextBlock Name="Instructions" Text="Click the button below to compare the left item to the right item." HorizontalAlignment="Center"/>
+            <Button Name="CompareBtn" Content="Compare!" Click="CompareBtn_Click" Width="100" Height="50" HorizontalAlignment="Center"/>
+            <TextBlock Name="Description" Text="" HorizontalAlignment="Center"/>
+            <TextBlock Name="Winner" Text="Winner: " HorizontalAlignment="Center"  FontSize="26"/>
         </StackPanel>
     </Grid>
 </Page>

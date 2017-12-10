@@ -23,6 +23,84 @@ namespace MHDB.Models.DatabaseItems
         public double MaxSpeed { get; set; }
         //MaxAltitude is in km, kilometers.
         public double MaxAltitude { get; set; }
+
+        public static bool operator >(FixedWingAircraft A, FixedWingAircraft B)
+        {
+            int valA = 0;
+            int valB = 0;
+
+            if (A.Weight < B.Weight)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Length > B.Length)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Width > B.Width)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Height > B.Height)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.MaxSpeed > B.MaxSpeed)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.MaxAltitude > B.MaxAltitude)
+                valA += 1;
+            else
+                valB += 1;
+
+            return valA > valB;
+
+        }
+        public static bool operator <(FixedWingAircraft A, FixedWingAircraft B)
+        {
+            int valA = 0;
+            int valB = 0;
+
+
+            if (A.Weight > B.Weight)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Length < B.Length)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Width < B.Width)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Height < B.Height)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.MaxSpeed < B.MaxSpeed)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.MaxAltitude < B.MaxAltitude)
+                valA += 1;
+            else
+                valB += 1;
+
+            return valA < valB;
+        }
+
     }
     internal class Fighter : FixedWingAircraft
     {

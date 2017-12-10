@@ -95,9 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20171210033458_InitialMigration.cs" />
-    <Compile Include="Migrations\20171210033458_InitialMigration.designer.cs">
-      <DependentUpon>20171210033458_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20171210095056_InitialMigration.cs" />
+    <Compile Include="Migrations\20171210095056_InitialMigration.designer.cs">
+      <DependentUpon>20171210095056_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Models\DatabaseHelper.cs" />

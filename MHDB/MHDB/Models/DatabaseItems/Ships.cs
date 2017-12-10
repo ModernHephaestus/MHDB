@@ -47,22 +47,27 @@ namespace MHDB.Models.DatabaseItems
                 valA += 1;
             else
                 valB += 1;
+
             if (A.Beam > B.Beam)
                 valA += 1;
             else
                 valB += 1;
+
             if (A.Draft > B.Draft)
                 valA += 1;
             else
                 valB += 1;
+
             if (A.Displacement > B.Displacement)
                 valA += 1;
             else
                 valB += 1;
+
             if (A.MaxSpeed > B.MaxSpeed)
                 valA += 1;
             else
                 valB += 1;
+
             if (A.AircraftNo > B.AircraftNo)
                 valA += 1;
             else
@@ -103,7 +108,7 @@ namespace MHDB.Models.DatabaseItems
 
             return valA < valB;
         }
-
+        
     }
     internal class AircraftCarriers : Ships
     {

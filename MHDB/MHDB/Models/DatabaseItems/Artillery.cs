@@ -35,6 +35,92 @@ namespace MHDB.Models.DatabaseItems
         public double MaximumElevation { get; set; }
         //RateOfFire is in rpm, rounds per minute.
         public double RateOfFire { get; set; }
+
+        public static bool operator >(Artillery A, Artillery B)
+        {
+            int valA = 0;
+            int valB = 0;
+
+            if (A.Weight < B.Weight)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Length > B.Length)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.BarrelLength > B.BarrelLength)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Crew < B.Crew)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.MinimumElevation < B.MinimumElevation)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.MaximumElevation > B.MaximumElevation)
+                valA += 1;
+            else
+                valB += 1;
+            if (A.RateOfFire > B.RateOfFire)
+                valA += 1;
+            else
+                valB += 1;
+
+            return valA > valB;
+
+        }
+        public static bool operator <(Artillery A, Artillery B)
+        {
+            int valA = 0;
+            int valB = 0;
+
+
+            if (A.Weight > B.Weight)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Length < B.Length)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.BarrelLength < B.BarrelLength)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.Crew > B.Crew)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.MinimumElevation > B.MinimumElevation)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.MaximumElevation < B.MaximumElevation)
+                valA += 1;
+            else
+                valB += 1;
+            if (A.RateOfFire < B.RateOfFire)
+                valA += 1;
+            else
+                valB += 1;
+
+            return valA < valB;
+        }
+
     }
     internal class Mortars : Artillery
     {

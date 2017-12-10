@@ -43,6 +43,72 @@ namespace MHDB.Models.DatabaseItems
         public string FeedSystem { get; set; }
         
         public string Sights { get; set; }
+
+        public static bool operator >(SmallArms A, SmallArms B)
+        {
+            int valA = 0;
+            int valB = 0;
+
+            if (A.Weight < B.Weight)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.RateOfFire > B.RateOfFire)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.MuzzleVelocity > B.MuzzleVelocity)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.EffectiveRange > B.EffectiveRange)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.MaxRange > B.MaxRange)
+                valA += 1;
+            else
+                valB += 1;
+            
+            return valA > valB;
+
+        }
+        public static bool operator <(SmallArms A, SmallArms B)
+        {
+            int valA = 0;
+            int valB = 0;
+
+            if (A.Weight > B.Weight)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.RateOfFire < B.RateOfFire)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.MuzzleVelocity < B.MuzzleVelocity)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.EffectiveRange < B.EffectiveRange)
+                valA += 1;
+            else
+                valB += 1;
+
+            if (A.MaxRange < B.MaxRange)
+                valA += 1;
+            else
+                valB += 1;
+
+            return valA < valB;
+        }
     }
 
     internal class Pistols : SmallArms

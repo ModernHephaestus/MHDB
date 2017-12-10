@@ -15,10 +15,10 @@
     </DataTemplate>
 
     <DataTemplate x:Name="SmallArmsTemplate" x:Key="SmallArmsTemplate">
-        <Grid Height="Auto" Width="Auto">
+        <Grid Height="Auto" Width="Auto" Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="350"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" MaxHeight="200"/>
@@ -89,10 +89,10 @@
     </DataTemplate>
 
     <DataTemplate x:Name="ArtilleryTemplate" x:Key="ArtilleryTemplate">
-        <Grid Height="Auto">
+        <Grid Height="Auto" Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="350"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" MaxHeight="200"/>
@@ -156,10 +156,10 @@
     </DataTemplate>
 
     <DataTemplate x:Name="VehiclesTemplate" x:Key="VehiclesTemplate">
-        <Grid Height="Auto">
+        <Grid Height="Auto" Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="350"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" MaxHeight="200"/>
@@ -226,10 +226,10 @@
     </DataTemplate>
 
     <DataTemplate x:Name="AircraftTemplate" x:Key="AircraftTemplate">
-        <Grid Height="Auto">
+        <Grid Height="Auto" Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="350"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" MaxHeight="200"/>
@@ -290,10 +290,10 @@
     </DataTemplate>
 
     <DataTemplate x:Name="ShipsTemplate" x:Key="ShipsTemplate">
-        <Grid Height="Auto">
+        <Grid Height="Auto" Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="350"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" MaxHeight="200"/>

@@ -8,7 +8,7 @@ using MHDB.Models;
 namespace MHDB.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20171210033458_InitialMigration")]
+    [Migration("20171210095056_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

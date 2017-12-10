@@ -27,8 +27,8 @@
       <Entity type="Class">
         <Name>Artillery</Name>
         <Access>Public</Access>
-        <Location left="400" top="1678" />
-        <Size width="267" height="230" />
+        <Location left="397" top="1658" />
+        <Size width="267" height="264" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public double Weight { get; set; }</Member>
         <Member type="Property">public double Length { get; set; }</Member>
@@ -39,6 +39,8 @@
         <Member type="Property">public double MinimumElevation { get; set; }</Member>
         <Member type="Property">public double MaximumElevation { get; set; }</Member>
         <Member type="Property">public double RateOfFire { get; set; }</Member>
+        <Member type="Method">public static bool operator&lt;(Artillery A, Artillery B)</Member>
+        <Member type="Method">public static bool operator&gt;(Artillery A, Artillery B)</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
@@ -69,7 +71,7 @@
         <Name>FixedWingAircraft</Name>
         <Access>Internal</Access>
         <Location left="1080" top="1678" />
-        <Size width="267" height="230" />
+        <Size width="322" height="247" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public double Weight { get; set; }</Member>
         <Member type="Property">public double Length { get; set; }</Member>
@@ -79,6 +81,8 @@
         <Member type="Property">public string Armament { get; set; }</Member>
         <Member type="Property">public double MaxSpeed { get; set; }</Member>
         <Member type="Property">public double MaxAltitude { get; set; }</Member>
+        <Member type="Method">public static bool operator&lt;(FixedWingAircraft A, FixedWingAircraft B)</Member>
+        <Member type="Method">public static bool operator&gt;(FixedWingAircraft A, FixedWingAircraft B)</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
@@ -141,7 +145,7 @@
         <Name>HelicopterRotorcraft</Name>
         <Access>Internal</Access>
         <Location left="1722" top="1678" />
-        <Size width="267" height="230" />
+        <Size width="267" height="247" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public double Weight { get; set; }</Member>
         <Member type="Property">public double Length { get; set; }</Member>
@@ -151,6 +155,8 @@
         <Member type="Property">public string Armament { get; set; }</Member>
         <Member type="Property">public double MaxSpeed { get; set; }</Member>
         <Member type="Property">public double MaxAltitude { get; set; }</Member>
+        <Member type="Method">public static bool operator&lt;(HelicopterRotorcraft A, HelicopterRotorcraft B)</Member>
+        <Member type="Method">public static bool operator&gt;(HelicopterRotorcraft A, HelicopterRotorcraft B)</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
@@ -249,7 +255,7 @@
         <Name>SmallArms</Name>
         <Access>Public</Access>
         <Location left="2986" top="1678" />
-        <Size width="267" height="298" />
+        <Size width="267" height="332" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public double Weight { get; set; }</Member>
         <Member type="Property">public double Length { get; set; }</Member>
@@ -264,6 +270,8 @@
         <Member type="Property">public double MaxRange { get; set; }</Member>
         <Member type="Property">public string FeedSystem { get; set; }</Member>
         <Member type="Property">publicstring Sights { get; set; }</Member>
+        <Member type="Method">public static bool operator&lt;(SmallArms A, SmallArms B)</Member>
+        <Member type="Method">public static bool operator&lt;(SmallArms A, SmallArms B)</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
@@ -323,10 +331,10 @@
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>FixedWingAircraft</Name>
+        <Name>Vehicles</Name>
         <Access>Internal</Access>
         <Location left="3491" top="1678" />
-        <Size width="267" height="247" />
+        <Size width="267" height="281" />
         <Collapsed>False</Collapsed>
         <Member type="Property">public double Weight { get; set; }</Member>
         <Member type="Property">public double Length { get; set; }</Member>
@@ -338,6 +346,8 @@
         <Member type="Property">public string Suspension { get; set; }</Member>
         <Member type="Property">public double FuelCapacity { get; set; }</Member>
         <Member type="Property">public double MaxSpeed { get; set; }</Member>
+        <Member type="Method">public static bool operator&lt;(Vehicles A, Vehicles B)</Member>
+        <Member type="Method">public static bool operator&gt;(Vehicles A, Vehicles B)</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
@@ -424,16 +434,16 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
-          <X>533</X>
-          <Y>1945</Y>
+          <X>530</X>
+          <Y>1959</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="3" second="1">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
-          <X>534</X>
-          <Y>1945</Y>
+          <X>531</X>
+          <Y>1959</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="4" second="1">
@@ -452,20 +462,20 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
-          <X>1125</X>
-          <Y>1933</Y>
+          <X>1123</X>
+          <Y>1950</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="6" second="5">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1222</X>
-          <Y>1937</Y>
+          <X>1221</X>
+          <Y>1945</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>1123</X>
-          <Y>1937</Y>
+          <Y>1954</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="7" second="5">
@@ -473,7 +483,7 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
           <X>1123</X>
-          <Y>1933</Y>
+          <Y>1950</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="9" second="5">
@@ -501,7 +511,7 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>1123</X>
-          <Y>1940</Y>
+          <Y>1957</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="12" second="5">
@@ -595,21 +605,25 @@
       <Relationship type="Generalization" first="25" second="24">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2989</X>
+          <Y>2035</Y>
+        </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3092</X>
-          <Y>2001</Y>
+          <Y>2035</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="26" second="24">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>3184</X>
-          <Y>2024</Y>
+          <X>3185</X>
+          <Y>2031</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3093</X>
-          <Y>2006</Y>
+          <Y>2031</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="27" second="24">
@@ -621,7 +635,7 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3093</X>
-          <Y>2001</Y>
+          <Y>2035</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="28" second="24">
@@ -633,7 +647,7 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3092</X>
-          <Y>2001</Y>
+          <Y>2035</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="29" second="24">
@@ -645,7 +659,7 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3093</X>
-          <Y>2005</Y>
+          <Y>2039</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="31" second="24">
@@ -657,7 +671,7 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3092</X>
-          <Y>2001</Y>
+          <Y>2035</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="30" second="24">
@@ -669,7 +683,7 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3092</X>
-          <Y>2001</Y>
+          <Y>2035</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="33" second="32">
@@ -681,7 +695,7 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3608</X>
-          <Y>1950</Y>
+          <Y>1984</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="34" second="32">
@@ -689,7 +703,7 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
           <X>3608</X>
-          <Y>1978</Y>
+          <Y>2012</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="35" second="32">
@@ -701,7 +715,7 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>3608</X>
-          <Y>1950</Y>
+          <Y>1984</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="36" second="32">
@@ -715,6 +729,10 @@
       <Relationship type="Generalization" first="24" second="0">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>3117</X>
+          <Y>1653</Y>
+        </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="32" second="0">
         <StartOrientation>Vertical</StartOrientation>
@@ -1565,7 +1583,7 @@
         <Name>Data</Name>
         <Access>Public</Access>
         <Location left="208" top="634" />
-        <Size width="202" height="247" />
+        <Size width="440" height="247" />
         <Collapsed>False</Collapsed>
         <Member type="Constructor">public Data()</Member>
         <Member type="Method">private void SelectLevel_ItemClick(object sender, ItemClickEventArgs e)</Member>
@@ -1582,10 +1600,13 @@
       <Entity type="Class">
         <Name>Compare</Name>
         <Access>Public</Access>
-        <Location left="445" top="634" />
-        <Size width="193" height="162" />
+        <Location left="693" top="634" />
+        <Size width="256" height="213" />
         <Collapsed>False</Collapsed>
         <Member type="Constructor">public Compare()</Member>
+        <Member type="Method">protected override void OnNavigatedTo(NavigationEventArgs e)</Member>
+        <Member type="Method">private void InitCompare()</Member>
+        <Member type="Method">private void CompareBtn_Click()</Member>
         <Member type="Property">private object PassedItem1 { get; set; }</Member>
         <Member type="Property">private object PassedItem2 { get; set; }</Member>
         <Member type="Property">private string _PassedType { get; set; }</Member>
@@ -1595,7 +1616,7 @@
       <Entity type="Class">
         <Name>Settings</Name>
         <Access>Public</Access>
-        <Location left="680" top="634" />
+        <Location left="963" top="634" />
         <Size width="309" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Constructor">public Settings()</Member>
@@ -1625,6 +1646,10 @@
       <Relationship type="Association" first="5" second="1">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>352</X>
+          <Y>589</Y>
+        </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
         <StartMultiplicity>1</StartMultiplicity>
@@ -1632,6 +1657,10 @@
       <Relationship type="Association" first="4" second="1">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>352</X>
+          <Y>589</Y>
+        </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
         <StartMultiplicity>1</StartMultiplicity>
@@ -1646,6 +1675,10 @@
       <Relationship type="Association" first="2" second="1">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>352</X>
+          <Y>589</Y>
+        </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
         <StartMultiplicity>1</StartMultiplicity>
