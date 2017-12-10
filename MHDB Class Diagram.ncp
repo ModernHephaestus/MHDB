@@ -1091,6 +1091,20 @@
         <Member type="Method">internal static void InitAircraftCarriers()</Member>
         <Modifier>None</Modifier>
       </Entity>
+      <Entity type="Class">
+        <Name>AddItems</Name>
+        <Access>Public</Access>
+        <Location left="865" top="1354" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void AddSA(object Item, string SType)</Member>
+        <Member type="Method">internal static void AddArt(object Item, string SType)</Member>
+        <Member type="Method">internal static void AddVeh(object Item, string SType)</Member>
+        <Member type="Method">internal static void AddFWA(object Item, string SType)</Member>
+        <Member type="Method">internal static void AddHR(object Item, string SType)</Member>
+        <Member type="Method">internal static void AddSh(object Item, string SType)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
     </Entities>
     <Relationships>
       <Relationship type="Association" first="1" second="0">
@@ -1540,6 +1554,17 @@
         <AssociationType>Association</AssociationType>
         <StartMultiplicity>1</StartMultiplicity>
       </Relationship>
+      <Relationship type="Association" first="38" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>697</X>
+          <Y>1318</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
     </Relationships>
   </ProjectItem>
   <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
@@ -1625,6 +1650,40 @@
         <Member type="Method">private void ResetDb_Click(object sender, RoutedEventArgs e)</Member>
         <Modifier>None</Modifier>
       </Entity>
+      <Entity type="Class">
+        <Name>Insert</Name>
+        <Access>Public</Access>
+        <Location left="1316" top="634" />
+        <Size width="440" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">private string _TableSelected { get; set; }</Member>
+        <Member type="Property">private string _TypeSelected { get; set; }</Member>
+        <Member type="Property">private object _Item1 { get; set; }</Member>
+        <Member type="Property">private object _Item2 { get; set; }</Member>
+        <Member type="Property">private ObservableCollection&lt;GenericHardware&gt; NewItem { get; set; }</Member>
+        <Member type="Constructor">public Insert()</Member>
+        <Member type="Method">private void SelectLevel_ItemClick(object sender, ItemClickEventArgs e)</Member>
+        <Member type="Method">private void SelectTable_SelectionChanged(object sender, SelectionChangedEventArgs e)</Member>
+        <Member type="Method">private void Submit_Click(object sender, RoutedEventArgs e)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Delete</Name>
+        <Access>Public</Access>
+        <Location left="1778" top="634" />
+        <Size width="440" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">private string _TableSelected { get; set; }</Member>
+        <Member type="Property">public string _TypeSelected { get; set; }</Member>
+        <Member type="Property">public dynamic _Item1 { get; set; }</Member>
+        <Member type="Constructor">public Delete()</Member>
+        <Member type="Method">private void SelectLevel_ItemClick(object sender, ItemClickEventArgs e)</Member>
+        <Member type="Method">private void SelectTable_SelectionChanged(object sender, SelectionChangedEventArgs e)</Member>
+        <Member type="Method">private void ChangeInfoSource()</Member>
+        <Member type="Method">private void Info_ItemClick(object sender, ItemClickEventArgs e)</Member>
+        <Member type="Method">private void ItemPanel_ItemClick(object sender, ItemClickEventArgs e)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
     </Entities>
     <Relationships>
       <Relationship type="Association" first="1" second="0">
@@ -1683,6 +1742,20 @@
         <AssociationType>Association</AssociationType>
         <StartMultiplicity>1</StartMultiplicity>
         <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="6" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="7" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
       </Relationship>
     </Relationships>
   </ProjectItem>

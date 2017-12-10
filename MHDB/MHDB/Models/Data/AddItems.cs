@@ -9,8 +9,7 @@ namespace MHDB.Models.Data
 {
     class AddItems
     {
-
-        internal static void AddSA(DatabaseItems.SmallArms Item, string SType)
+        internal static void AddSA(object Item, string SType)
         {
             using (var db = new DatabaseContext())
             {
