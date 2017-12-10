@@ -64,15 +64,21 @@ namespace MHDB.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<SmallArms>().HasDiscriminator<string>("_FirearmType");
-            modelBuilder.Entity<Artillery>().HasDiscriminator<string>("_ArtilleryType");
-            modelBuilder.Entity<Vehicles>().HasDiscriminator<string>("_VehicleType");
-            modelBuilder.Entity<FixedWingAircraft>().HasDiscriminator<string>("_AircraftType");
-            modelBuilder.Entity<HelicopterRotorcraft>().HasDiscriminator<string>("_HelicopterType");
-            modelBuilder.Entity<Ships>().HasDiscriminator<string>("_ShipType");
+            //modelBuilder.Entity<SmallArms>().HasDiscriminator<string>("_FirearmType");
+            //modelBuilder.Entity<Artillery>().HasDiscriminator<string>("_ArtilleryType");
+            //modelBuilder.Entity<Vehicles>().HasDiscriminator<string>("_VehicleType");
+            //modelBuilder.Entity<FixedWingAircraft>().HasDiscriminator<string>("_AircraftType");
+            //modelBuilder.Entity<HelicopterRotorcraft>().HasDiscriminator<string>("_HelicopterType");
+            //modelBuilder.Entity<Ships>().HasDiscriminator<string>("_ShipType");
+            modelBuilder.Entity<SmallArms>().HasDiscriminator<string>("_Type");
+            modelBuilder.Entity<Artillery>().HasDiscriminator<string>("_Type");
+            modelBuilder.Entity<Vehicles>().HasDiscriminator<string>("_Type");
+            modelBuilder.Entity<FixedWingAircraft>().HasDiscriminator<string>("_Type");
+            modelBuilder.Entity<HelicopterRotorcraft>().HasDiscriminator<string>("_Type");
+            modelBuilder.Entity<Ships>().HasDiscriminator<string>("_Type");
         }
     }
-    internal class GenericHardware
+    internal abstract class GenericHardware
     {
         /// <summary>
         /// Each property is a column in the SQLite database table.

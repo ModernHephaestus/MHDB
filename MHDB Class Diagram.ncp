@@ -747,16 +747,16 @@
       <Entity type="Class">
         <Name>DatabaseHelper</Name>
         <Access>Internal</Access>
-        <Location left="503" top="1074" />
+        <Location left="505" top="1074" />
         <Size width="252" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Method">internal static void MigrateDb()</Member>
         <Member type="Method">internal static bool IsEmpty()</Member>
         <Member type="Method">internal static void ResetDatabase()</Member>
         <Member type="Method">internal static void InitializeDatabase()</Member>
-        <Member type="Method">internal object SelectTable(string Table)</Member>
-        <Member type="Method">internal List&lt;string&gt; FillTableList(string GivenTable)</Member>
-        <Modifier>None</Modifier>
+        <Member type="Method">internal static object SelectTable(string Table)</Member>
+        <Member type="Method">internal static List&lt;string&gt; FillTableList(string GivenTable)</Member>
+        <Modifier>Static</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>InitializeData</Name>

@@ -8,7 +8,7 @@ using MHDB.Models;
 namespace MHDB.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20171210095056_InitialMigration")]
+    [Migration("20171210131522_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,14 +63,14 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Weight");
 
-                    b.Property<string>("_ArtilleryType")
+                    b.Property<string>("_Type")
                         .IsRequired();
 
                     b.HasKey("Id");
 
                     b.ToTable("Artillery");
 
-                    b.HasDiscriminator<string>("_ArtilleryType").HasValue("Artillery");
+                    b.HasDiscriminator<string>("_Type").HasValue("Artillery");
                 });
 
             modelBuilder.Entity("MHDB.Models.DatabaseItems.FixedWingAircraft", b =>
@@ -118,14 +118,14 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Width");
 
-                    b.Property<string>("_AircraftType")
+                    b.Property<string>("_Type")
                         .IsRequired();
 
                     b.HasKey("Id");
 
                     b.ToTable("Aircraft");
 
-                    b.HasDiscriminator<string>("_AircraftType").HasValue("FixedWingAircraft");
+                    b.HasDiscriminator<string>("_Type").HasValue("FixedWingAircraft");
                 });
 
             modelBuilder.Entity("MHDB.Models.DatabaseItems.HelicopterRotorcraft", b =>
@@ -175,14 +175,14 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Width");
 
-                    b.Property<string>("_HelicopterType")
+                    b.Property<string>("_Type")
                         .IsRequired();
 
                     b.HasKey("Id");
 
                     b.ToTable("Helicopters");
 
-                    b.HasDiscriminator<string>("_HelicopterType").HasValue("HelicopterRotorcraft");
+                    b.HasDiscriminator<string>("_Type").HasValue("HelicopterRotorcraft");
                 });
 
             modelBuilder.Entity("MHDB.Models.DatabaseItems.Ships", b =>
@@ -237,14 +237,14 @@ namespace MHDB.Migrations
 
                     b.Property<double?>("Weight");
 
-                    b.Property<string>("_ShipType")
+                    b.Property<string>("_Type")
                         .IsRequired();
 
                     b.HasKey("Id");
 
                     b.ToTable("Ships");
 
-                    b.HasDiscriminator<string>("_ShipType").HasValue("Ships");
+                    b.HasDiscriminator<string>("_Type").HasValue("Ships");
                 });
 
             modelBuilder.Entity("MHDB.Models.DatabaseItems.SmallArms", b =>
@@ -301,14 +301,14 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Weight");
 
-                    b.Property<string>("_FirearmType")
+                    b.Property<string>("_Type")
                         .IsRequired();
 
                     b.HasKey("Id");
 
                     b.ToTable("Small Arms");
 
-                    b.HasDiscriminator<string>("_FirearmType").HasValue("SmallArms");
+                    b.HasDiscriminator<string>("_Type").HasValue("SmallArms");
                 });
 
             modelBuilder.Entity("MHDB.Models.DatabaseItems.Vehicles", b =>
@@ -362,14 +362,14 @@ namespace MHDB.Migrations
 
                     b.Property<double>("Width");
 
-                    b.Property<string>("_VehicleType")
+                    b.Property<string>("_Type")
                         .IsRequired();
 
                     b.HasKey("Id");
 
                     b.ToTable("Vehicles");
 
-                    b.HasDiscriminator<string>("_VehicleType").HasValue("Vehicles");
+                    b.HasDiscriminator<string>("_Type").HasValue("Vehicles");
                 });
 
             modelBuilder.Entity("MHDB.Models.DatabaseItems.AirDefense", b =>

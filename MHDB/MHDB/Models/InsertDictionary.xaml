@@ -1,0 +1,355 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MHDB.Models">
+    
+    <DataTemplate x:Name="SmallArmsInsertTemplate" x:Key="SmallArmsInsertTemplate">
+        <Grid Height="Auto" Width="Auto" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="350"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" MaxHeight="200"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Name="ItemImageDesc" Text="Image URL: " Grid.Column="0" Grid.Row="0"/>
+            <TextBox Name="ItemImage" Text="{Binding Image, Mode=TwoWay}" MaxWidth="200" MaxHeight="200" Grid.Column="1" Grid.Row="0"/>
+            <TextBlock Name="ItemModelNameDesc" Text="Model Name: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="0"/>
+            <TextBox Name="ItemModelName" Text="{Binding ModelName, Mode=TwoWay}" TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock Name="ItemManufactuerDesc" Text="Manufacturer: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="2" Grid.Column="0"/>
+            <TextBox Text="{Binding Manufacturer, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="2" Grid.Column="1"/>
+            <TextBlock Name="ItemStartProdDesc" Text="Start Production: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="3" Grid.Column="0"/>
+            <TextBox Text="{Binding StartProduction, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="3" Grid.Column="1"/>
+            <TextBlock Name="ItemDesinedDesc" Text="Designed: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="4" Grid.Column="0"/>
+            <TextBox Text="{Binding Designed, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="4" Grid.Column="1"/>
+            <TextBlock Name="ItemEndProdDesc" Text="End Production: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="5" Grid.Column="0"/>
+            <TextBox Text="{Binding EndProduction, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="5" Grid.Column="1"/>
+            <TextBlock Name="ItemStartServiceDesc" Text="Start Service: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="6" Grid.Column="0"/>
+            <TextBox Text="{Binding StartService, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="6" Grid.Column="1"/>
+            <TextBlock Name="ItemEndServiceDesc" Text="End Service: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="7" Grid.Column="0"/>
+            <TextBox Text="{Binding EndService, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="7" Grid.Column="1"/>
+            <TextBlock Name="ItemNoBuiltDesc" Text="Number Built: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="8" Grid.Column="0"/>
+            <TextBox Text="{Binding NoBuilt, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="8" Grid.Column="1"/>
+            <TextBlock Name="ItemCostDesc" Text="Cost (USD): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
+            <TextBox Text="{Binding Cost, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="9" Grid.Column="1"/>
+            <TextBlock Name="ItemWeightDesc" Text="Weight (kg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="10" Grid.Column="0"/>
+            <TextBox Text="{Binding Weight, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="10" Grid.Column="1"/>
+            <TextBlock Name="ItemLengthDesc" Text="Length (mm): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="11" Grid.Column="0"/>
+            <TextBox Text="{Binding Length, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="11" Grid.Column="1"/>
+            <TextBlock Name="ItemBarrelLengthDesc" Text="Barrel Length (mm): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="12" Grid.Column="0"/>
+            <TextBox Text="{Binding BarrelLength, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="12" Grid.Column="1"/>
+            <TextBlock Name="ItemCartridgeDesc" Text="Cartridge: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="13" Grid.Column="0"/>
+            <TextBox Text="{Binding Cartridge, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="13" Grid.Column="1"/>
+            <TextBlock Name="ItemActionDesc" Text="Action: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="14" Grid.Column="0"/>
+            <TextBox Text="{Binding Action, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="14" Grid.Column="1"/>
+            <TextBlock Name="ItemRateOfFireDesc" Text="Rate of Fire (rpm): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="15" Grid.Column="0"/>
+            <TextBox Text="{Binding RateOfFire, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="15" Grid.Column="1"/>
+            <TextBlock Name="ItemMuzzleVelocityDesc" Text="Muzzle Velocity (m/s): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="16" Grid.Column="0"/>
+            <TextBox Text="{Binding MuzzleVelocity, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="16" Grid.Column="1"/>
+            <TextBlock Name="ItemEffectiveRangeDesc" Text="Effective Range (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="17" Grid.Column="0"/>
+            <TextBox Text="{Binding EffectiveRange, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="17" Grid.Column="1"/>
+            <TextBlock Name="ItemMaxRangeDesc" Text="Max Range (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="18" Grid.Column="0"/>
+            <TextBox Text="{Binding MaxRange, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="18" Grid.Column="1"/>
+            <TextBlock Name="ItemFeedSystemDesc" Text="Feed System: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="19" Grid.Column="0"/>
+            <TextBox Text="{Binding FeedSystem, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="19" Grid.Column="1"/>
+            <TextBlock Name="ItemSightsDesc" Text="Sights: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="20" Grid.Column="0"/>
+            <TextBox Text="{Binding Sights, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="20" Grid.Column="1"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Name="ArtilleryInsertTemplate" x:Key="ArtilleryInsertTemplate">
+        <Grid Height="Auto" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="350"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" MaxHeight="200"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Name="ItemImageDesc" Text="Image URL: " Grid.Column="0" Grid.Row="0"/>
+            <TextBox Name="ItemImage" Text="{Binding Image, Mode=TwoWay}" MaxWidth="200" MaxHeight="200" Grid.Column="1" Grid.Row="0"/>
+            <TextBlock Name="ItemModelNameDesc" Text="Model Name: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="0"/>
+            <TextBox Name="ItemModelName" Text="{Binding ModelName, Mode=TwoWay}" TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock Name="ItemManufactuerDesc" Text="Manufacturer: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="2" Grid.Column="0"/>
+            <TextBox Text="{Binding Manufacturer, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="2" Grid.Column="1"/>
+            <TextBlock Name="ItemStartProdDesc" Text="Start Production: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="3" Grid.Column="0"/>
+            <TextBox Text="{Binding StartProduction, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="3" Grid.Column="1"/>
+            <TextBlock Name="ItemDesinedDesc" Text="Designed: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="4" Grid.Column="0"/>
+            <TextBox Text="{Binding Designed, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="4" Grid.Column="1"/>
+            <TextBlock Name="ItemEndProdDesc" Text="End Production: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="5" Grid.Column="0"/>
+            <TextBox Text="{Binding EndProduction, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="5" Grid.Column="1"/>
+            <TextBlock Name="ItemStartServiceDesc" Text="Start Service: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="6" Grid.Column="0"/>
+            <TextBox Text="{Binding StartService, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="6" Grid.Column="1"/>
+            <TextBlock Name="ItemEndServiceDesc" Text="End Service: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="7" Grid.Column="0"/>
+            <TextBox Text="{Binding EndService, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="7" Grid.Column="1"/>
+            <TextBlock Name="ItemNoBuiltDesc" Text="Number Built: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="8" Grid.Column="0"/>
+            <TextBox Text="{Binding NoBuilt, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="8" Grid.Column="1"/>
+            <TextBlock Name="ItemCostDesc" Text="Cost (USD): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
+            <TextBox Text="{Binding Cost, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="9" Grid.Column="1"/>
+            <TextBlock Name="ItemWeightDesc" Text="Weight (kg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="10" Grid.Column="0"/>
+            <TextBox Text="{Binding Weight, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="10" Grid.Column="1"/>
+            <TextBlock Name="ItemLengthDesc" Text="Length (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="11" Grid.Column="0"/>
+            <TextBox Text="{Binding Length, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="11" Grid.Column="1"/>
+            <TextBlock Name="ItemBarrelLengthDesc" Text="Barrel Length (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="12" Grid.Column="0"/>
+            <TextBox Text="{Binding BarrelLength, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="12" Grid.Column="1"/>
+            <TextBlock Name="ItemCrewDesc" Text="Crew: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="13" Grid.Column="0"/>
+            <TextBox Text="{Binding Crew, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="13" Grid.Column="1"/>
+            <TextBlock Name="ItemShellDesc" Text="Shell: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="14" Grid.Column="0"/>
+            <TextBox Text="{Binding Shell, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="14" Grid.Column="1"/>
+            <TextBlock Name="ItemCarriageDesc" Text="Carriage: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="15" Grid.Column="0"/>
+            <TextBox Text="{Binding Carriage, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="15" Grid.Column="1"/>
+            <TextBlock Name="ItemMinElevationDesc" Text="Minimum Elevation (deg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="16" Grid.Column="0"/>
+            <TextBox Text="{Binding MinimumElevation, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="16" Grid.Column="1"/>
+            <TextBlock Name="ItemMaxElevationDesc" Text="Maximum Elevation (deg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="17" Grid.Column="0"/>
+            <TextBox Text="{Binding MaximumElevation, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="17" Grid.Column="1"/>
+            <TextBlock Name="ItemRateOfFireDesc" Text="Rate of Fire (rpm): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="18" Grid.Column="0"/>
+            <TextBox Text="{Binding RateOfFire, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="18" Grid.Column="1"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Name="VehiclesInsertTemplate" x:Key="VehiclesInsertTemplate">
+        <Grid Height="Auto" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="350"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" MaxHeight="200"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Name="ItemImageDesc" Text="Image URL: " Grid.Column="0" Grid.Row="0"/>
+            <TextBox Name="ItemImage" Text="{Binding Image, Mode=TwoWay}" MaxWidth="200" MaxHeight="200" Grid.Column="1" Grid.Row="0"/>
+            <TextBlock Name="ItemModelNameDesc" Text="Model Name: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="0"/>
+            <TextBox Name="ItemModelName" Text="{Binding ModelName, Mode=TwoWay}" TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock Name="ItemManufactuerDesc" Text="Manufacturer: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="2" Grid.Column="0"/>
+            <TextBox Text="{Binding Manufacturer, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="2" Grid.Column="1"/>
+            <TextBlock Name="ItemStartProdDesc" Text="Start Production: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="3" Grid.Column="0"/>
+            <TextBox Text="{Binding StartProduction, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="3" Grid.Column="1"/>
+            <TextBlock Name="ItemDesinedDesc" Text="Designed: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="4" Grid.Column="0"/>
+            <TextBox Text="{Binding Designed, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="4" Grid.Column="1"/>
+            <TextBlock Name="ItemEndProdDesc" Text="End Production: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="5" Grid.Column="0"/>
+            <TextBox Text="{Binding EndProduction, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="5" Grid.Column="1"/>
+            <TextBlock Name="ItemStartServiceDesc" Text="Start Service: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="6" Grid.Column="0"/>
+            <TextBox Text="{Binding StartService, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="6" Grid.Column="1"/>
+            <TextBlock Name="ItemEndServiceDesc" Text="End Service: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="7" Grid.Column="0"/>
+            <TextBox Text="{Binding EndService, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="7" Grid.Column="1"/>
+            <TextBlock Name="ItemNoBuiltDesc" Text="Number Built: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="8" Grid.Column="0"/>
+            <TextBox Text="{Binding NoBuilt, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="8" Grid.Column="1"/>
+            <TextBlock Name="ItemCostDesc" Text="Cost (USD): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
+            <TextBox Text="{Binding Cost, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="9" Grid.Column="1"/>
+            <TextBlock Name="ItemWeightDesc" Text="Weight (kg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="10" Grid.Column="0"/>
+            <TextBox Text="{Binding Weight, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="10" Grid.Column="1"/>
+            <TextBlock Name="ItemLengthDesc" Text="Length (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="11" Grid.Column="0"/>
+            <TextBox Text="{Binding Length, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="11" Grid.Column="1"/>
+            <TextBlock Name="ItemWidthDesc" Text="Width (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="12" Grid.Column="0"/>
+            <TextBox Text="{Binding Width, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="12" Grid.Column="1"/>
+            <TextBlock Name="ItemHeightDesc" Text="Height (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="13" Grid.Column="0"/>
+            <TextBox Text="{Binding Height, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="13" Grid.Column="1"/>
+            <TextBlock Name="ItemArmamentDesc" Text="Armament: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="14" Grid.Column="0"/>
+            <TextBox Text="{Binding Armament, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="14" Grid.Column="1"/>
+            <TextBlock Name="ItemEngineDesc" Text="Engine: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="15" Grid.Column="0"/>
+            <TextBox Text="{Binding Engine, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="15" Grid.Column="1"/>
+            <TextBlock Name="ItemTransmissionDesc" Text="Transmission: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="16" Grid.Column="0"/>
+            <TextBox Text="{Binding Transmission, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="16" Grid.Column="1"/>
+            <TextBlock Name="ItemSuspensionDesc" Text="Suspension: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="17" Grid.Column="0"/>
+            <TextBox Text="{Binding Suspension, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="17" Grid.Column="1"/>
+            <TextBlock Name="ItemFuelCapDesc" Text="Fuel Capacity (L): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="18" Grid.Column="0"/>
+            <TextBox Text="{Binding FuelCapacity, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="18" Grid.Column="1"/>
+            <TextBlock Name="ItemMaxSpeedDesc" Text="Maximum Speed (kph): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="19" Grid.Column="0"/>
+            <TextBox Text="{Binding MaxSpeed, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="19" Grid.Column="1"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Name="AircraftInsertTemplate" x:Key="AircraftInsertTemplate">
+        <Grid Height="Auto" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="350"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" MaxHeight="200"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Name="ItemImageDesc" Text="Image URL: " Grid.Column="0" Grid.Row="0"/>
+            <TextBox Name="ItemImage" Text="{Binding Image, Mode=TwoWay}" MaxWidth="200" MaxHeight="200" Grid.Column="1" Grid.Row="0"/>
+            <TextBlock Name="ItemModelNameDesc" Text="Model Name: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="0"/>
+            <TextBox Name="ItemModelName" Text="{Binding ModelName, Mode=TwoWay}" TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock Name="ItemManufactuerDesc" Text="Manufacturer: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="2" Grid.Column="0"/>
+            <TextBox Text="{Binding Manufacturer, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="2" Grid.Column="1"/>
+            <TextBlock Name="ItemStartProdDesc" Text="Start Production: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="3" Grid.Column="0"/>
+            <TextBox Text="{Binding StartProduction, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="3" Grid.Column="1"/>
+            <TextBlock Name="ItemDesinedDesc" Text="Designed: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="4" Grid.Column="0"/>
+            <TextBox Text="{Binding Designed, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="4" Grid.Column="1"/>
+            <TextBlock Name="ItemEndProdDesc" Text="End Production: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="5" Grid.Column="0"/>
+            <TextBox Text="{Binding EndProduction, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="5" Grid.Column="1"/>
+            <TextBlock Name="ItemStartServiceDesc" Text="Start Service: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="6" Grid.Column="0"/>
+            <TextBox Text="{Binding StartService, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="6" Grid.Column="1"/>
+            <TextBlock Name="ItemEndServiceDesc" Text="End Service: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="7" Grid.Column="0"/>
+            <TextBox Text="{Binding EndService, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="7" Grid.Column="1"/>
+            <TextBlock Name="ItemNoBuiltDesc" Text="Number Built: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="8" Grid.Column="0"/>
+            <TextBox Text="{Binding NoBuilt, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="8" Grid.Column="1"/>
+            <TextBlock Name="ItemCostDesc" Text="Cost (USD): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
+            <TextBox Text="{Binding Cost, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="9" Grid.Column="1"/>
+            <TextBlock Name="ItemWeightDesc" Text="Weight (kg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="10" Grid.Column="0"/>
+            <TextBox Text="{Binding Weight, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="10" Grid.Column="1"/>
+            <TextBlock Name="ItemLengthDesc" Text="Length (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="11" Grid.Column="0"/>
+            <TextBox Text="{Binding Length, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="11" Grid.Column="1"/>
+            <TextBlock Name="ItemWidthDesc" Text="Width (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="12" Grid.Column="0"/>
+            <TextBox Text="{Binding Width, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="12" Grid.Column="1"/>
+            <TextBlock Name="ItemHeightDesc" Text="Height (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="13" Grid.Column="0"/>
+            <TextBox Text="{Binding Height, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="13" Grid.Column="1"/>
+            <TextBlock Name="ItemArmamentDesc" Text="Armament: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="14" Grid.Column="0"/>
+            <TextBox Text="{Binding Armament, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="14" Grid.Column="1"/>
+            <TextBlock Name="ItemEngineDesc" Text="Engine: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="15" Grid.Column="0"/>
+            <TextBox Text="{Binding Engine, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="15" Grid.Column="1"/>
+            <TextBlock Name="ItemMaxSpeedDesc" Text="Maximum Speed (kph): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="16" Grid.Column="0"/>
+            <TextBox Text="{Binding MaxSpeed, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="16" Grid.Column="1"/>
+            <TextBlock Name="ItemMaxAltitudeDesc" Text="Maximum Altitude (km): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="17" Grid.Column="0"/>
+            <TextBox Text="{Binding MaxAltitude, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="17" Grid.Column="1"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Name="ShipsInsertTemplate" x:Key="ShipsInsertTemplate">
+        <Grid Height="Auto" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="350"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" MaxHeight="200"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Name="ItemImageDesc" Text="Image URL: " Grid.Column="0" Grid.Row="0"/>
+            <TextBox Name="ItemImage" Text="{Binding Image, Mode=TwoWay}" MaxWidth="200" MaxHeight="200" Grid.Column="1" Grid.Row="0"/>
+            <TextBlock Name="ItemModelNameDesc" Text="Model Name: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="0"/>
+            <TextBox Name="ItemModelName" Text="{Binding ModelName, Mode=TwoWay}" TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock Name="ItemManufactuerDesc" Text="Manufacturer: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="2" Grid.Column="0"/>
+            <TextBox Text="{Binding Manufacturer, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="2" Grid.Column="1"/>
+            <TextBlock Name="ItemStartProdDesc" Text="Start Production: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="3" Grid.Column="0"/>
+            <TextBox Text="{Binding StartProduction, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="3" Grid.Column="1"/>
+            <TextBlock Name="ItemDesinedDesc" Text="Designed: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="4" Grid.Column="0"/>
+            <TextBox Text="{Binding Designed, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="4" Grid.Column="1"/>
+            <TextBlock Name="ItemEndProdDesc" Text="End Production: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="5" Grid.Column="0"/>
+            <TextBox Text="{Binding EndProduction, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="5" Grid.Column="1"/>
+            <TextBlock Name="ItemStartServiceDesc" Text="Start Service: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="6" Grid.Column="0"/>
+            <TextBox Text="{Binding StartService, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="6" Grid.Column="1"/>
+            <TextBlock Name="ItemEndServiceDesc" Text="End Service: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="7" Grid.Column="0"/>
+            <TextBox Text="{Binding EndService, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="7" Grid.Column="1"/>
+            <TextBlock Name="ItemNoBuiltDesc" Text="Number Built: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="8" Grid.Column="0"/>
+            <TextBox Text="{Binding NoBuilt, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="8" Grid.Column="1"/>
+            <TextBlock Name="ItemCostDesc" Text="Cost (USD): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
+            <TextBox Text="{Binding Cost, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="9" Grid.Column="1"/>
+            <TextBlock Name="ItemWeightDesc" Text="Weight (kg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="10" Grid.Column="0"/>
+            <TextBox Text="{Binding Weight, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="10" Grid.Column="1"/>
+            <TextBlock Name="ItemLengthDesc" Text="Length (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="11" Grid.Column="0"/>
+            <TextBox Text="{Binding Length, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="11" Grid.Column="1"/>
+            <TextBlock Name="ItemBeamDesc" Text="Beam (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="12" Grid.Column="0"/>
+            <TextBox Text="{Binding Beam, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="12" Grid.Column="1"/>
+            <TextBlock Name="ItemDraftDesc" Text="Draft (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="13" Grid.Column="0"/>
+            <TextBox Text="{Binding Draft, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="13" Grid.Column="1"/>
+            <TextBlock Name="ItemDisplacementDesc" Text="Displacement (long tons): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="14" Grid.Column="0"/>
+            <TextBox Text="{Binding Displacement, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="14" Grid.Column="1"/>
+            <TextBlock Name="ItemArmamentDesc" Text="Armament: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="15" Grid.Column="0"/>
+            <TextBox Text="{Binding Armament, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="15" Grid.Column="1"/>
+            <TextBlock Name="ItemArmorDesc" Text="Armor: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="16" Grid.Column="0"/>
+            <TextBox Text="{Binding Armor, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="16" Grid.Column="1"/>
+            <TextBlock Name="ItemEngineDesc" Text="Engine: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="17" Grid.Column="0"/>
+            <TextBox Text="{Binding Engine, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="17" Grid.Column="1"/>
+            <TextBlock Name="ItemMaxSpeedDesc" Text="Maximum Speed (kph): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="18" Grid.Column="0"/>
+            <TextBox Text="{Binding MaxSpeed, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="18" Grid.Column="1"/>
+            <TextBlock Name="ItemAircraftNoDesc" Text="Aircraft Number: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="19" Grid.Column="0"/>
+            <TextBox Text="{Binding AircraftNo, Mode=TwoWay}" TextWrapping="Wrap" Margin="6" Grid.Row="19" Grid.Column="1"/>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

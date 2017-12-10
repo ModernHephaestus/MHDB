@@ -30,7 +30,9 @@ namespace MHDB.Models
             {
                 new MenuItem() { Icon = Symbol.Home, Name = "Home", PageType = typeof(Views.Home) },
                 new MenuItem() { Icon = Symbol.ViewAll, Name = "Data", PageType = typeof(Views.Data) },
-                new MenuItem() { Icon = Symbol.TwoPage, Name = "Compare", PageType = typeof(Views.Compare) }
+                new MenuItem() { Icon = Symbol.TwoPage, Name = "Compare", PageType = typeof(Views.Compare) },
+                new MenuItem() { Icon = Symbol.Add, Name = "Insert", PageType = typeof(Views.Insert) },
+                new MenuItem() { Icon = Symbol.Remove, Name = "Delete", PageType = typeof(Views.Delete) }
             };
             return items;
         }

@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MHDB.Models;
+using MHDB.Models.DatabaseItems;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -12,28 +15,21 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using MHDB.Models;
-using System.Reflection;
-using MHDB.Models.DatabaseItems;
-using System.CodeDom;
-using System.CodeDom.Compiler;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.ObjectModel;
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MHDB.Views
 {
     /// <summary>
-    /// Page where you view and select which pieces of hardware you want to compare.
+    /// A page where items can be deleted from the database;
     /// </summary>
-    public sealed partial class Data : Page
+    public sealed partial class Delete : Page
     {
-        private string _TableSelected {get; set;}
+        private string _TableSelected { get; set; }
         private string _TypeSelected { get; set; }
-        private object _Item1 { get; set; }
-        private object _Item2 { get; set; }
-        
-        public Data()
+        private dynamic _Item1 { get; set; }
+
+        public Delete()
         {
             this.InitializeComponent();
         }
@@ -43,14 +39,16 @@ namespace MHDB.Views
             var ClickedItem = (TextBlock)e.ClickedItem;
             SelectTable.ItemsSource = DatabaseHelper.FillTableList(ClickedItem.Text);
             _TableSelected = ClickedItem.Text;
-            ClearSelected();
             Info.Visibility = Visibility.Collapsed;
             SelectTable.Visibility = Visibility.Visible;
         }
 
-        
-
         private void SelectTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ChangeInfoSource();
+        }
+
+        private void ChangeInfoSource()
         {
             try
             {
@@ -63,6 +61,7 @@ namespace MHDB.Views
 
             }
         }
+
         private void Info_ItemClick(object sender, ItemClickEventArgs e)
         {
             dynamic ItemInfo = (GenericHardware)e.ClickedItem;
@@ -99,60 +98,37 @@ namespace MHDB.Views
                     }
                     break;
             };
-            if((string)SelectedItem1.Tag == "Empty")
+            if ((string)SelectedItem.Tag == "Empty")
             {
-                SelectedItem1.Text = ItemInfo.ModelName;
+                SelectedItem.Text = ItemInfo.ModelName;
                 _Item1 = ItemInfo;
-                SelectedItem1.Tag = "Filled";
+                SelectedItem.Tag = "Filled";
             }
-            else if ((string)SelectedItem2.Tag == "Empty")
-            {
-                SelectedItem2.Text = ItemInfo.ModelName;
-                _Item2 = ItemInfo;
-                SelectedItem2.Tag = "Filled";
-            }
+
         }
 
         private void ItemPanel_ItemClick(object sender, ItemClickEventArgs e)
         {
             var Item = (TextBlock)e.ClickedItem;
-            if (Item.Name == SelectedItem1.Name)
+            if (Item.Name == SelectedItem.Name)
             {
-                SelectedItem1.Tag = "Empty";
+                SelectedItem.Tag = "Empty";
                 _Item1 = null;
-                SelectedItem1.Text = "Item 1 Selection Empty";
+                SelectedItem.Text = "Item Selection Empty";
             }
-            else if (Item.Name == SelectedItem2.Name)
+            else if (Item.Name == DeleteSelected.Name)
             {
-                _Item2 = null;
-                SelectedItem2.Tag = "Empty";
-                SelectedItem2.Text = "Item 2 Selection Empty";
-            }
-            else if (Item.Name == ClearSelections.Name)
-            {
-                ClearSelected();
-            }
-            else
-            {
-                Dictionary<string, object> dictionary = new Dictionary<string, object>
+                if (_Item1 != null)
                 {
-                    { "Item1", _Item1 },
-                    { "Item2", _Item2 },
-                    { "Type", _TypeSelected },
-                    { "Table", _TableSelected }
-                };
-                Frame.Navigate(typeof(Compare), dictionary);
+                    DatabaseHelper.DeleteItem(_Item1);
+                    SelectedItem.Tag = "Empty";
+                    _Item1 = null;
+                    SelectedItem.Text = "Item Selection Empty";
+                    Info.SelectedIndex = -1;
+                    ChangeInfoSource();
+                }
             }
         }
 
-        private void ClearSelected()
-        {
-            _Item1 = null;
-            _Item2 = null;
-            SelectedItem1.Tag = "Empty";
-            SelectedItem1.Text = "Item 1 Selection Empty";
-            SelectedItem2.Tag = "Empty";
-            SelectedItem2.Text = "Item 2 Selection Empty";
-        }
     }
 }

@@ -95,9 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20171210095056_InitialMigration.cs" />
-    <Compile Include="Migrations\20171210095056_InitialMigration.designer.cs">
-      <DependentUpon>20171210095056_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20171210131522_InitialMigration.cs" />
+    <Compile Include="Migrations\20171210131522_InitialMigration.designer.cs">
+      <DependentUpon>20171210131522_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Models\DatabaseHelper.cs" />
@@ -108,6 +108,7 @@
     <Compile Include="Models\DatabaseItems\SmallArms.cs" />
     <Compile Include="Models\DatabaseItems\Vehicles.cs" />
     <Compile Include="Models\DatabaseStructure.cs" />
+    <Compile Include="Models\Data\AddItems.cs" />
     <Compile Include="Models\Data\Artillery\AddAirDefense.cs" />
     <Compile Include="Models\Data\Artillery\AddHowitzers.cs" />
     <Compile Include="Models\Data\Artillery\AddMortars.cs" />
@@ -152,8 +153,14 @@
     <Compile Include="Views\Data.xaml.cs">
       <DependentUpon>Data.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Delete.xaml.cs">
+      <DependentUpon>Delete.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Insert.xaml.cs">
+      <DependentUpon>Insert.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -191,6 +198,11 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
+    <Page Include="Models\InsertDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
     <Page Include="Views\Compare.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -199,7 +211,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Delete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Insert.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

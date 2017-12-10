@@ -11,7 +11,7 @@ using MHDB.Models.Data;
 using System.Reflection;
 namespace MHDB.Models
 {
-    internal class DatabaseHelper
+    internal static class DatabaseHelper
     {
         internal static void MigrateDb()
         {
@@ -69,6 +69,39 @@ namespace MHDB.Models
                 }
             }
         }
+        internal static void DeleteItem<T>(T Item) where T : GenericHardware
+        {
+            using (var db = new DatabaseContext())
+            {
+                db.Remove(Item);
+                db.SaveChanges();
+            }
+        }
+        internal static void InsertItem(object Item, string Table, string SType)
+        {
+            switch(Table)
+            {
+                case "Small Arms":
+                    AddItems.AddSA((SmallArms)Item, SType);
+                    break;
+                case "Artillery":
+                    AddItems.AddArt(Item, SType);
+                    break;
+                case "Vehicles":
+                    AddItems.AddVeh(Item, SType);
+                    break;
+                case "Aircraft":
+                    AddItems.AddFWA(Item, SType);
+                    break;
+                case "Helicopters":
+                    AddItems.AddHR(Item, SType);
+                    break;
+                case "Ships":
+                    AddItems.AddSh(Item, SType);
+                    break;
+            }
+        }
+
         internal static void InitializeDatabase()
         {
             using (var db = new DatabaseContext())
@@ -76,12 +109,12 @@ namespace MHDB.Models
                 InitializeData.InitializeDatabase();
             }
         }
-        internal object SelectTable(string Table)
+        internal static object SelectTable(string Table)
         {
             var db = new DatabaseContext();
             return db.GetType().GetProperty(Table).GetValue(db);
         }
-        internal List<string> FillTableList(string GivenTable)
+        internal static List<string> FillTableList(string GivenTable)
         {
             using (var db = new DatabaseContext())
             {
