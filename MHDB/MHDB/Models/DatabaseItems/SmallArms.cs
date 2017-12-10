@@ -15,7 +15,6 @@ namespace MHDB.Models.DatabaseItems
         /// Properties must be public for the Entity Framework SQLite to work.
         /// As the whole class is internal, each public property in the class is also, in effect, internal.
         /// </summary>  
-        public const string TopLevelClass = "Firearms";
         //Weight is in Kg, kilograms.
 
         public double Weight { get; set; }

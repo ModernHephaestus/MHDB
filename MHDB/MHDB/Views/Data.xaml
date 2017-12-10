@@ -55,7 +55,7 @@
                 <TextBlock Name="SelectedItem1" Tag="Empty" Text="Item 1 Selection Empty" TextWrapping="Wrap" FontSize="20"/>
                 <TextBlock Name="SelectedItem2" Tag="Empty" Text="Item 2 Selection Empty" TextWrapping="Wrap" FontSize="20"/>
                 <TextBlock Name="ClearSelections" Tag="Empty" Text="Clear Selections" TextWrapping="Wrap" FontSize="20"/>
-                <TextBlock Name="CompareItems" Tag="Empty" Text="CompareItems" TextWrapping="Wrap" FontSize="20" FontWeight="Bold"/>
+                <TextBlock Name="CompareItems" Tag="Empty" Text="Compare Items" TextWrapping="Wrap" FontSize="20" FontWeight="Bold"/>
             </GridView>
         </RelativePanel>
     </ScrollViewer>

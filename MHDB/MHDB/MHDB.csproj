@@ -121,6 +121,11 @@
     <Compile Include="Models\Data\HelicopterRotorcraft\AddAttack.cs" />
     <Compile Include="Models\Data\HelicopterRotorcraft\AddObservation.cs" />
     <Compile Include="Models\Data\HelicopterRotorcraft\AddUtility.cs" />
+    <Compile Include="Models\Data\_InitTables\InitAircraft.cs" />
+    <Compile Include="Models\Data\_InitTables\InitArtillery.cs" />
+    <Compile Include="Models\Data\_InitTables\InitHelicopters.cs" />
+    <Compile Include="Models\Data\_InitTables\InitShips.cs" />
+    <Compile Include="Models\Data\_InitTables\InitSmallArms.cs" />
     <Compile Include="Models\Data\Ships\AddAircraftCarriers.cs" />
     <Compile Include="Models\Data\Ships\AddAmphibiousWarfare.cs" />
     <Compile Include="Models\Data\Ships\AddCruisers.cs" />
@@ -139,8 +144,8 @@
     <Compile Include="Models\Data\Vehicles\AddTanks.cs" />
     <Compile Include="Models\Data\Vehicles\AddTrucks.cs" />
     <Compile Include="Models\Data\InitializeData.cs" />
+    <Compile Include="Models\Data\_InitTables\InitVehicles.cs" />
     <Compile Include="Models\Menus.cs" />
-    <Compile Include="Models\TemplateSelector.cs" />
     <Compile Include="Views\Compare.xaml.cs">
       <DependentUpon>Compare.xaml</DependentUpon>
     </Compile>
@@ -162,6 +167,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="MHDB.cd" />
     <None Include="MHDB_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

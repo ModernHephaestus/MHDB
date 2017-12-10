@@ -14,45 +14,21 @@ namespace MHDB.Models.Data
 {
     internal class InitializeData
     {
-        public static void InitializeDatabase()
+        internal static void InitializeDatabase()
         {
             //SmallArms
-            AddAntiMaterial.InitAntiMaterial();
-            AddDMRSniperRifles.InitDMRSniperRifles();
-            AddMachineGuns.InitMachineGuns();
-            AddPistols.InitPistols();
-            AddRiflesAndCarbines.InitRiflesAndCarbines();
-            AddShotguns.InitShotguns();
-            AddSubmachineGuns.InitSubmachineGuns();
+            InitSmallArms.SmallArmsInit();
             //Artillery
-            AddAirDefense.InitAirDefense();
-            AddHowitzers.InitHowitzers();
-            AddMortars.InitMortars();
+            InitArtillery.ArtilleryInit();
             //AddRocketArtillery.InitRocketArtillery();
             //Vehicles
-            AddAPCs.InitAPCs();
-            AddIFVs.InitIFVs();
-            AddTanks.InitTanks();
-            AddTrucks.InitTrucks();
+            InitVehicles.VehiclesInit();
             //FixeWingAircraft
-            AddBomber.InitBomber();
-            AddCommandAndControl.InitCommandAndControl();
-            AddFighter.InitFighter();
-            AddGroundAttack.InitGroundAttack();
-            AddGunship.InitGunship();
-            AddTransport.InitTransport();
-            AddUAV.InitUAV();
+            InitAircraft.AircraftInit();
             //HelicopterRotorcraft
-            AddAttack.InitAttack();
-            AddObservation.InitObservation();
-            AddUtility.InitUtility();
+            InitHelicopters.HelicoptersInit();
             //Ships
-            AddAircraftCarriers.InitAircraftCarriers();
-            AddAmphibiousWarfare.InitAmphibiousWarfare();
-            AddCruisers.InitCruisers();
-            AddDestroyers.InitDestroyers();
-            AddFrigates.InitFrigates();
-            AddSubmarines.InitSubmarines();
+            InitShips.ShipsInit();
         }
     }
 }

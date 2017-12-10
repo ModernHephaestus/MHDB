@@ -70,9 +70,6 @@ namespace MHDB.Models
             modelBuilder.Entity<FixedWingAircraft>().HasDiscriminator<string>("_AircraftType");
             modelBuilder.Entity<HelicopterRotorcraft>().HasDiscriminator<string>("_HelicopterType");
             modelBuilder.Entity<Ships>().HasDiscriminator<string>("_ShipType");
-            //modelBuilder.Entity<Pistols>().HasKey(p => new { p.Id });
-            //modelBuilder.Entity<Pistols>().Property(r => new { r.ModelName }).IsRequired();
-            //modelBuilder.Entity<Pistols>().Property(r => new { r.Manufacturer}).IsRequired();
         }
     }
     internal class GenericHardware

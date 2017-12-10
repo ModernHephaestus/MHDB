@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MHDB.App" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="78.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MHDB.MainPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="82" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MHDB.Migrations.InitialMigration" Collapsed="true">
+    <Position X="80.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20171210033458_InitialMigration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Migrations.DatabaseContextModelSnapshot" Collapsed="true">
+    <Position X="85.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Migrations\DatabaseContextModelSnapshot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.Artillery.AddAirDefense" Collapsed="true">
+    <Position X="76.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\Data\Artillery\AddAirDefense.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.Artillery.AddHowitzers" Collapsed="true">
+    <Position X="76.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\Artillery\AddHowitzers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.Artillery.AddMortars" Collapsed="true">
+    <Position X="82" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\Artillery\AddMortars.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.FixedWingAircraft.AddBomber" Collapsed="true">
+    <Position X="85.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Models\Data\FixedWingAircraft\AddBomber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.FixedWingAircraft.AddCommandAndControl" Collapsed="true">
+    <Position X="75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\FixedWingAircraft\AddCommandAndControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.FixedWingAircraft.AddFighter" Collapsed="true">
+    <Position X="82" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Models\Data\FixedWingAircraft\AddFighter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.FixedWingAircraft.AddGroundAttack" Collapsed="true">
+    <Position X="85.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\Data\FixedWingAircraft\AddGroundAttack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.FixedWingAircraft.AddGunship" Collapsed="true">
+    <Position X="75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\FixedWingAircraft\AddGunship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.FixedWingAircraft.AddTransport" Collapsed="true">
+    <Position X="83.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Models\Data\FixedWingAircraft\AddTransport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.FixedWingAircraft.AddUAV" Collapsed="true">
+    <Position X="75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Models\Data\FixedWingAircraft\AddUAV.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.HelicopterRotorcraft.AddAttack" Collapsed="true">
+    <Position X="83.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\HelicopterRotorcraft\AddAttack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.HelicopterRotorcraft.AddObservation" Collapsed="true">
+    <Position X="83.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\HelicopterRotorcraft\AddObservation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.HelicopterRotorcraft.AddUtility" Collapsed="true">
+    <Position X="76.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\HelicopterRotorcraft\AddUtility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.InitializeData" Collapsed="true">
+    <Position X="78.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\InitializeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.Ships.AddAircraftCarriers" Collapsed="true">
+    <Position X="75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\Ships\AddAircraftCarriers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.Ships.AddAmphibiousWarfare" Collapsed="true">
+    <Position X="78.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\Ships\AddAmphibiousWarfare.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.Ships.AddCruisers" Collapsed="true">
+    <Position X="76.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Models\Data\Ships\AddCruisers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.Ships.AddDestroyers" Collapsed="true">
+    <Position X="78.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\Ships\AddDestroyers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.Ships.AddFrigates" Collapsed="true">
+    <Position X="83.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\Ships\AddFrigates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.Ships.AddSubmarines" Collapsed="true">
+    <Position X="80.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Models\Data\Ships\AddSubmarines.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.SmallArms.AddAntiMaterial" Collapsed="true">
+    <Position X="80.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\SmallArms\AddAntiMaterial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.SmallArms.AddDMRSniperRifles" Collapsed="true">
+    <Position X="80.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Models\Data\SmallArms\AddDMRSniperRifles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.SmallArms.AddMachineGuns" Collapsed="true">
+    <Position X="80.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\SmallArms\AddMachineGuns.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.SmallArms.AddPistols" Collapsed="true">
+    <Position X="85.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Models\Data\SmallArms\AddPistols.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.SmallArms.AddRiflesAndCarbines" Collapsed="true">
+    <Position X="75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Models\Data\SmallArms\AddRiflesAndCarbines.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.SmallArms.AddShotguns" Collapsed="true">
+    <Position X="76.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\SmallArms\AddShotguns.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.SmallArms.AddSubmachineGuns" Collapsed="true">
+    <Position X="78.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\SmallArms\AddSubmachineGuns.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.Vehicles.AddAPCs" Collapsed="true">
+    <Position X="82" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\Vehicles\AddAPCs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.Vehicles.AddIFVs" Collapsed="true">
+    <Position X="78.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\Vehicles\AddIFVs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.Vehicles.AddTanks" Collapsed="true">
+    <Position X="82" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\Vehicles\AddTanks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.Data.Vehicles.AddTrucks" Collapsed="true">
+    <Position X="85.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Data\Vehicles\AddTrucks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseHelper" Collapsed="true">
+    <Position X="75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABgAIAAEAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseContext" Collapsed="true">
+    <Position X="83.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECNQAAAUACgAAkkAgRAAQAEYAAQQiCEUgYAAgOACA=</HashCode>
+      <FileName>Models\DatabaseStructure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.GenericHardware">
+    <Position X="39.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCAAgAAAEAAAAAgAAAABAAAhCAABAAAAAAAAgAACA=</HashCode>
+      <FileName>Models\DatabaseStructure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.MenuItem" Collapsed="true">
+    <Position X="83.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIwAAAAAAgAAAAAAAAEAAAA=</HashCode>
+      <FileName>Models\Menus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Artillery">
+    <Position X="38.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAIAAAAAAQEAEACBAACAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Artillery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Mortars">
+    <Position X="36.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Artillery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Howitzers">
+    <Position X="38.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Artillery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.AirDefense">
+    <Position X="41" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Artillery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.FixedWingAircraft">
+    <Position X="56.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABoAAAAAAAAAEAEBAACAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\FixedWingAircraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Fighter">
+    <Position X="59" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\FixedWingAircraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.GroundAttack">
+    <Position X="50" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\FixedWingAircraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Gunship">
+    <Position X="61.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\FixedWingAircraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Bomber">
+    <Position X="52.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\FixedWingAircraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Transport">
+    <Position X="54.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\FixedWingAircraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.CommandAndControl">
+    <Position X="63.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\FixedWingAircraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.UAV">
+    <Position X="56.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\FixedWingAircraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.HelicopterRotorcraft">
+    <Position X="45.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABoAAAAAAAAAEAEBAACAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\HelicopterRotorcraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Attack">
+    <Position X="43.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\HelicopterRotorcraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Utility">
+    <Position X="45.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\HelicopterRotorcraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Observation">
+    <Position X="47.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\HelicopterRotorcraft.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Ships">
+    <Position X="28.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAgABAEAAAACEAgBAQCAAAAAAFAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Ships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.AircraftCarriers">
+    <Position X="23" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Ships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.AmphibiousWarfare">
+    <Position X="27.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Ships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Cruisers">
+    <Position X="32" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Ships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Destroyers">
+    <Position X="25.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Ships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Frigates">
+    <Position X="29.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Ships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Submarines">
+    <Position X="34.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Ships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.SmallArms">
+    <Position X="14" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAIACAAAEAEAABAACAAIAAAAAEAEAAAQAQ=</HashCode>
+      <FileName>Models\DatabaseItems\SmallArms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Pistols">
+    <Position X="7.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\SmallArms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.SubmachineGuns">
+    <Position X="9.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\SmallArms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.RiflesAndCarbines">
+    <Position X="16.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\SmallArms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Shotguns">
+    <Position X="11.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\SmallArms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.MachineGuns">
+    <Position X="14" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\SmallArms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.DMRSniperRifles">
+    <Position X="18.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\SmallArms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.AntiMaterial">
+    <Position X="20.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\SmallArms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Vehicles">
+    <Position X="69" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABgAAAAAAAAAEAEBAACCAABAABAAAAAAAgAA=</HashCode>
+      <FileName>Models\DatabaseItems\Vehicles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Trucks">
+    <Position X="65.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Vehicles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.APCs">
+    <Position X="70.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Vehicles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.IFVs">
+    <Position X="68" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Vehicles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Models.DatabaseItems.Tanks">
+    <Position X="72.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DatabaseItems\Vehicles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MHDB.Views.Compare" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="80.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAQAAAAAABIAABACAAAAA=</HashCode>
+      <FileName>Views\Compare.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MHDB.Views.Data" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="82" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAIAAAABAAAAAAEAAAQAAAAAAAAAAAAAAIAEIQAAg=</HashCode>
+      <FileName>Views\Data.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MHDB.Views.Home" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="76.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Home.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MHDB.Views.Settings" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="85.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAQAIA=</HashCode>
+      <FileName>Views\Settings.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

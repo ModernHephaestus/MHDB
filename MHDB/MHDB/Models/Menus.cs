@@ -15,16 +15,16 @@ using Windows.UI.Xaml.Navigation;
 
 namespace MHDB.Models
 {
-    public class MenuItem
+    internal class MenuItem
     {
         /// <summary>
         /// This class provides the Hamburger Menu items used for navigation throughout the app.
         /// </summary>
-        public Symbol Icon { get; set; }
-        public string Name { get; set; }
-        public Type PageType { get; set; }
+        internal Symbol Icon { get; set; }
+        internal string Name { get; set; }
+        internal Type PageType { get; set; }
 
-        public static List<MenuItem> GetMainItems()
+        internal static List<MenuItem> GetMainItems()
         {
             var items = new List<MenuItem>
             {
@@ -35,7 +35,7 @@ namespace MHDB.Models
             return items;
         }
 
-        public static List<MenuItem> GetOptionsItems()
+        internal static List<MenuItem> GetOptionsItems()
         {
             var items = new List<MenuItem>
             {

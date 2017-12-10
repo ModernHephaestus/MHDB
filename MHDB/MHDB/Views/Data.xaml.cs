@@ -32,9 +32,7 @@ namespace MHDB.Views
         private string _TypeSelected { get; set; }
         private object _Item1 { get; set; }
         private object _Item2 { get; set; }
-        private Pistols TestObject { get; set; } = new Pistols();
-
-        private List<GenericHardware> DataContent { get; set; }
+        
         public Data()
         {
             this.InitializeComponent();

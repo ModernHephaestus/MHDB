@@ -13,14 +13,14 @@ namespace MHDB.Models
 {
     internal class DatabaseHelper
     {
-        public static void MigrateDb()
+        internal static void MigrateDb()
         {
             using (DatabaseContext db = new DatabaseContext())
             {
                 db.Database.Migrate();
             }
         }
-        public static bool IsEmpty()
+        internal static bool IsEmpty()
         {
             using (DatabaseContext db = new DatabaseContext())
             {
@@ -41,7 +41,7 @@ namespace MHDB.Models
             }
         }
 
-        public static void ResetDatabase()
+        internal static void ResetDatabase()
         {
             using (var db = new DatabaseContext())
             {

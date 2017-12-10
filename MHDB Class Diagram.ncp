@@ -1,0 +1,1656 @@
+<Project>
+  <Name>MHDB</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Database</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>GenericHardware</Name>
+        <Access>Internal</Access>
+        <Location left="916" top="1300" />
+        <Size width="220" height="281" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string EndService</Member>
+        <Member type="Field">private string EndProduction</Member>
+        <Member type="Property">public int Id { get; set; }</Member>
+        <Member type="Property">public string Image { get; set; }</Member>
+        <Member type="Property">public string ModelName { get; set; }</Member>
+        <Member type="Property">public string Manufacturer { get; set; }</Member>
+        <Member type="Property">public string Designed { get; set; }</Member>
+        <Member type="Property">public string StartService { get; set; }</Member>
+        <Member type="Property">public string EndService { get; set; }</Member>
+        <Member type="Property">public string StartProduction { get; set; }</Member>
+        <Member type="Property">public double NoBuilt { get; set; }</Member>
+        <Member type="Property">public double Cost { get; set; }</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Artillery</Name>
+        <Access>Public</Access>
+        <Location left="400" top="1678" />
+        <Size width="267" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public double Weight { get; set; }</Member>
+        <Member type="Property">public double Length { get; set; }</Member>
+        <Member type="Property">public double BarrelLength { get; set; }</Member>
+        <Member type="Property">public double Crew { get; set; }</Member>
+        <Member type="Property">public string Shell { get; set; }</Member>
+        <Member type="Property">public string Carriage { get; set; }</Member>
+        <Member type="Property">public double MinimumElevation { get; set; }</Member>
+        <Member type="Property">public double MaximumElevation { get; set; }</Member>
+        <Member type="Property">public double RateOfFire { get; set; }</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Mortars</Name>
+        <Access>Public</Access>
+        <Location left="280" top="1988" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Howitzers</Name>
+        <Access>Public</Access>
+        <Location left="487" top="1988" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AirDefense</Name>
+        <Access>Public</Access>
+        <Location left="677" top="1988" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>FixedWingAircraft</Name>
+        <Access>Internal</Access>
+        <Location left="1080" top="1678" />
+        <Size width="267" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public double Weight { get; set; }</Member>
+        <Member type="Property">public double Length { get; set; }</Member>
+        <Member type="Property">public double Width { get; set; }</Member>
+        <Member type="Property">public double Height { get; set; }</Member>
+        <Member type="Property">public string Engine { get; set; }</Member>
+        <Member type="Property">public string Armament { get; set; }</Member>
+        <Member type="Property">public double MaxSpeed { get; set; }</Member>
+        <Member type="Property">public double MaxAltitude { get; set; }</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GroundAttack</Name>
+        <Access>Public</Access>
+        <Location left="1143" top="1970" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Fighter</Name>
+        <Access>Public</Access>
+        <Location left="941" top="1970" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Gunship</Name>
+        <Access>Public</Access>
+        <Location left="1336" top="1970" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CommandAndControl</Name>
+        <Access>Public</Access>
+        <Location left="1335" top="2214" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Transport</Name>
+        <Access>Public</Access>
+        <Location left="1148" top="2214" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Bomber</Name>
+        <Access>Public</Access>
+        <Location left="941" top="2214" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UAV</Name>
+        <Access>Public</Access>
+        <Location left="941" top="2480" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>HelicopterRotorcraft</Name>
+        <Access>Internal</Access>
+        <Location left="1722" top="1678" />
+        <Size width="267" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public double Weight { get; set; }</Member>
+        <Member type="Property">public double Length { get; set; }</Member>
+        <Member type="Property">public double Width { get; set; }</Member>
+        <Member type="Property">public double Height { get; set; }</Member>
+        <Member type="Property">public string Engine { get; set; }</Member>
+        <Member type="Property">public string Armament { get; set; }</Member>
+        <Member type="Property">public double MaxSpeed { get; set; }</Member>
+        <Member type="Property">public double MaxAltitude { get; set; }</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Observation</Name>
+        <Access>Public</Access>
+        <Location left="1976" top="2010" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Utility</Name>
+        <Access>Public</Access>
+        <Location left="1783" top="2010" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Attack</Name>
+        <Access>Public</Access>
+        <Location left="1581" top="2010" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Ships</Name>
+        <Access>Internal</Access>
+        <Location left="2372" top="1678" />
+        <Size width="267" height="281" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public double Weight { get; set; }</Member>
+        <Member type="Property">public double Length { get; set; }</Member>
+        <Member type="Property">public double Beam { get; set; }</Member>
+        <Member type="Property">public double Draft { get; set; }</Member>
+        <Member type="Property">public double Displacement { get; set; }</Member>
+        <Member type="Property">public string Engine { get; set; }</Member>
+        <Member type="Property">public string Armament { get; set; }</Member>
+        <Member type="Property">public string Armor { get; set; }</Member>
+        <Member type="Property">public double MaxSpeed { get; set; }</Member>
+        <Member type="Property">public double AircraftNo { get; set; }</Member>
+        <Member type="Method">public static bool operator&lt;(Ships A, Ships B)</Member>
+        <Member type="Method">public static bool operator&gt;(Ships A, Ships B)</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AircraftCarriers</Name>
+        <Access>Public</Access>
+        <Location left="2193" top="2056" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AmphibiousWarfare</Name>
+        <Access>Public</Access>
+        <Location left="2418" top="2056" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Cruisers</Name>
+        <Access>Public</Access>
+        <Location left="2629" top="2056" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Frigates</Name>
+        <Access>Public</Access>
+        <Location left="2418" top="2322" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Destroyers</Name>
+        <Access>Public</Access>
+        <Location left="2193" top="2322" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Submarines</Name>
+        <Access>Public</Access>
+        <Location left="2629" top="2322" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SmallArms</Name>
+        <Access>Public</Access>
+        <Location left="2986" top="1678" />
+        <Size width="267" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public double Weight { get; set; }</Member>
+        <Member type="Property">public double Length { get; set; }</Member>
+        <Member type="Property">public double BarrelLength { get; set; }</Member>
+        <Member type="Property">public double Crew { get; set; }</Member>
+        <Member type="Property">public string Cartridge { get; set; }</Member>
+        <Member type="Property">public string Calibre { get; set; }</Member>
+        <Member type="Property">public string Action { get; set; }</Member>
+        <Member type="Property">public string RateOfFire { get; set; }</Member>
+        <Member type="Property">public double MuzzleVelocity { get; set; }</Member>
+        <Member type="Property">public double EffectieRange { get; set; }</Member>
+        <Member type="Property">public double MaxRange { get; set; }</Member>
+        <Member type="Property">public string FeedSystem { get; set; }</Member>
+        <Member type="Property">publicstring Sights { get; set; }</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Pistols</Name>
+        <Access>Public</Access>
+        <Location left="2910" top="2055" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SubmachineGuns</Name>
+        <Access>Public</Access>
+        <Location left="3106" top="2056" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Shotguns</Name>
+        <Access>Public</Access>
+        <Location left="3106" top="2322" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RiflesAndCarbines</Name>
+        <Access>Public</Access>
+        <Location left="2910" top="2321" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DMRSniperRifles</Name>
+        <Access>Public</Access>
+        <Location left="3106" top="2580" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AntiMaterial</Name>
+        <Access>Public</Access>
+        <Location left="2910" top="2843" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MachineGuns</Name>
+        <Access>Public</Access>
+        <Location left="2910" top="2580" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>FixedWingAircraft</Name>
+        <Access>Internal</Access>
+        <Location left="3491" top="1678" />
+        <Size width="267" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public double Weight { get; set; }</Member>
+        <Member type="Property">public double Length { get; set; }</Member>
+        <Member type="Property">public double Width { get; set; }</Member>
+        <Member type="Property">public double Height { get; set; }</Member>
+        <Member type="Property">public string Engine { get; set; }</Member>
+        <Member type="Property">public string Armament { get; set; }</Member>
+        <Member type="Property">public string Transmission { get; set; }</Member>
+        <Member type="Property">public string Suspension { get; set; }</Member>
+        <Member type="Property">public double FuelCapacity { get; set; }</Member>
+        <Member type="Property">public double MaxSpeed { get; set; }</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Trucks</Name>
+        <Access>Public</Access>
+        <Location left="3396" top="1994" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>APCs</Name>
+        <Access>Public</Access>
+        <Location left="3629" top="1994" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>IFVs</Name>
+        <Access>Public</Access>
+        <Location left="3396" top="2270" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Tanks</Name>
+        <Access>Public</Access>
+        <Location left="3629" top="2270" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DatabaseContext</Name>
+        <Access>Internal</Access>
+        <Location left="1377" top="262" />
+        <Size width="392" height="723" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public DbSet&lt;SmallArms&gt; SmallArms { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Artillery&gt; Artillery { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Vehicles&gt; Vehicles { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;FixedWingAircraft&gt; FixedWingAircraft { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;HelicopterRotorcraft&gt; HelicopterRotorcraft { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Ships&gt; Ships { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Pistols&gt; Pistols { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;SubmachineGuns&gt; SubmachineGuns { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;RiflesAndCarbines&gt; RiflesAndCarbines { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Shotguns&gt; Shotguns { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;MachineGuns&gt; MachineGuns { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;DMRSniperRifles&gt; DMRSniperRifles { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;AntiMaterial&gt; AntiMaterial { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Mortars&gt; Mortars { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Howitzers&gt; Howitzers { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;AirDefense&gt; AirDefense { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Trucks&gt; Trucks { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;APCs&gt; APCs { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;IFVs&gt; IFVs { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Tanks&gt; Tanks { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Fighter&gt; Fighter { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;GroundAttack&gt; GroundAttack { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Gunship&gt; Gunship { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Bomber&gt; Bomber { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Transport&gt; Transport { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;CommandAndControl&gt; CommandAndControl { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;UAV&gt; UAV { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Attack&gt; Attack { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Utility&gt; Utility { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Observation&gt; Observation { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;AircraftCarriers&gt; AircraftCarriers { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;AmphibiousWarfare&gt; AmphibiousWarfare { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Cruisers&gt; Cruisers { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Destroyers&gt; Destroyers { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Frigates&gt; Frigates { get; set; }</Member>
+        <Member type="Property">public DbSet&lt;Submarines&gt; Submarines { get; set; }</Member>
+        <Member type="Method">protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)</Member>
+        <Member type="Method">protected override void OnModelCreating(ModelBuilder modelBuilder)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Generalization" first="2" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>533</X>
+          <Y>1945</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="3" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>534</X>
+          <Y>1945</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="1" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="8" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1125</X>
+          <Y>1933</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1222</X>
+          <Y>1937</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1123</X>
+          <Y>1937</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="7" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1123</X>
+          <Y>1933</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="9" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1122</X>
+          <Y>2202</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="10" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1123</X>
+          <Y>2202</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="11" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1123</X>
+          <Y>2189</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1123</X>
+          <Y>1940</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="12" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1122</X>
+          <Y>2455</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="14" second="13">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="15" second="13">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1856</X>
+          <Y>1985</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="16" second="13">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="13" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1026</X>
+          <Y>1606</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="18" second="17">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="19" second="17">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>2505</X>
+          <Y>1986</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="20" second="17">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="23" second="17">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2617</X>
+          <Y>2297</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2602</X>
+          <Y>1987</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="21" second="17">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2393</X>
+          <Y>2297</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2393</X>
+          <Y>1984</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="22" second="17">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2358</X>
+          <Y>2297</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2393</X>
+          <Y>2001</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="17" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="25" second="24">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>3092</X>
+          <Y>2001</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="26" second="24">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>3184</X>
+          <Y>2024</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>3093</X>
+          <Y>2006</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="27" second="24">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>3093</X>
+          <Y>2297</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>3093</X>
+          <Y>2001</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="28" second="24">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>3092</X>
+          <Y>2296</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>3092</X>
+          <Y>2001</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="29" second="24">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>3093</X>
+          <Y>2554</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>3093</X>
+          <Y>2005</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="31" second="24">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>3081</X>
+          <Y>2555</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>3092</X>
+          <Y>2001</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="30" second="24">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>3092</X>
+          <Y>2816</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>3092</X>
+          <Y>2001</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="33" second="32">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>3608</X>
+          <Y>1969</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>3608</X>
+          <Y>1950</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="34" second="32">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>3608</X>
+          <Y>1978</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="35" second="32">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>3608</X>
+          <Y>2249</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>3608</X>
+          <Y>1950</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="36" second="32">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>3609</X>
+          <Y>2245</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="24" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="32" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Helper Classes</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>DatabaseHelper</Name>
+        <Access>Internal</Access>
+        <Location left="503" top="1074" />
+        <Size width="252" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void MigrateDb()</Member>
+        <Member type="Method">internal static bool IsEmpty()</Member>
+        <Member type="Method">internal static void ResetDatabase()</Member>
+        <Member type="Method">internal static void InitializeDatabase()</Member>
+        <Member type="Method">internal object SelectTable(string Table)</Member>
+        <Member type="Method">internal List&lt;string&gt; FillTableList(string GivenTable)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InitializeData</Name>
+        <Access>Public</Access>
+        <Location left="636" top="1360" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal void InitializeDatabase()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InitSmallArms</Name>
+        <Access>Public</Access>
+        <Location left="545" top="1677" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void SmallArmsInit()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InitArtillery</Name>
+        <Access>Public</Access>
+        <Location left="981" top="1677" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void ArtilleryInit()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InitVehicles</Name>
+        <Access>Public</Access>
+        <Location left="1404" top="1677" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void VehiclesInit()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InitAircraft</Name>
+        <Access>Public</Access>
+        <Location left="1879" top="1677" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void AircraftInit()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InitHelicopters</Name>
+        <Access>Public</Access>
+        <Location left="2375" top="1677" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void HelicoptersInit()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InitShips</Name>
+        <Access>Public</Access>
+        <Location left="2915" top="1677" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void ShipsInit()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddAntiMaterial</Name>
+        <Access>Internal</Access>
+        <Location left="440" top="1935" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitAntiMaterial()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddDMRSniperRifles</Name>
+        <Access>Internal</Access>
+        <Location left="652" top="1935" />
+        <Size width="164" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitDMRSniperRifles()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddMachineGuns</Name>
+        <Access>Internal</Access>
+        <Location left="440" top="2192" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitMachineGuns()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddPistols</Name>
+        <Access>Internal</Access>
+        <Location left="651" top="2196" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitPistols()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddRiflesAndCarbines</Name>
+        <Access>Internal</Access>
+        <Location left="440" top="2492" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void NewMethod()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddShotguns</Name>
+        <Access>Internal</Access>
+        <Location left="651" top="2492" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitShotguns()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddSubmachineGuns</Name>
+        <Access>Internal</Access>
+        <Location left="458" top="2748" />
+        <Size width="168" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitSubmachineGuns()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddAirDefense</Name>
+        <Access>Internal</Access>
+        <Location left="888" top="1935" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitAirDefense()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddHowitzers</Name>
+        <Access>Internal</Access>
+        <Location left="891" top="2192" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitHowitzers()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddMortars</Name>
+        <Access>Internal</Access>
+        <Location left="888" top="2492" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitMortars()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddIFVs</Name>
+        <Access>Internal</Access>
+        <Location left="1524" top="1935" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitIFVs()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddTanks</Name>
+        <Access>Internal</Access>
+        <Location left="1267" top="2196" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitTanks()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddAPCs</Name>
+        <Access>Internal</Access>
+        <Location left="1267" top="1935" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitAPCs()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddTrucks</Name>
+        <Access>Internal</Access>
+        <Location left="1524" top="2196" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitTrucks()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddCommandAndControl</Name>
+        <Access>Internal</Access>
+        <Location left="1996" top="1935" />
+        <Size width="187" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitCommandAndControl()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddFighter</Name>
+        <Access>Internal</Access>
+        <Location left="1996" top="2196" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitFighter()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddGroundAttack</Name>
+        <Access>Internal</Access>
+        <Location left="1739" top="2196" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitGroundAttack()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddBomber</Name>
+        <Access>Internal</Access>
+        <Location left="1739" top="1935" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitBomber()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddGunship</Name>
+        <Access>Internal</Access>
+        <Location left="1739" top="2448" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitGunship()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddUAV</Name>
+        <Access>Internal</Access>
+        <Location left="1874" top="2712" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitUAV()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddTransport</Name>
+        <Access>Internal</Access>
+        <Location left="1996" top="2448" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitTransport()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddUtility</Name>
+        <Access>Internal</Access>
+        <Location left="2375" top="2212" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitUtility()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddObservation</Name>
+        <Access>Internal</Access>
+        <Location left="2486" top="1953" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitObservation()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddAttack</Name>
+        <Access>Internal</Access>
+        <Location left="2255" top="1953" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitAttack()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddAmphibiousWarfare</Name>
+        <Access>Internal</Access>
+        <Location left="3031" top="1953" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitAmphibiousWarfare()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddDestroyers</Name>
+        <Access>Internal</Access>
+        <Location left="3031" top="2212" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitDestroyers()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddSubmarines</Name>
+        <Access>Internal</Access>
+        <Location left="3031" top="2466" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitSubmarines()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddFrigates</Name>
+        <Access>Internal</Access>
+        <Location left="2774" top="2466" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitFrigates()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddCruisers</Name>
+        <Access>Internal</Access>
+        <Location left="2774" top="2212" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitCruisers()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddAircraftCarriers</Name>
+        <Access>Internal</Access>
+        <Location left="2774" top="1953" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">internal static void InitAircraftCarriers()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="1" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="2" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>629</X>
+          <Y>1652</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>717</X>
+          <Y>1605</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="3" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1063</X>
+          <Y>1652</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>718</X>
+          <Y>1603</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="5" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1977</X>
+          <Y>1652</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1482</X>
+          <Y>1652</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="7" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2998</X>
+          <Y>1652</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="6" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2467</X>
+          <Y>1652</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="8" second="2">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>627</X>
+          <Y>2051</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>627</X>
+          <Y>1935</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="9" second="2">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>627</X>
+          <Y>2052</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>626</X>
+          <Y>1927</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="11" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>628</X>
+          <Y>2171</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>629</X>
+          <Y>1918</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="10" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>627</X>
+          <Y>2170</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="13" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>628</X>
+          <Y>2467</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="12" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>628</X>
+          <Y>2467</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="14" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>628</X>
+          <Y>2723</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="15" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1075</X>
+          <Y>2043</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1083</X>
+          <Y>1928</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1081</X>
+          <Y>2173</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="17" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1081</X>
+          <Y>2579</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="20" second="4">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1458</X>
+          <Y>2062</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1487</X>
+          <Y>1918</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="18" second="4">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1488</X>
+          <Y>2062</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1488</X>
+          <Y>1925</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="21" second="4">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1487</X>
+          <Y>2306</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="True">
+          <X>1487</X>
+          <Y>2280</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="19" second="4">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1486</X>
+          <Y>2306</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1486</X>
+          <Y>1918</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1486</X>
+          <Y>1918</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="24" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1957</X>
+          <Y>2240</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="23" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1957</X>
+          <Y>2240</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="True">
+          <X>1957</X>
+          <Y>2229</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="27" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="26" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1957</X>
+          <Y>2521</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="28" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1957</X>
+          <Y>2521</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1957</X>
+          <Y>1918</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="22" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1956</X>
+          <Y>2028</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1956</X>
+          <Y>1925</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="25" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1956</X>
+          <Y>2028</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1956</X>
+          <Y>1919</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="30" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="31" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="29" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="37" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="32" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="33" second="7">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2997</X>
+          <Y>2304</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="36" second="7">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2997</X>
+          <Y>2304</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="35" second="7">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2998</X>
+          <Y>2596</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="34" second="7">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2998</X>
+          <Y>2596</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Views</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>MenuItem</Name>
+        <Access>Internal</Access>
+        <Location left="196" top="49" />
+        <Size width="218" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">internal Symbol Icon { get; set; }</Member>
+        <Member type="Property">internal string Name { get; set; }</Member>
+        <Member type="Property">internal Type PageType { get; set; }</Member>
+        <Member type="Method">internal static List&lt;MenuItem&gt; GetMainItems()</Member>
+        <Member type="Method">internal static List&lt;MenuItem&gt; GetOptionsItems()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MainPage</Name>
+        <Access>Public</Access>
+        <Location left="122" top="348" />
+        <Size width="375" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public MainPage()</Member>
+        <Member type="Method">private void OnMenuItemClick(object sender, ItemClickEventArgs e)</Member>
+        <Member type="Method">private void HamburgerMenu_LostFocus(object sender, RoutedEventArgs e)</Member>
+        <Modifier>Sealed</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Home</Name>
+        <Access>Public</Access>
+        <Location left="10" top="634" />
+        <Size width="162" height="155" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Home()</Member>
+        <Modifier>Sealed</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Data</Name>
+        <Access>Public</Access>
+        <Location left="208" top="634" />
+        <Size width="202" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Data()</Member>
+        <Member type="Method">private void SelectLevel_ItemClick(object sender, ItemClickEventArgs e)</Member>
+        <Member type="Method">private void SelectTable_SelectionChanged(object sender, SelectionChangedEventArgs e)</Member>
+        <Member type="Method">private void Info_ItemClick(object sender, ItemClickEventArgs e)</Member>
+        <Member type="Method">private void ItemPanel_ItemClick(object sender, ItemClickEventArgs e)</Member>
+        <Member type="Method">private void ClearSelected()</Member>
+        <Member type="Property">private string _TypeSelected { get; set; }</Member>
+        <Member type="Property">private string _TableSelected { get; set; }</Member>
+        <Member type="Property">private object _Item1 { get; set; }</Member>
+        <Member type="Property">private object _Item2 { get; set; }</Member>
+        <Modifier>Sealed</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Compare</Name>
+        <Access>Public</Access>
+        <Location left="445" top="634" />
+        <Size width="193" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Compare()</Member>
+        <Member type="Property">private object PassedItem1 { get; set; }</Member>
+        <Member type="Property">private object PassedItem2 { get; set; }</Member>
+        <Member type="Property">private string _PassedType { get; set; }</Member>
+        <Member type="Property">private string _PassedTable { get; set; }</Member>
+        <Modifier>Sealed</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Settings</Name>
+        <Access>Public</Access>
+        <Location left="680" top="634" />
+        <Size width="309" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Settings()</Member>
+        <Member type="Method">private void RunReset()</Member>
+        <Member type="Method">private void ResetCompleted()</Member>
+        <Member type="Method">private void ResetDb_Click(object sender, RoutedEventArgs e)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="1" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>307</X>
+          <Y>323</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>307</X>
+          <Y>306</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="5" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="3" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="2" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

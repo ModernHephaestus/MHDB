@@ -24,8 +24,8 @@ namespace MHDB.Views
     /// </summary>
     public sealed partial class Compare : Page
     {
-        private object PassedItem1 { get; set; }
-        private object PassedItem2 { get; set; }
+        private object _PassedItem1 { get; set; }
+        private object _PassedItem2 { get; set; }
         private string _PassedType { get; set; }
         private string _PassedTable { get; set; }
         public Compare()
@@ -40,8 +40,8 @@ namespace MHDB.Views
                 return;
             }
             var DataDictionary = (Dictionary<string , object>)e.Parameter;
-            PassedItem1 = DataDictionary.ElementAt(0).Value;
-            PassedItem2 = DataDictionary.ElementAt(1).Value;
+            _PassedItem1 = DataDictionary.ElementAt(0).Value;
+            _PassedItem2 = DataDictionary.ElementAt(1).Value;
             _PassedType = DataDictionary.ElementAt(2).Value.ToString();
             _PassedTable = DataDictionary.ElementAt(3).Value.ToString();
             InitCompare();
@@ -54,8 +54,8 @@ namespace MHDB.Views
                     {
                         ObservableCollection<SmallArms> ComparedItems = new ObservableCollection<SmallArms>
                         {
-                            (SmallArms)PassedItem1,
-                            (SmallArms)PassedItem2
+                            (SmallArms)_PassedItem1,
+                            (SmallArms)_PassedItem2
                         };
                         ItemView.ItemsSource = ComparedItems;
                         ItemView.ItemTemplate = (DataTemplate)Application.Current.Resources["SmallArmsTemplate"];
@@ -65,8 +65,8 @@ namespace MHDB.Views
                     {
                         ObservableCollection<Artillery> ComparedItems = new ObservableCollection<Artillery>
                         {
-                            (Artillery)PassedItem1,
-                            (Artillery)PassedItem2
+                            (Artillery)_PassedItem1,
+                            (Artillery)_PassedItem2
                         };
                         ItemView.ItemsSource = ComparedItems;
                         ItemView.ItemTemplate = (DataTemplate)Application.Current.Resources["ArtilleryTemplate"];
@@ -76,8 +76,8 @@ namespace MHDB.Views
                     {
                         ObservableCollection<Vehicles> ComparedItems = new ObservableCollection<Vehicles>
                         {
-                            (Vehicles)PassedItem1,
-                            (Vehicles)PassedItem2
+                            (Vehicles)_PassedItem1,
+                            (Vehicles)_PassedItem2
                         };
                         ItemView.ItemsSource = ComparedItems;
 
@@ -88,8 +88,8 @@ namespace MHDB.Views
                     {
                         ObservableCollection<FixedWingAircraft> ComparedItems = new ObservableCollection<FixedWingAircraft>
                         {
-                            (FixedWingAircraft)PassedItem1,
-                            (FixedWingAircraft)PassedItem2
+                            (FixedWingAircraft)_PassedItem1,
+                            (FixedWingAircraft)_PassedItem2
                         };
                         ItemView.ItemsSource = ComparedItems;
                         ItemView.ItemTemplate = (DataTemplate)Application.Current.Resources["AircraftTemplate"];
@@ -99,8 +99,8 @@ namespace MHDB.Views
                     {
                         ObservableCollection<HelicopterRotorcraft> ComparedItems = new ObservableCollection<HelicopterRotorcraft>
                         {
-                            (HelicopterRotorcraft)PassedItem1,
-                            (HelicopterRotorcraft)PassedItem2
+                            (HelicopterRotorcraft)_PassedItem1,
+                            (HelicopterRotorcraft)_PassedItem2
                         };
                         ItemView.ItemsSource = ComparedItems;
                         ItemView.ItemTemplate = (DataTemplate)Application.Current.Resources["AircraftTemplate"];
@@ -110,8 +110,8 @@ namespace MHDB.Views
                     {
                         ObservableCollection<Ships> ComparedItems = new ObservableCollection<Ships>
                         {
-                            (Ships)PassedItem1,
-                            (Ships)PassedItem2
+                            (Ships)_PassedItem1,
+                            (Ships)_PassedItem2
                         };
                         ItemView.ItemsSource = ComparedItems;
                         ItemView.ItemTemplate = (DataTemplate)Application.Current.Resources["ShipsTemplate"];
