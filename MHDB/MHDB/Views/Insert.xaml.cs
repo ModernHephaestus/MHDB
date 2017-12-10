@@ -43,6 +43,7 @@ namespace MHDB.Views
             SelectTable.ItemsSource = DatabaseHelper.FillTableList(ClickedItem.Text);
             _TableSelected = ClickedItem.Text;
             SelectTable.Visibility = Visibility.Visible;
+            NewItemInfo.Visibility = Visibility.Collapsed;
         }
 
         private void SelectTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -82,7 +83,7 @@ namespace MHDB.Views
                         NewItemInfo.ItemTemplate = (DataTemplate)Application.Current.Resources["VehiclesInsertTemplate"];
                     }
                     break;
-                case "FixedWingAircraft":
+                case "Aircraft":
                     {
                         NewItem.Clear();
                         NewItem.Add(new FixedWingAircraft());
@@ -90,7 +91,7 @@ namespace MHDB.Views
                         NewItemInfo.ItemTemplate = (DataTemplate)Application.Current.Resources["AircraftInsertTemplate"];
                     }
                     break;
-                case "HelicopterRotorcraft":
+                case "Helicopters":
                     {
                         NewItem.Clear();
                         NewItem.Add(new HelicopterRotorcraft());
@@ -107,6 +108,7 @@ namespace MHDB.Views
                     }
                     break;
             };
+            NewItemInfo.Visibility = Visibility.Visible;
 
         }
 
