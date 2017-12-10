@@ -90,7 +90,7 @@ namespace MHDB.Models
                 foreach (var x in Tables)
                 {
                     var temp = x.Relational().DiscriminatorValue.ToString();
-                    if (!temp.Contains(GivenTable) && !temp.Contains("Aircraft") && !temp.Contains("Helicopter") && !temp.Contains("SmallArms"))
+                    if (!temp.Contains(GivenTable) && !temp.Equals("Aircraft") && !temp.Contains("Helicopter") && !temp.Contains("SmallArms"))
                         names.Add(temp);
                 }
                 return names;

@@ -189,22 +189,24 @@ namespace MHDB.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<double>("AircraftNo");
+                    b.Property<double?>("AircraftNo")
+                        .IsRequired();
 
                     b.Property<string>("Armament")
                         .IsRequired();
 
                     b.Property<string>("Armor");
 
-                    b.Property<double>("Beam");
+                    b.Property<double?>("Beam");
 
                     b.Property<double?>("Cost");
 
                     b.Property<string>("Designed");
 
-                    b.Property<double>("Displacement");
+                    b.Property<double?>("Displacement")
+                        .IsRequired();
 
-                    b.Property<double>("Draft");
+                    b.Property<double?>("Draft");
 
                     b.Property<string>("EndProduction");
 
@@ -214,12 +216,12 @@ namespace MHDB.Migrations
 
                     b.Property<string>("Image");
 
-                    b.Property<double>("Length");
+                    b.Property<double?>("Length");
 
                     b.Property<string>("Manufacturer")
                         .IsRequired();
 
-                    b.Property<double>("MaxSpeed");
+                    b.Property<double?>("MaxSpeed");
 
                     b.Property<string>("ModelName")
                         .IsRequired();
@@ -232,7 +234,7 @@ namespace MHDB.Migrations
                     b.Property<string>("StartService")
                         .IsRequired();
 
-                    b.Property<double>("Weight");
+                    b.Property<double?>("Weight");
 
                     b.Property<string>("_ShipType")
                         .IsRequired();

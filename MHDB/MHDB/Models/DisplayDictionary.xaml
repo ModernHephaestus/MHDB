@@ -61,7 +61,7 @@
             <TextBlock Text="{Binding EndService}" TextWrapping="Wrap" Margin="6" Grid.Row="7" Grid.Column="1"/>
             <TextBlock Name="ItemNoBuiltDesc" Text="Number Built: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="8" Grid.Column="0"/>
             <TextBlock Text="{Binding NoBuilt, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="8" Grid.Column="1"/>
-            <TextBlock Name="ItemCostDesc" Text="Cost: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
+            <TextBlock Name="ItemCostDesc" Text="Cost (USD): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
             <TextBlock Text="{Binding Cost, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="9" Grid.Column="1"/>
             <TextBlock Name="ItemWeightDesc" Text="Weight (kg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="10" Grid.Column="0"/>
             <TextBlock Text="{Binding Weight, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="10" Grid.Column="1"/>
@@ -132,7 +132,7 @@
             <TextBlock Text="{Binding EndService}" TextWrapping="Wrap" Margin="6" Grid.Row="7" Grid.Column="1"/>
             <TextBlock Name="ItemNoBuiltDesc" Text="Number Built: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="8" Grid.Column="0"/>
             <TextBlock Text="{Binding NoBuilt, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="8" Grid.Column="1"/>
-            <TextBlock Name="ItemCostDesc" Text="Cost: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
+            <TextBlock Name="ItemCostDesc" Text="Cost (USD): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
             <TextBlock Text="{Binding Cost, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="9" Grid.Column="1"/>
             <TextBlock Name="ItemWeightDesc" Text="Weight (kg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="10" Grid.Column="0"/>
             <TextBlock Text="{Binding Weight, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="10" Grid.Column="1"/>
@@ -200,7 +200,7 @@
             <TextBlock Text="{Binding EndService}" TextWrapping="Wrap" Margin="6" Grid.Row="7" Grid.Column="1"/>
             <TextBlock Name="ItemNoBuiltDesc" Text="Number Built: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="8" Grid.Column="0"/>
             <TextBlock Text="{Binding NoBuilt, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="8" Grid.Column="1"/>
-            <TextBlock Name="ItemCostDesc" Text="Cost: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
+            <TextBlock Name="ItemCostDesc" Text="Cost (USD): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
             <TextBlock Text="{Binding Cost, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="9" Grid.Column="1"/>
             <TextBlock Name="ItemWeightDesc" Text="Weight (kg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="10" Grid.Column="0"/>
             <TextBlock Text="{Binding Weight, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="10" Grid.Column="1"/>
@@ -268,7 +268,7 @@
             <TextBlock Text="{Binding EndService}" TextWrapping="Wrap" Margin="6" Grid.Row="7" Grid.Column="1"/>
             <TextBlock Name="ItemNoBuiltDesc" Text="Number Built: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="8" Grid.Column="0"/>
             <TextBlock Text="{Binding NoBuilt, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="8" Grid.Column="1"/>
-            <TextBlock Name="ItemCostDesc" Text="Cost: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
+            <TextBlock Name="ItemCostDesc" Text="Cost (USD): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
             <TextBlock Text="{Binding Cost, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="9" Grid.Column="1"/>
             <TextBlock Name="ItemWeightDesc" Text="Weight (kg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="10" Grid.Column="0"/>
             <TextBlock Text="{Binding Weight, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="10" Grid.Column="1"/>
@@ -314,6 +314,8 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Image Name="ItemImage" Source="{Binding Image}" MaxWidth="200" MaxHeight="200" Grid.ColumnSpan="2"/>
             <TextBlock Name="ItemModelNameDesc" Text="Model Name: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="1" Grid.Column="0"/>
@@ -332,7 +334,7 @@
             <TextBlock Text="{Binding EndService}" TextWrapping="Wrap" Margin="6" Grid.Row="7" Grid.Column="1"/>
             <TextBlock Name="ItemNoBuiltDesc" Text="Number Built: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="8" Grid.Column="0"/>
             <TextBlock Text="{Binding NoBuilt, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="8" Grid.Column="1"/>
-            <TextBlock Name="ItemCostDesc" Text="Cost: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
+            <TextBlock Name="ItemCostDesc" Text="Cost (USD): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="9" Grid.Column="0"/>
             <TextBlock Text="{Binding Cost, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="9" Grid.Column="1"/>
             <TextBlock Name="ItemWeightDesc" Text="Weight (kg): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="10" Grid.Column="0"/>
             <TextBlock Text="{Binding Weight, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="10" Grid.Column="1"/>
@@ -341,7 +343,7 @@
             <TextBlock Name="ItemBeamDesc" Text="Beam (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="12" Grid.Column="0"/>
             <TextBlock Text="{Binding Beam, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="12" Grid.Column="1"/>
             <TextBlock Name="ItemDraftDesc" Text="Draft (m): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="13" Grid.Column="0"/>
-            <TextBlock Text="{Binding Draft, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="13" Grid.Column="1"/>
+            <TextBlock Text="{Binding Draft, TargetNullValue=N/A}" TextWrapping="Wrap" Margin="6" Grid.Row="13" Grid.Column="1"/>
             <TextBlock Name="ItemDisplacementDesc" Text="Displacement (long tons): " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="14" Grid.Column="0"/>
             <TextBlock Text="{Binding Displacement, TargetNullValue=Unknown}" TextWrapping="Wrap" Margin="6" Grid.Row="14" Grid.Column="1"/>
             <TextBlock Name="ItemArmamentDesc" Text="Armament: " TextWrapping="Wrap" FontWeight="Bold" Margin="6" Grid.Row="15" Grid.Column="0"/>
